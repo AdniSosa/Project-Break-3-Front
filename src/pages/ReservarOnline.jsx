@@ -120,21 +120,3 @@ const ReservarOnline = () => {
 
 export default ReservarOnline;
 
-        const [selectedDate, setSelectedDate] = useState(new Date());
-        return (
-            <>
-            <div>
-                <h1>Reservar Online</h1>
-                <DatePicker
-                showIcon
-                toggleCalendarOnIconClick
-                selected={selectedDate}
-                onChange={(date) => setSelectedDate(date)}
-            />
-            {console.log(selectedDate)} 
-            </div>
-            </>
-        );
-    };
-    
-
