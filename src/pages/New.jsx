@@ -13,7 +13,8 @@ const New = () => {
     const [createdService, setCreatedService] = useState('');
     const treatments = ['Elige una opción: ', 'tratamiento facial', 'Tratamiento corporal']
 
-    const newService = async () => {
+    const newService = async (e) => {
+        e.preventDefault()
         try {
             const response = await fetch(`${import.meta.env.VITE_URL_API}/create`,
                 {
@@ -27,7 +28,7 @@ const New = () => {
             if (!response.ok) throw new Error(`The service couldn't be created`);
 
             const data = await response.json();
-            setCreatedService(`The service has been created: '${payload.title}'`)
+            setCreatedService(`El servicio '${payload.title}' ha sido creado, en la categoría '${payload.category}'`)
         } catch (error) {
 
         }
@@ -43,19 +44,7 @@ const New = () => {
                 <Input title={"Precio"} name={"servicePrice"} value={price}  onChange={(e) => setPrice(e.target.value)}/>
                 <Input title={"Duración"} name={"serviceDuration"} value={duration}  onChange={(e) => setDuration(e.target.value)}/>
 
-                <Select title={"Categoría"} name={"serviceCategory"} value={category}  onChange={(e) => setCategory(e.target.value)}/>
-        
-                <label htmlFor="serviceCategory">Categoría: </label>
-                <select
-                id="serviceCategory"
-                name="serviceCategory"
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-                required>
-                    <option value="">Elige una opción</option>
-                    <option value={"Tratamiento facial"}>Tratamiento facial</option>
-                    <option value={"Tratamiento corporal"}>Tratamiento corporal</option>
-                </select>
+                <Select title={"Categoría"} name={"serviceCategory"} value={category}  onChange={(e) => setCategory(e.target.value)} options={treatments}/>
                
                 <button type="submit" onClick={newService}>Guardar</button>
 

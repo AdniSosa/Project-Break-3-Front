@@ -1,4 +1,4 @@
-const SelectAdmin = ({title, name, value, onChange}) => {
+const SelectAdmin = ({title, name, value, onChange, options}) => {
     return (
         <>
             <label htmlFor={name}>{title}: </label>
@@ -8,9 +8,9 @@ const SelectAdmin = ({title, name, value, onChange}) => {
                 value={value}
                 onChange={onChange}
                 required>
-                <option value="">Elige una opción</option>
-                <option value={"Tratamiento facial"}>Tratamiento facial</option>
-                <option value={"Tratamiento corporal"}>Tratamiento corporal</option>
+                    {options.map(treatment => (
+                        <option key={treatment} value={treatment}>{treatment}</option>
+                    ))}
             </select>
         </>
     )
