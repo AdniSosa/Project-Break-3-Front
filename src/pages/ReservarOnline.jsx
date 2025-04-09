@@ -15,6 +15,7 @@ const ReservarOnline = () => {
                 selected={selectedDate}
                 onChange={(date) => setSelectedDate(date)}
             />
+            {console.log(selectedDate)} 
             </div>
             </>
         );
