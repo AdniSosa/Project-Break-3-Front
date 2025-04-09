@@ -1,11 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Estrias = () => {
   return (
-    <div>
-      <h1>Estrías</h1>
-      <p>Esta es la página donde mostraremos información sobre nuestra marca.</p>
-    </div>
+      <>
+        <div>
+          <nav>
+            <Link to='/inicio'>INICIO</Link>
+            <Link to='/tratamientos-faciales'>FACIAL</Link>
+            <Link to='/tratamientos-corporales'>CORPORAL</Link>
+            <Link to='/botox'>BÓTOX</Link>
+            <Link to='/laser'>ESTRÍAS</Link>
+            <Link to='/contacto'>CONTACTO</Link>
+            <Link to='/pide-cita' >RESERVAR ONLINE</Link>
+            <Link to='/regala-tova' >REGALA TOVA</Link>
+          </nav>
+        </div>
+        <div>
+          <h1>Bótox</h1>
+          <p></p>
+        </div>
+      </>
   );
 };
 
