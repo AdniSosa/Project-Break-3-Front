@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PideCita = () => {
+const ReservarOnline = () => {
     return (
         <>
             <div>
@@ -12,16 +12,16 @@ const PideCita = () => {
                     <Link to='/botox'>BÓTOX</Link>
                     <Link to='/laser'>ESTRÍAS</Link>
                     <Link to='/contacto'>CONTACTO</Link>
-                    <Link to='/pide-cita' >RESERVAR ONLINE</Link>
+                    <Link to='/reservar-online' >RESERVAR ONLINE</Link>
                     <Link to='/regala-tova' >REGALA TOVA</Link>
                 </nav>
             </div>
             <div>
-                <h1>Pide Cita</h1>
+                <h1>Reservar Online</h1>
                 <p></p>
             </div>
         </>
     );
 };
 
-export default PideCita;
+export default ReservarOnline;

@@ -12,7 +12,7 @@ const Inicio = () => {
                 <Link to='/botox'>BÓTOX</Link>
                 <Link to='/laser'>ESTRÍAS</Link>
                 <Link to='/contacto'>CONTACTO</Link>
-                <Link to='/pide-cita' >RESERVAR ONLINE</Link>
+                <Link to='/reservar-online' >RESERVAR ONLINE</Link>
                 <Link to='/regala-tova' >REGALA TOVA</Link>
             </nav>
         </div>
@@ -26,7 +26,7 @@ const Inicio = () => {
             <p>En Tova estamos deseando conocerte y ofrecerte productos y tratamientos personalizados que se adapten a tus necesidades y estilo de vida.Queremos que tu inversión sea un acto de cuidado personal.</p>
             <p>Trabajamos con productos de ingredientes naturales, y nos mantenemos en constante formación, siempre apostando por las últimas tendencias y buscando lo mejor para ti en cada detalle.</p>
             <img src='https://img.freepik.com/foto-gratis/productos-listos-sesion-spa_23-2151916542.jpg?ga=GA1.1.1117630890.1730399903&semt=ais_country_boost&w=740' alt='Centro-Tova' height={250} width={180}/>
-            <Link to="/acerca-de-tova" >Conocer más el centro</Link>
+            <Link to="/incio" >Conocer más el centro</Link>
         </div>
     </>
     );

@@ -12,7 +12,7 @@ const RegalaTova = () => {
                     <Link to='/botox'>BÓTOX</Link>
                     <Link to='/laser'>ESTRÍAS</Link>
                     <Link to='/contacto'>CONTACTO</Link>
-                    <Link to='/pide-cita' >RESERVAR ONLINE</Link>
+                    <Link to='/reservar-online'>RESERVAR ONLINE</Link>
                     <Link to='/regala-tova' >REGALA TOVA</Link>
                 </nav>
             </div>
