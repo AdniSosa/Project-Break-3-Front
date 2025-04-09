@@ -2,12 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 
 import Contacto from "./pages/Contacto";
-//import AcercaDeTova from "./components/AcercaDeTova";
 import TratamientosFaciales from "./components/TratamientosFaciales";
 import TratamientosCorporales from "./components/TratamientosCorporales";
-import Home from "./pages/Inicio";
+import Inicio from "./pages/Inicio";
 import RegalaTova from "./pages/RegalaTova";
-//import PideCita from "./components/PideCita";
+import ReservaOnline from "./pages/ReservaOnline";
 import New from "./pages/New";
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -22,12 +21,11 @@ function App() {
       <NavBar />
         <Routes>
           <Route path="/contacto" element={<Contacto />} />
-          {/* <Route path="/acerca-de-tova" element={<AcercaDeTova />} /> */}
           <Route path="/tratamientos-faciales" element={<TratamientosFaciales />} />
           <Route path="/tratamientos-corporales" element={<TratamientosCorporales />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/inicio" element={<Inicio />} />
           <Route path="/regala-tova" element={<RegalaTova />} />
-          {/* <Route path="/pide-cita" element={<PideCita />} /> */}
+          <Route path="/reserva-online" element={<ReservaOnline />} />
           <Route path="/new" element={<New />} />
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
