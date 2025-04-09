@@ -27,7 +27,7 @@ function App() {
           <Route path="/regala-tova" element={<RegalaTova />} />
           <Route path="/reservar-online" element={<ReservarOnline />} />
           <Route path="/new" element={<New />} />
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Inicio />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path="*" element={<Navigate to="/" replace />} //la propiedad "replace" evitará redirecciones adicionales después de que el usuario haga clic en "atrás" 
