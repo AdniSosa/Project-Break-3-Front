@@ -35,7 +35,7 @@ const ReservarOnline = () => {
     const filterTime = (time) => {
         const now = new Date();
         const hour = time.getHours();
-        const isInValidRange = (hour >= 10 && hour < 14) || (hour >= 16 && hour < 20);
+        const isInValidRange = (hour >= 10 && hour < 20) 
         const isInFuture = time > now;
         return isInValidRange && isInFuture;
     };
