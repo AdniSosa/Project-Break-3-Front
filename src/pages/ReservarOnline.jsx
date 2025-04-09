@@ -4,21 +4,25 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useState } from 'react';
 
 const ReservarOnline = () => {
-        const [selectedDate, setSelectedDate] = useState(new Date());
-        return (
-            <>
-            <div>
-                <h1>Reservar Online</h1>
-                <DatePicker
-                showIcon
-                toggleCalendarOnIconClick
-                selected={selectedDate}
-                onChange={(date) => setSelectedDate(date)}
-            />
-            </div>
-            </>
+    const [startDate, setStartDate] = useState(
+        setHours(setMinutes(new Date(), 0), 9),
         );
+        const filterPassedTime = (time) => {
+            const currentDate = new Date();
+            const selectedDate = new Date(time);
+        
+            return currentDate.getTime() < selectedDate.getTime();
+        };
+        return (
+            <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            showTimeSelect
+            filterTime={filterPassedTime}
+            dateFormat="MMMM d, yyyy h:mm aa"
+            />
+    );
     };
-    
 
 export default ReservarOnline;
+

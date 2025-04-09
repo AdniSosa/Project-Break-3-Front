@@ -25,7 +25,7 @@ const Contacto = () => {
         <p><strong>Email</strong> contacto@tova.com</p>
         <p><strong>Teléfono</strong> 654 00 00 00</p>
         <p><strong>Dirección</strong> Av. de la Industria 65, 28760 Tres Cantos-Madrid</p>
-        <p><strong>Nuestro horario</strong> Lunes a Sábados de 10:00 AM a 8:00 PM</p>
+        <p><strong>Nuestro horario</strong> Lunes a Viernes de 10:00 AM a 8:00 PM</p>
       </div>
       <div>
         <h2>Envíanos un mensaje para resolver cualquier duda</h2>
