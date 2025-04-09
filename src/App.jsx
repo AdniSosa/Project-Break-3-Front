@@ -11,8 +11,9 @@ import New from "./pages/New";
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Logout from './components/Logout';
-import NavBar from "./components/NavBar";
+import NavBar from './components/NavBar';
 import './App.css';
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} //la propiedad "replace" evitará redirecciones adicionales después de que el usuario haga clic en "atrás" 
           />
         </Routes>
+      <Footer/>
     </Router>
   );
 }
