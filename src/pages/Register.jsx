@@ -30,7 +30,7 @@ const Register = () => {
                     if(!response.ok) throw new Error (`There was a problem with the registration`);
                     
                     navigate('/login')
-                   
+
             } catch (error) {
                 console.error(error)
             }
