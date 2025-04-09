@@ -6,7 +6,7 @@ import TratamientosFaciales from "./components/TratamientosFaciales";
 import TratamientosCorporales from "./components/TratamientosCorporales";
 import Inicio from "./pages/Inicio";
 import RegalaTova from "./pages/RegalaTova";
-import ReservaOnline from "./pages/ReservaOnline";
+import ReservarOnline from "./pages/ReservarOnline";
 import New from "./pages/New";
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -25,7 +25,7 @@ function App() {
           <Route path="/tratamientos-corporales" element={<TratamientosCorporales />} />
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/regala-tova" element={<RegalaTova />} />
-          <Route path="/reserva-online" element={<ReservaOnline />} />
+          <Route path="/reservar-online" element={<ReservarOnline />} />
           <Route path="/new" element={<New />} />
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
