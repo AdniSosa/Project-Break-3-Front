@@ -40,3 +40,24 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+/* Ocultar horas fuera del rango 10:00-14:00 y 16:00-20:00 
+.react-datepicker__time-list-item[data-time="14:00"],
+.react-datepicker__time-list-item[data-time="15:00"]{
+  display: none;
+}
+
+.react-datepicker__time-list-item[data-time="10:00"],
+.react-datepicker__time-list-item[data-time="11:00"],
+.react-datepicker__time-list-item[data-time="12:00"],
+.react-datepicker__time-list-item[data-time="13:00"],
+.react-datepicker__time-list-item[data-time="14:00"],
+.react-datepicker__time-list-item[data-time="16:00"],
+.react-datepicker__time-list-item[data-time="17:00"],
+.react-datepicker__time-list-item[data-time="18:00"],
+.react-datepicker__time-list-item[data-time="19:00"]
+.react-datepicker__time-list-item[data-time="20:00"]  {
+  display: block;
+}*/

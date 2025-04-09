@@ -65,7 +65,7 @@ const RegalaTova = () => {
             <div>
                 <label>Teléfono</label>
                 <input 
-                type='telefono'
+                type='tel'
                 id='telefono'
                 name='telefono'
                 value={formRegala.telefono}
@@ -84,6 +84,7 @@ const RegalaTova = () => {
                 />
                 <a>Pregúntanos lo que quieras</a>
             </div>
+            
             <button type="submit">Enviar</button>
             </form>
         </>
