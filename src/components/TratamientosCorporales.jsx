@@ -3,13 +3,16 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import EditButton from './EditButton';
+import useLoggedUser from "../hooks/useLoggedUser"
 
 const TratamientosCorporales = () => {
+    const {userLogged} = useLoggedUser();
     const [tratamientosCorporales, setTratamientosCorporales] = useState([]);
     
     const getTratamientosCorporales = async () => {
         try {
-            const response = await fetch('http://localhost:3000/tratamientos-corporales');
+            const response = await fetch(`${import.meta.env.VITE_URL_API}/tratamientos-corporales`);
            // const response = await fetch(`http://localhost:3000/${tratamientosCorporales}`);
             if (!response.ok) throw new Error("Tratamientos no encontrados");
             const data = await response.json();
@@ -37,6 +40,7 @@ const TratamientosCorporales = () => {
                         <p>Precio: {tratamientoCorporal.price} €</p>
                         <Link to='/reservar-online'>Reserva tu cita</Link>
                         <a href={tratamientoCorporal.explorer}>Más información</a>
+                        {!userLogged ? null : <EditButton id={tratamientoCorporal._id}/>}
                     </div>
                 ))}
             </div>

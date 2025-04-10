@@ -1,8 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import EditButton from './EditButton';
+import useLoggedUser from "../hooks/useLoggedUser"
 
 const TratamientosFaciales = () => {
+    const {userLogged} = useLoggedUser();
     const [tratamientosFaciales, setTratamientosFaciales] = useState([]);
     
     const getTratamientosFaciales = async () => {
@@ -35,6 +38,7 @@ const TratamientosFaciales = () => {
                         <p>Precio: {tratamientoFacial.price} €</p>
                         <Link to='/reservar-online'>Reserva tu cita</Link>
                         <a href={tratamientoFacial.explorer}>Más información</a>
+                        {!userLogged ? null : <EditButton id={tratamientoFacial._id}/>}
                     </div>
                 ))}
             </div>
