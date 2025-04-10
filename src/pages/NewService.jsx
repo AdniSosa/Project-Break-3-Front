@@ -2,7 +2,7 @@ import { useState } from "react";
 import Input from "../components/InputAdmin";
 import Select from "../components/SelectAdmin";
 
-const New = () => {
+const NewService = () => {
     const [image, setImage] = useState('')
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
@@ -13,7 +13,7 @@ const New = () => {
     const [createdService, setCreatedService] = useState('');
     const treatments = ['Elige una opción: ', 'tratamiento facial', 'Tratamiento corporal']
 
-    const newService = async (e) => {
+    const createService = async (e) => {
         e.preventDefault()
         try {
             const response = await fetch(`${import.meta.env.VITE_URL_API}/create`,
@@ -23,6 +23,7 @@ const New = () => {
                         'Content-Type': 'application/json', // Indicamos que el contenido es JSON
                     },
                     body: JSON.stringify(payload), // Convertimos el payload de JS a JSON
+                    credentials: 'include',
                 })
 
             if (!response.ok) throw new Error(`The service couldn't be created`);
@@ -46,7 +47,7 @@ const New = () => {
 
                 <Select title={"Categoría"} name={"serviceCategory"} value={category}  onChange={(e) => setCategory(e.target.value)} options={treatments}/>
                
-                <button type="submit" onClick={newService}>Guardar</button>
+                <button type="submit" onClick={createService}>Guardar</button>
 
             </form>
             {createdService && <p>{createdService}</p>}
@@ -55,4 +56,4 @@ const New = () => {
     );
 };
 
-export default New;
+export default NewService;
