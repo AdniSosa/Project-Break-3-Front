@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobile } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 
 const Contacto = () => {
@@ -22,9 +27,16 @@ const Contacto = () => {
       <h1>Contacta con Tova, tu centro de estética</h1>
       <div>
         <h2>Visita nuestro centro en Madrid</h2>
+        <FontAwesomeIcon icon={faEnvelope}/>
         <p><strong>Email</strong> contacto@tova.com</p>
+        
+        <FontAwesomeIcon icon={faMobile}/>
         <p><strong>Teléfono</strong> 654 00 00 00</p>
+        
+        <FontAwesomeIcon icon={faLocationDot}/>
         <p><strong>Dirección</strong> Av. de la Industria 65, 28760 Tres Cantos-Madrid</p>
+        
+        <FontAwesomeIcon icon={faClock}/>
         <p><strong>Nuestro horario</strong> Lunes a Viernes de 10:00 AM a 8:00 PM</p>
       </div>
       <div>
