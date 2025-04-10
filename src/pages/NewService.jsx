@@ -50,7 +50,7 @@ const NewService = () => {
                 <button type="submit" onClick={createService}>Guardar</button>
 
             </form>
-            {createdService && <p>{createdService}</p>}
+            {createdService ? <p>{createdService}</p> : <p>El servicio no ha sido creado</p>}
 
         </>
     );

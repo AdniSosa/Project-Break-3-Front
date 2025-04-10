@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import { UserLoggedProvider } from "./contexts/UserLoggedContext";
+import isUserLogin from "./hooks/useLoggedUser";
 
 import Contacto from "./pages/Contacto";
 import TratamientosFaciales from "./components/TratamientosFaciales";
@@ -15,13 +17,16 @@ import NavBar from './components/NavBar';
 import './App.css';
 import Footer from "./components/Footer";
 import UpdateService from "./pages/UpdateService";
-
+import ProtectedRoutes from './components/ProtectedRoutes';
 
 function App() {
+  //const { userLogged } = useUserLogged();
+
   return (
-    <Router>
-      <NavBar />
-      <Logout />
+    <UserLoggedProvider>
+      <Router>
+        <NavBar />
+
         <Routes>
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/tratamientos-faciales" element={<TratamientosFaciales />} />
@@ -29,16 +34,19 @@ function App() {
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/regala-tova" element={<RegalaTova />} />
           <Route path="/reservar-online" element={<ReservarOnline />} />
-          <Route path="/new" element={<NewService />} />
-          <Route path="/update-service/:id" element={<UpdateService />} />
           <Route path='/' element={<Inicio />} />
+
+          <Route path="/new" element={<ProtectedRoutes><><NewService /> <Logout /></></ProtectedRoutes>} />
+          <Route path="/update-service/:id" element={<ProtectedRoutes><><UpdateService /> <Logout /></></ProtectedRoutes>} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path="*" element={<Navigate to="/" replace />} //la propiedad "replace" evitará redirecciones adicionales después de que el usuario haga clic en "atrás" 
           />
         </Routes>
-      <Footer/>
-    </Router>
+
+        <Footer />
+      </Router>
+    </UserLoggedProvider>
   );
 }
 

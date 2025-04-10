@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import useLoggedUser from "../hooks/useLoggedUser"
 
 const Logout = () => {
-    const navigate = useNavigate();
+    const {userLogged, userLogout} = useLoggedUser();
 
     const handleLogout = async () => {
         try {
@@ -9,16 +9,17 @@ const Logout = () => {
             method: 'POST',
             credentials: 'include', // para que mande la cookie
           });
-    
-          navigate('/');
+          
+          userLogout();
         } catch (error) {
           console.error('Error al cerrar sesión:', error);
         }
       };
     
-    return (
-        <button onClick={handleLogout}>Cierra sesión</button>
-    )
+      return(
+      <>{!userLogged ? null : <button onClick={handleLogout}>Cierra sesión</button>}</>
+      )
+    
 }
 
 export default Logout;
