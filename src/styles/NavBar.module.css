@@ -1,7 +1,4 @@
 .navbar{
-    background-image: linear-gradient(rgba(246, 233, 217, 0.6), rgba(248, 230, 210, 0.6)), url('https://img.freepik.com/foto-gratis/vista-lujoso-espacio-interior-hotel_23-2150683467.jpg');
-    background-size: cover;
-    background-position: center; 
     height: 500px;
     display: flex;
     justify-content: center;
@@ -16,17 +13,79 @@
 h1{
     font-size: 65px;
     position: absolute;
-    color: rgb(91, 90, 90);
-    top: 50%;  
+    color: #6c6c6c;;
+    top: 40%;  
     left: 50%;
     text-align: center;
     margin-top: 0;
     transform: translate(-50%, -50%);  
+    
+}
+h2{
+    font-size: 45px;
+    position: absolute;
+    display: flex;
+    color: #6c6c6c;;
+    top: 50%;  
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);  
+    
 }
 
-.navbar a , h2, h3 {
-    color: rgb(91, 90, 90);
+
+
+.navbar a , h3 {
+    color: #6c6c6c;
     font-size: 1.3rem; 
     text-decoration: none;
     font-weight: bold;
+}
+
+.banner{
+    position: relative;
+    overflow: hidden; /* Asegura que el texto no se desborde fuera del contenedor */
+    background-color: #7A7A7A;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fija el fondo */
+    height: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+.banner1{
+    position: absolute;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    animation: moveLeft 35s linear infinite; /* La animación hace que el texto se mueva lentamente */
+    color:#F4F0EB;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;;
+    
+
+}
+
+.regalaTova{
+    background: #D8C7B9;
+    height: 30px;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #7A7A7A;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
 }

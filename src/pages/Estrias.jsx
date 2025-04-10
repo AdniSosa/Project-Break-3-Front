@@ -5,7 +5,7 @@ const Estrias = () => {
   return (
       <>
         <div>
-          <h1>Bótox</h1>
+          <h1>Estrías</h1>
           <p></p>
         </div>
       </>

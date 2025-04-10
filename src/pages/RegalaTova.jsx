@@ -24,13 +24,16 @@ const RegalaTova = () => {
             <div className={styles.titulo}>
                 <h1>Regala Tova</h1>
             </div>
+
             <div className={styles.subtitulo}>
                 <p>Regala una experiencia totalmente personalizada para tu persona favorita.</p>
                 <p>Nosotros nos encargamos del resto.</p>   
             </div>
+
             <div className={styles.img}>
-            {/*<img src='https://img.freepik.com/foto-gratis/mujer-orgullosa-su-tarjeta_1098-2749.jpg?uid=R195384068&ga=GA1.1.1117630890.1730399903&semt=ais_country_boost&w=740'alt='regala-Tova' height={300} width={200}/>*/}
+            <img src='https://img.freepik.com/foto-gratis/mujer-orgullosa-su-tarjeta_1098-2749.jpg?uid=R195384068&ga=GA1.1.1117630890.1730399903&semt=ais_country_boost&w=740'alt='regala-Tova' height={300} width={200}/>
             </div>
+
             <div className={styles.form}>
                 <form onSubmit={handleSubmit} >
                     <div >

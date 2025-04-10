@@ -13,7 +13,7 @@ import styles from '../styles/Footer.module.css';
 const Footer = () => {
     return (
         <footer>
-            <h2>CONTACTO</h2>
+            <h3>CONTACTO</h3>
 
             <div className={styles.mail}>
             <FontAwesomeIcon icon={faEnvelope}/>
@@ -35,11 +35,11 @@ const Footer = () => {
             <span>Visítanos de Lunes a Viernes de 10:00 AM a 8:00 PM</span>
             </div>
 
-            <h2>INFORMACIÓN</h2>
+            <h3>INFORMACIÓN</h3>
             <Link to='/inicio'>Quiénes somos</Link>
             <Link to='/contacto'>Contacto</Link>
 
-            <h2>SÍGUENOS</h2>
+            <h3>SÍGUENOS</h3>
             <a href="https://www.instagram.com/tuusuario" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>

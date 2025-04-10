@@ -5,9 +5,9 @@ const Inicio = () => {
     return (
     <>
         <div className={styles.inicio}> 
-            <h1>Tova Bienestar y Autocuidado</h1>
-            <h2>Tu refugio de bienestar en Madrid</h2>
-        </div>  
+            <h1>Tova</h1>   
+            <h2 className="subtitulo">Centro de Bienestar & Autocuidado</h2>
+        </div> 
         <div> 
             <p>Como bien dice su significado, Tova significa: llena de bienestar. ¡Y eso es exactamente lo que queremos que sientas con nosotros!</p>
             <p>En Tova estamos deseando conocerte y ofrecerte productos y tratamientos personalizados que se adapten a tus necesidades y estilo de vida.Queremos que tu inversión sea un acto de cuidado personal.</p>
