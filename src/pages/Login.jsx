@@ -2,12 +2,14 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
+import useLoggedUser from "../hooks/useLoggedUser"
 
 
 const Login = () => {
-
+    const {isUserLogin} = useLoggedUser();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -17,6 +19,8 @@ const Login = () => {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
             const idToken = await user.getIdToken();
+            console.log(user)
+           
 
             const response = await fetch(`${import.meta.env.VITE_URL_API}/login`,
                 {
@@ -28,15 +32,20 @@ const Login = () => {
                     credentials: 'include'
                 })
 
-            if (!response.ok) throw new Error(`There was a problem with the login in the backend`);
+            if (!response.ok) throw new Error(`There was a problem with the login in the backend`)
             
+            isUserLogin(idToken);
             navigate('/admin');
 
         } catch (error) {
             console.error('Login error: ', error)
+            setMessage('Usuario y/o contraseña incorrectos')
         }
-
     }
+
+    const detectClick = () => {
+        setMessage('')
+    }  
 
     return (
         <>
@@ -47,6 +56,7 @@ const Login = () => {
                     placeholder='Ingresa tu correo electrónico'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    onClick={() => detectClick()}
                     required
                 />
                 <input
@@ -60,6 +70,8 @@ const Login = () => {
 
             </form>
             <p>¿No estás registrado? <Link to='/register'>Regístrate aquí</Link></p>
+
+            {message && <p>{message}</p>}
         </>
     )
 }
