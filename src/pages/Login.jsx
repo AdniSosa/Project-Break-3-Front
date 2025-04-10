@@ -23,9 +23,9 @@ const Login = () => {
                     method: 'POST', // Método HTTP
                     headers: {
                         'Content-Type': 'application/json', // Indicamos que el contenido es JSON
-                        Authorization: `Bearer ${idToken}`,
-                        credentials: 'include'
                     },
+                     body: JSON.stringify({ token: idToken }),
+                    credentials: 'include'
                 })
 
             if (!response.ok) throw new Error(`There was a problem with the login in the backend`);
