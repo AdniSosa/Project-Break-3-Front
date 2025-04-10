@@ -7,22 +7,33 @@ import { faMobile } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
+import styles from '../styles/Footer.module.css';
+
 
 const Footer = () => {
     return (
         <footer>
             <h2>CONTACTO</h2>
+
+            <div className={styles.mail}>
             <FontAwesomeIcon icon={faEnvelope}/>
-            <p><strong>Email</strong> contacto@tova.com</p>
+            <span>contacto@tova.com</span>
+            </div>
 
-            <FontAwesomeIcon icon={faMobile}/>
-            <p><strong>Teléfono</strong> 654 00 00 00</p>
+            <div className={styles.telefono}>
+            <FontAwesomeIcon icon={faMobile} />
+            <span>654 00 00 00</span>
+            </div>
 
+            <div className={styles.direccion}>
             <FontAwesomeIcon icon={faLocationDot}/>
-            <p><strong>Dirección</strong> Av. de la Industria 65, 28760 Tres Cantos-Madrid</p>
+            <span>Av. de la Industria 65, 28760 Tres Cantos-Madrid</span>
+            </div>
 
+            <div className={styles.horario}>
             <FontAwesomeIcon icon={faClock}/>
-            <p><strong>Nuestro horario</strong> Lunes a Viernes de 10:00 AM a 8:00 PM</p>
+            <span>Visítanos de Lunes a Viernes de 10:00 AM a 8:00 PM</span>
+            </div>
 
             <h2>INFORMACIÓN</h2>
             <Link to='/inicio'>Quiénes somos</Link>

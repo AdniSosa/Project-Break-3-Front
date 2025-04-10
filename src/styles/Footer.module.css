@@ -1,0 +1,14 @@
+.styles_mail,
+.styles_telefono,
+.styles_direccion,
+.styles_horario {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    color: #333;
+    font-family: 'Lora', serif;
+    /* vertical-align: middle;*/
+    justify-content: center; 
+}
+

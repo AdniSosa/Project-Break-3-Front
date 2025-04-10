@@ -4,7 +4,7 @@ import { faMobile } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
-
+import styles from '../styles/Contacto.module.css';
 
 const Contacto = () => {
   const [formData, setFormData] = useState({
@@ -27,18 +27,26 @@ const Contacto = () => {
       <h1>Contacta con Tova, tu centro de estética</h1>
       <div>
         <h2>Visita nuestro centro en Madrid</h2>
-        <FontAwesomeIcon icon={faEnvelope}/>
-        <p><strong>Email</strong> contacto@tova.com</p>
+          <div className={styles.mail}>
+            <FontAwesomeIcon icon={faEnvelope}/>
+          <span>contacto@tova.com</span>
+          </div>
         
-        <FontAwesomeIcon icon={faMobile}/>
-        <p><strong>Teléfono</strong> 654 00 00 00</p>
+          <div className={styles.telefono}>
+            <FontAwesomeIcon icon={faMobile} />
+            <span>654 00 00 00</span>
+          </div>         
         
-        <FontAwesomeIcon icon={faLocationDot}/>
-        <p><strong>Dirección</strong> Av. de la Industria 65, 28760 Tres Cantos-Madrid</p>
+          <div className={styles.direccion}>
+            <FontAwesomeIcon icon={faLocationDot}/>
+            <span>Av. de la Industria 65, 28760 Tres Cantos-Madrid</span>
+          </div>
         
-        <FontAwesomeIcon icon={faClock}/>
-        <p><strong>Nuestro horario</strong> Lunes a Viernes de 10:00 AM a 8:00 PM</p>
-      </div>
+          <div className={styles.horario}>
+            <FontAwesomeIcon icon={faClock}/>
+            <span>Visítanos de Lunes a Viernes de 10:00 AM a 8:00 PM</span>
+          </div>
+      </div>   
       <div>
         <h2>Envíanos un mensaje para resolver cualquier duda</h2>
         <form onSubmit={handleSubmit}>

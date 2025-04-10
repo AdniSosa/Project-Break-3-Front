@@ -1,14 +1,14 @@
 import React from 'react';
+import styles from '../styles/Inicio.module.css';
 
 const Inicio = () => {
     return (
     <>
-        <div>
-            <h1>Centro de Estética Tova</h1>
-            <h2>Tu centro de autocuidado en Madrid</h2>
+        <div className={styles.inicio}> 
+            <h1>Tova Bienestar y Autocuidado</h1>
+            <h2>Tu refugio de bienestar en Madrid</h2>
         </div>  
         <div> 
-            <h3>Tova Bienestar y Autocuidado en Madrid: Tu refugio de bienestar</h3>
             <p>Como bien dice su significado, Tova significa: llena de bienestar. ¡Y eso es exactamente lo que queremos que sientas con nosotros!</p>
             <p>En Tova estamos deseando conocerte y ofrecerte productos y tratamientos personalizados que se adapten a tus necesidades y estilo de vida.Queremos que tu inversión sea un acto de cuidado personal.</p>
             <p>Trabajamos con productos de ingredientes naturales, y nos mantenemos en constante formación, siempre apostando por las últimas tendencias y buscando lo mejor para ti en cada detalle.</p>

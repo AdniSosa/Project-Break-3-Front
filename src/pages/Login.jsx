@@ -24,7 +24,7 @@ const Login = () => {
                     headers: {
                         'Content-Type': 'application/json', // Indicamos que el contenido es JSON
                     },
-                     body: JSON.stringify({ token: idToken }),
+                    body: JSON.stringify({ token: idToken }),
                     credentials: 'include'
                 })
 
