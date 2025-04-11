@@ -51,13 +51,14 @@ button {
   transition: 0.3s;
 }
 
-h1, h2, h3 {
-  font-family: 'Cormorant Garamond', serif;
+h1, h2{
+  font-family: 'Playfair Display', serif;
   letter-spacing: 1px;
+  
 }
 
 p, a, span {
-  font-family: 'Lora', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 

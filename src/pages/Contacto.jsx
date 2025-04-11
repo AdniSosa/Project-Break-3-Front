@@ -24,7 +24,7 @@ const Contacto = () => {
 
   return (
     <>
-      <h1>Contacta con Tova, tu centro de estética</h1>
+      <h2>Contacta con Tova, tu centro de estética</h2>
       <div>
         <h2>Visita nuestro centro en Madrid</h2>
           <div className={styles.mail}>
