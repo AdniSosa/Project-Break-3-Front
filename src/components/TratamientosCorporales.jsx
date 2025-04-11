@@ -4,13 +4,16 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import styles from '../styles/TratamientosCorporales.module.css';
+import EditButton from './EditButton';
+import useLoggedUser from "../hooks/useLoggedUser"
 
 const TratamientosCorporales = () => {
+    const {userLogged} = useLoggedUser();
     const [tratamientosCorporales, setTratamientosCorporales] = useState([]);
     
     const getTratamientosCorporales = async () => {
         try {
-            const response = await fetch('http://localhost:3000/tratamientos-corporales');
+            const response = await fetch(`${import.meta.env.VITE_URL_API}/tratamientos-corporales`);
            // const response = await fetch(`http://localhost:3000/${tratamientosCorporales}`);
             if (!response.ok) throw new Error("Tratamientos no encontrados");
             const data = await response.json();
@@ -34,14 +37,14 @@ const TratamientosCorporales = () => {
 
             <div className={styles.servicios}>
                 {tratamientosCorporales.map((tratamientoCorporal) => (
-                    <div key={tratamientoCorporal._id}className={styles.tratamiento}>
-                        <img src={tratamientoCorporal.image} alt={tratamientoCorporal.title}className={styles.img} />
-                        <a>{tratamientoCorporal.title}</a>
-                        <p>{tratamientoCorporal.duration}</p>
-                        <p>Desde {tratamientoCorporal.price} €</p>
-                        <Link to='/mas-info'>Más información</Link>
-                        <Link to='/reservar-online'className={styles.reservar}>Reserva tu cita</Link>
-                        
+                    <div key={tratamientoCorporal._id} className="service-detail">
+                        <img src={tratamientoCorporal.image} alt={tratamientoCorporal.title} />
+                        <h2>{tratamientoCorporal.title}</h2>
+                        <p>{tratamientoCorporal.description}</p>
+                        <p>Duración: {tratamientoCorporal.duration}</p>
+                        <p>Precio: {tratamientoCorporal.price} €</p>
+                        <Link to='/reservar-online'>Reserva tu cita</Link>
+                        <a href={tratamientoCorporal.explorer}>Más información</a>
                     </div>
                 ))}
             </div>

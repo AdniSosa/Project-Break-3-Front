@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import styles from '../styles/TratamientosFaciales.module.css';
 
 const TratamientosFaciales = () => {
+    const {userLogged} = useLoggedUser();
     const [tratamientosFaciales, setTratamientosFaciales] = useState([]);
     
     const getTratamientosFaciales = async () => {
@@ -32,14 +32,14 @@ const TratamientosFaciales = () => {
             
             <div className={styles.servicios}>
                 {tratamientosFaciales.map((tratamientoFacial) => (
-                    <div key={tratamientoFacial._id} className={styles.tratamiento}>
-                        <img src={tratamientoFacial.image} alt={tratamientoFacial.title}className={styles.img} />
-                        <a>{tratamientoFacial.title}</a>
-                        <p>{tratamientoFacial.duration}</p>
-                        <p>Desde {tratamientoFacial.price} €</p>
-                        <Link to='/mas-info'>Más información</Link>
-                        <Link to='/reservar-online'className={styles.reservar}>Reserva tu cita</Link>
-                        
+                    <div key={tratamientoFacial._id} className="service-detail">
+                        <img src={tratamientoFacial.image} alt={tratamientoFacial.title} />
+                        <h2>{tratamientoFacial.title}</h2>
+                        <p>{tratamientoFacial.description}</p>
+                        <p>Duración: {tratamientoFacial.duration}</p>
+                        <p>Precio: {tratamientoFacial.price} €</p>
+                        <Link to='/reservar-online'>Reserva tu cita</Link>
+                        <a href={tratamientoFacial.explorer}>Más información</a>
                     </div>
                 ))}
             </div>
