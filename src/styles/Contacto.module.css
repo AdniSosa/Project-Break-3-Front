@@ -77,7 +77,10 @@
 .mail,
 .mensaje{
     font-family: 'Open Sans', sans-serif;
-    color: #7d7b7c
+    color: #7d7b7c;
+    background-color: #F4F0EB;
+    border-radius: 10px;
+    border-color: #b5b4b5;
 }
 
 .mensaje{
