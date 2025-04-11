@@ -1,8 +1,6 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const EditButton = ({ id }) => {
-    //const { id } = useParams();
-    //const id2 = id.slice(1) --> por si lo necesitamos
     const navigate = useNavigate();
 
     return (

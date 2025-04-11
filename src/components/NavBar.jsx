@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
+import useLoggedUser from "../hooks/useLoggedUser"
 
 const NavBar = () => {
+    const {userLogged} = useLoggedUser();
     return (
         <nav>
-            <Link to='/inicio'>INICIO</Link>
+            {!userLogged ? <Link to='/inicio'>INICIO</Link> : <Link to='/admin'>INICIO</Link>}
             <Link to='/tratamientos-faciales'>FACIAL</Link>
             <Link to='/tratamientos-corporales'>CORPORAL</Link>
             <Link to='/botox'>BÓTOX</Link>

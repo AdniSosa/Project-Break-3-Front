@@ -1,7 +1,7 @@
 import useLoggedUser from "../hooks/useLoggedUser"
 
 const Logout = () => {
-    const {userLogged, userLogout} = useLoggedUser();
+    const {userLogout} = useLoggedUser();
 
     const handleLogout = async () => {
         try {
@@ -17,7 +17,7 @@ const Logout = () => {
       };
     
       return(
-      <>{!userLogged ? null : <button onClick={handleLogout}>Cierra sesión</button>}</>
+      <><button onClick={handleLogout}>Cierra sesión</button></>
       )
     
 }

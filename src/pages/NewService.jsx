@@ -3,15 +3,15 @@ import Input from "../components/InputAdmin";
 import Select from "../components/SelectAdmin";
 
 const NewService = () => {
-    const [image, setImage] = useState('')
-    const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
-    const [category, setCategory] = useState('')
-    const [price, setPrice] = useState('')
-    const [duration, setDuration] = useState('')
-    const payload = { image, title, description, category, price, duration }
+     const [payload, setPayload] = useState({ 
+        image : '', 
+        title: '', 
+        description: '', 
+        category: '', 
+        price: '', 
+        duration: '' })
     const [createdService, setCreatedService] = useState('');
-    const treatments = ['Elige una opción: ', 'tratamiento facial', 'Tratamiento corporal']
+    const treatments = ['Elige una opción: ', 'Tratamiento facial', 'Tratamiento corporal']
 
     const createService = async (e) => {
         e.preventDefault()
@@ -35,22 +35,27 @@ const NewService = () => {
         }
     }
 
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setPayload({ ...payload, [name]: value });
+      };
+
     return (
         <>
             <h1>Crear nuevo servicio</h1>
             <form>
-                <Input title={"URL de la imágen"} name={"serviceImg"} value={image}  onChange={(e) => setImage(e.target.value)}/>
-                <Input title={"Título"} name={"serviceTitle"} value={title}  onChange={(e) => setTitle(e.target.value)}/>
-                <Input title={"Descripción"} name={"serviceDescription"} value={description}  onChange={(e) => setDescription(e.target.value)}/>
-                <Input title={"Precio"} name={"servicePrice"} value={price}  onChange={(e) => setPrice(e.target.value)}/>
-                <Input title={"Duración"} name={"serviceDuration"} value={duration}  onChange={(e) => setDuration(e.target.value)}/>
+                <Input title={"URL de la imágen"} name={"image"} value={payload.image}  onChange={handleChange}/>
+                <Input title={"Título"} name={"title"} value={payload.title}  onChange={handleChange}/>
+                <Input title={"Descripción"} name={"description"} value={payload.description}  onChange={handleChange}/>
+                <Input title={"Precio"} name={"price"} value={payload.price}  onChange={handleChange}/>
+                <Input title={"Duración"} name={"duration"} value={payload.duration}  onChange={handleChange}/>
 
-                <Select title={"Categoría"} name={"serviceCategory"} value={category}  onChange={(e) => setCategory(e.target.value)} options={treatments}/>
+                <Select title={"Categoría"} name={"category"} value={payload.category}  onChange={handleChange} options={treatments}/>
                
                 <button type="submit" onClick={createService}>Guardar</button>
 
             </form>
-            {createdService ? <p>{createdService}</p> : <p>El servicio no ha sido creado</p>}
+            {createdService && <p>{createdService}</p>}
 
         </>
     );

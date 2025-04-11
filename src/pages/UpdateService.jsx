@@ -4,12 +4,8 @@ import Input from '../components/InputAdmin'
 import Select from '../components/SelectAdmin'
 
 const UpdateService = () => {
-    const [newImage, setNewImage] = useState('')
-    const [newTitle, setNewTitle] = useState('')
-    const [newDescription, setNewDescription] = useState('')
-    const [newCategory, setNewCategory] = useState('')
-    const [newPrice, setNewPrice] = useState('')
-    const [newDuration, setNewDuration] = useState('')
+    const [updatedService, setUpdatedService] = useState('');
+    const [treatment, setTreatment] = useState(null);
     const [payload, setPayload] = useState({ 
         image : '', 
         title: '', 
@@ -17,9 +13,8 @@ const UpdateService = () => {
         category: '', 
         price: '', 
         duration: '' })
-    const [updatedService, setUpdatedService] = useState('');
-    const treatments = ['Elige una opción: ', 'tratamiento facial', 'Tratamiento corporal']
-    const [treatment, setTreatment] = useState(null);
+    
+    const treatments = ['Elige una opción: ', 'Tratamiento facial', 'Tratamiento corporal']
     const { id } = useParams();
 
     const searchService = async () => {

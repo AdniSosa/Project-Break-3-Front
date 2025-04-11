@@ -4,11 +4,13 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import EditButton from './EditButton';
+import DeleteButton from './DeleteButton';
 import useLoggedUser from "../hooks/useLoggedUser"
 
 const TratamientosCorporales = () => {
     const {userLogged} = useLoggedUser();
     const [tratamientosCorporales, setTratamientosCorporales] = useState([]);
+    const [deletedService, setDeletedService] = useState('');
     
     const getTratamientosCorporales = async () => {
         try {
@@ -28,6 +30,13 @@ const TratamientosCorporales = () => {
             getTratamientosCorporales()
         }, [])
 
+        useEffect(() =>{
+            setTimeout(() => {
+                getTratamientosCorporales();
+                setDeletedService('')
+              }, 2000);
+        }, [deletedService])
+
         return (
             <div className="treatments-list">
                 <h1>Tratamientos Corporales</h1>
@@ -41,8 +50,11 @@ const TratamientosCorporales = () => {
                         <Link to='/reservar-online'>Reserva tu cita</Link>
                         <a href={tratamientoCorporal.explorer}>Más información</a>
                         {!userLogged ? null : <EditButton id={tratamientoCorporal._id}/>}
+                        {!userLogged ? null : <DeleteButton id={tratamientoCorporal._id} setDeletedService={setDeletedService} deletedService={deletedService} treatment={'tratamientos-corporales'}/>}
                     </div>
+                    
                 ))}
+                {deletedService && <p>{deletedService}</p>}
             </div>
         );
     };
