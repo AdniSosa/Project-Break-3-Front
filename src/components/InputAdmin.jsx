@@ -1,4 +1,4 @@
-const InputAdmin = ( {title, name, value, onChange}) => {
+const InputAdmin = ( {title, name, value, onChange, onClick}) => {
     return (
         <>
             <label htmlFor={name}>{title}: </label>
@@ -8,6 +8,7 @@ const InputAdmin = ( {title, name, value, onChange}) => {
                 name={name}
                 value={value}
                 onChange={onChange}
+                onClick={onClick}
                 required
             />
         </>

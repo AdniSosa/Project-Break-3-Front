@@ -4,22 +4,25 @@ import Input from '../components/InputAdmin'
 import Select from '../components/SelectAdmin'
 
 const UpdateService = () => {
-    const [image, setImage] = useState('')
-    const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
-    const [category, setCategory] = useState('')
-    const [price, setPrice] = useState('')
-    const [duration, setDuration] = useState('')
-    const payload = { image, title, description, category, price, duration }
-    const [createdService, setCreatedService] = useState('');
+    const [newImage, setNewImage] = useState('')
+    const [newTitle, setNewTitle] = useState('')
+    const [newDescription, setNewDescription] = useState('')
+    const [newCategory, setNewCategory] = useState('')
+    const [newPrice, setNewPrice] = useState('')
+    const [newDuration, setNewDuration] = useState('')
+    const [payload, setPayload] = useState({ 
+        image : '', 
+        title: '', 
+        description: '', 
+        category: '', 
+        price: '', 
+        duration: '' })
+    const [updatedService, setUpdatedService] = useState('');
     const treatments = ['Elige una opción: ', 'tratamiento facial', 'Tratamiento corporal']
     const [treatment, setTreatment] = useState(null);
     const { id } = useParams();
 
     const searchService = async () => {
-        
-        //const id2 = id.slice(1) --> por si lo necesitamos
-        //const navigate = useNavigate();
 
         try {
             const response = await fetch(`${import.meta.env.VITE_URL_API}/id/${id}`,
@@ -38,7 +41,6 @@ const UpdateService = () => {
             const data = await response.json();
             console.log(data)
             setTreatment(data)
-            //navigate('/update-service/:id')
 
         } catch (error) {
 
@@ -65,11 +67,30 @@ const UpdateService = () => {
             if (!response.ok) throw new Error(`The service couldn't be created`);
 
             const data = await response.json();
-            setCreatedService(`El servicio '${payload.title}' ha sido creado, en la categoría '${payload.category}'`)
+            setUpdatedService(`El servicio '${payload.title}' ha sido actualizado`)
         } catch (error) {
 
         }
     }
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setPayload({ ...payload, [name]: value });
+      };
+
+      useEffect(() => {
+        if (treatment) {
+            setPayload({
+                image: treatment.image,
+                title: treatment.title,
+                description: treatment.description,
+                category: treatment.category,
+                price: treatment.price,
+                duration: treatment.duration,
+            });
+        }
+    }, [treatment]);
+    
 
     return (
         <>
@@ -77,19 +98,19 @@ const UpdateService = () => {
             {treatment && 
             <form>
                
-                <Input title={"URL de la imágen"} name={"serviceImg"} value={treatment.image} onChange={(e) => setImage(e.target.value)} />
-                <Input title={"Título"} name={"serviceTitle"} value={treatment.title} onChange={(e) => setTitle(e.target.value)} />
-                <Input title={"Descripción"} name={"serviceDescription"} value={treatment.description} onChange={(e) => setDescription(e.target.value)} />
-                <Input title={"Precio"} name={"servicePrice"} value={treatment.price} onChange={(e) => setPrice(e.target.value)} />
-                <Input title={"Duración"} name={"serviceDuration"} value={treatment.duration} onChange={(e) => setDuration(e.target.value)} />
+                <Input title={"URL de la imágen"} name={"image"} value={payload.image} onChange={handleChange} />
+                <Input title={"Título"} name={"title"} value={payload.title} onChange={handleChange} />
+                <Input title={"Descripción"} name={"description"} value={payload.description} onChange={handleChange} />
+                <Input title={"Precio"} name={"price"} value={payload.price} onChange={handleChange} />
+                <Input title={"Duración"} name={"duration"} value={payload.duration} onChange={handleChange} />
 
-                <Select title={"Categoría"} name={"serviceCategory"} value={treatment.category} onChange={(e) => setCategory(e.target.value)} options={treatments} />
+                <Select title={"Categoría"} name={"category"} value={payload.category} onChange={handleChange} options={treatments} />
 
                 <button type="submit" onClick={editService}>Guardar</button>
 
             </form>
         }
-            {createdService && <p>{createdService}</p>}
+            {updatedService && <p>{updatedService}</p>}
 
         </>
     );
