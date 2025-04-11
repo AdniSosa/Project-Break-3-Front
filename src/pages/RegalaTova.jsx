@@ -33,8 +33,7 @@ const RegalaTova = () => {
 
             <div className={styles.form}>
                 <form onSubmit={handleSubmit} >
-                    <div >
-                        <label>Cantidad</label>
+                    <div className={styles.importe}>
                         <select
                         id="importe"
                         name="importe"
@@ -48,8 +47,8 @@ const RegalaTova = () => {
                             <option value={250}>250€</option>
                         </select>
                     </div>
-                    <div>
-                        <label>Nombre y apellidos de la persona regalada</label>
+                    <div className={styles.nombre}>
+                        <label>Nombre y apellidos de la persona regalada:</label>
                         <input
                         type='text'
                         id='nombre'
@@ -59,8 +58,8 @@ const RegalaTova = () => {
                         required
                         />
                     </div>
-                    <div>
-                        <label>Escribe tu dedicatoria, si lo deseas</label>
+                    <div className={styles.dedicatoria}>
+                        <label>Escribe tu dedicatoria, si lo deseas:</label>
                         <textarea
                         id="mensaje"
                         name="mensaje"
@@ -68,8 +67,9 @@ const RegalaTova = () => {
                         onChange={handleChange}
                         />
                     </div>
-                    <div>
-                        <label>Teléfono</label>
+
+                    <div className={styles.telefono}>
+                        <label>Teléfono:</label>
                         <input 
                         type='tel'
                         id='telefono'
@@ -80,8 +80,8 @@ const RegalaTova = () => {
                         />
                         <a>Inserta tu número de teléfono por si te tuviéramos que consultar algo</a>
                     </div>
-                    <div>
-                        <label>Observaciones</label>
+
+                    <div className={styles.observaciones}>
                         <textarea
                         id="observaciones"
                         name="observaciones"

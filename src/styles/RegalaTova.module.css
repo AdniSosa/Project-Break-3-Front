@@ -54,3 +54,24 @@ form {
 label{
     margin-right: 15px;
 }
+
+.importe,
+.nombre,
+.dedicatoria,
+.telefono,
+.obeservaciones{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    color: #7d7b7c
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fff;
+}
