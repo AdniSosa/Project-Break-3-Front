@@ -37,8 +37,9 @@ const TratamientosFaciales = () => {
                         <a>{tratamientoFacial.title}</a>
                         <p>{tratamientoFacial.duration}</p>
                         <p>Desde {tratamientoFacial.price} €</p>
-                        <Link to='/reservar-online'>Reserva tu cita</Link>
                         <Link to='/mas-info'>Más información</Link>
+                        <Link to='/reservar-online'className={styles.reservar}>Reserva tu cita</Link>
+                        
                     </div>
                 ))}
             </div>

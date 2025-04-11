@@ -38,7 +38,7 @@ function App() {
           <Route path="/reservar-online" element={<ReservarOnline />} />
           <Route path='/' element={<Inicio />} />
           <Route path='/estrias' element={<Estrias />} />
-          <Route path='/Acmella-Oleracea' element={<AcmellaOleracea/>} />
+          <Route path='/acmella-oleracea' element={<AcmellaOleracea/>} />
 
           <Route path="/new" element={<ProtectedRoutes><><NewService /> <Logout /></></ProtectedRoutes>} />
           <Route path="/update-service/:id" element={<ProtectedRoutes><><UpdateService /> <Logout /></></ProtectedRoutes>} />

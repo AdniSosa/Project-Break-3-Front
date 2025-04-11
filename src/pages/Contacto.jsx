@@ -24,12 +24,12 @@ const Contacto = () => {
 
   return (
     <>
-      <div className={styles.contacto}>
+      <div className={styles.titulo}>
         <h1>Contacta con Tova</h1>
         <h2>Centro de Bienestar & Autocuidado</h2>
       </div>
 
-      <div className={styles.contacto2}>
+      <div className={styles.contacto}>
 
         <div className={styles.datos}>
           <h3 className={styles.subtitulo}>Visita nuestro centro en Madrid</h3>
@@ -71,7 +71,7 @@ const Contacto = () => {
         <h3 className={styles.subtitulo}>Escríbenos y resolveremos tu duda</h3>
         <form onSubmit={handleSubmit}>
           <div>
-            <input
+            <input className={styles.nombre}
               type="text"
               id="nombre"
               name="nombre"
@@ -82,7 +82,7 @@ const Contacto = () => {
             />
           </div>
           <div>
-            <input
+            <input  className={styles.mail}
               type="email"
               id="correo"
               name="correo"
@@ -93,7 +93,7 @@ const Contacto = () => {
             />
           </div>
           <div>
-            <textarea
+            <textarea  className={styles.mensaje}
               id="mensaje"
               name="mensaje"
               value={formData.mensaje}

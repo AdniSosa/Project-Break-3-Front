@@ -12,8 +12,8 @@ const NavBar = () => {
             <Link to='/inicio'>INICIO</Link>
             <Link to='/tratamientos-faciales'>FACIAL</Link>
             <Link to='/tratamientos-corporales'>CORPORAL</Link>
-            <Link to='/Acmella Oleracea'>ACMELLA OLERACEA</Link>
-            <Link to='/laser'>ESTRÍAS</Link>
+            <Link to='/acmella-oleracea'>ACMELLA OLERACEA</Link>
+            <Link to='/estrias'>ESTRÍAS</Link>
             <Link to='/contacto'>CONTACTO</Link>
             <Link to='/reservar-online'>RESERVAR ONLINE</Link>
             <div className={styles.regalaTova}>
@@ -25,3 +25,4 @@ const NavBar = () => {
 }
 
 export default NavBar;
+

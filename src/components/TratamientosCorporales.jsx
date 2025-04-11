@@ -39,8 +39,9 @@ const TratamientosCorporales = () => {
                         <a>{tratamientoCorporal.title}</a>
                         <p>{tratamientoCorporal.duration}</p>
                         <p>Desde {tratamientoCorporal.price} €</p>
-                        <Link to='/reservar-online'>Reserva tu cita</Link>
                         <Link to='/mas-info'>Más información</Link>
+                        <Link to='/reservar-online'className={styles.reservar}>Reserva tu cita</Link>
+                        
                     </div>
                 ))}
             </div>
