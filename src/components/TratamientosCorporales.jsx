@@ -5,11 +5,13 @@ import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import styles from '../styles/TratamientosCorporales.module.css';
 import EditButton from './EditButton';
+import DeleteButton from './DeleteButton';
 import useLoggedUser from "../hooks/useLoggedUser"
 
 const TratamientosCorporales = () => {
     const {userLogged} = useLoggedUser();
     const [tratamientosCorporales, setTratamientosCorporales] = useState([]);
+    const [deletedService, setDeletedService] = useState('');
     
     const getTratamientosCorporales = async () => {
         try {
@@ -29,6 +31,13 @@ const TratamientosCorporales = () => {
             getTratamientosCorporales()
         }, [])
 
+        useEffect(() =>{
+            setTimeout(() => {
+                getTratamientosCorporales();
+                setDeletedService('')
+            }, 2000);
+        }, [deletedService])
+
         return (
             <>
             <div className={styles.corporales}>
@@ -45,8 +54,11 @@ const TratamientosCorporales = () => {
                         <p>Precio: {tratamientoCorporal.price} €</p>
                         <Link to='/reservar-online'>Reserva tu cita</Link>
                         <a href={tratamientoCorporal.explorer}>Más información</a>
+                        {!userLogged ? null : <DeleteButton id={tratamientoCorporal._id} setDeletedService={setDeletedService} deletedService={deletedService} treatment={'tratamientos-corporales'}/>}
                     </div>
+                    
                 ))}
+                {deletedService && <p>{deletedService}</p>}
             </div>
             </>
         );

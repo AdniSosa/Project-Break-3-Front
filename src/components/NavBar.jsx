@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import styles from '../styles/NavBar.module.css';
 
+import useLoggedUser from "../hooks/useLoggedUser"
 
 const NavBar = () => {
+    const {userLogged} = useLoggedUser();
     return (
         <>
         <div className={styles.banner}>
@@ -10,6 +12,9 @@ const NavBar = () => {
         </div>
         <nav className={styles.navbar}>
             <Link to='/inicio'>INICIO</Link>
+        </nav>   
+        <nav>
+            {!userLogged ? <Link to='/inicio'>INICIO</Link> : <Link to='/admin'>INICIO</Link>}
             <Link to='/tratamientos-faciales'>FACIAL</Link>
             <Link to='/tratamientos-corporales'>CORPORAL</Link>
             <Link to='/acmella-oleracea'>ACMELLA OLERACEA</Link>

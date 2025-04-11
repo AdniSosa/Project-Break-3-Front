@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import { UserLoggedProvider } from "./contexts/UserLoggedContext";
-import isUserLogin from "./hooks/useLoggedUser";
+import useUserLogged from "./hooks/useLoggedUser";
 
 import Contacto from "./pages/Contacto";
 import TratamientosFaciales from "./components/TratamientosFaciales";
@@ -12,13 +12,14 @@ import Estrias from "./pages/Estrias";
 import RegalaTova from "./pages/RegalaTova";
 import ReservarOnline from "./pages/ReservarOnline";
 import NewService from "./pages/NewService";
+import UpdateService from "./pages/UpdateService";
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Logout from './components/Logout';
+import NewButton from "./components/NewButton";
 import NavBar from './components/NavBar';
 import './App.css';
 import Footer from "./components/Footer";
-import UpdateService from "./pages/UpdateService";
 import ProtectedRoutes from './components/ProtectedRoutes';
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
           <Route path='/estrias' element={<Estrias />} />
           <Route path='/acmella-oleracea' element={<AcmellaOleracea/>} />
 
+          <Route path='/admin' element={<ProtectedRoutes><><Inicio /> <NewButton /> <Logout /></></ProtectedRoutes>} />
           <Route path="/new" element={<ProtectedRoutes><><NewService /> <Logout /></></ProtectedRoutes>} />
           <Route path="/update-service/:id" element={<ProtectedRoutes><><UpdateService /> <Logout /></></ProtectedRoutes>} />
           <Route path='/login' element={<Login />} />
