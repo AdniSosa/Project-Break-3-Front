@@ -18,6 +18,7 @@ import Register from './pages/Register';
 import Logout from './components/Logout';
 import NewButton from "./components/NewButton";
 import NavBar from './components/NavBar';
+import NavBarAdmin from "./components/NavBarAdmin";
 import './App.css';
 import Footer from "./components/Footer";
 import ProtectedRoutes from './components/ProtectedRoutes';
@@ -39,10 +40,23 @@ function App() {
           <Route path="/reservar-online" element={<ReservarOnline />} />
           <Route path='/' element={<Inicio />} />
           <Route path='/estrias' element={<Estrias />} />
-          <Route path='/acmella-oleracea' element={<AcmellaOleracea/>} />
+          <Route path='/acmella-oleracea' element={<AcmellaOleracea />} />
 
-          <Route path='/admin' element={<ProtectedRoutes><><Inicio /> <NewButton /> <Logout /></></ProtectedRoutes>} />
-          <Route path="/new" element={<ProtectedRoutes><><NewService /> <Logout /></></ProtectedRoutes>} />
+          <Route path='/admin' element={
+            <ProtectedRoutes>
+              <>
+                <Inicio />
+                <NavBarAdmin />
+              </>
+            </ProtectedRoutes>}
+          />
+          <Route path="/new" element={
+            <ProtectedRoutes>
+              <>
+                <NewService />
+                <NavBarAdmin />
+              </>
+            </ProtectedRoutes>} />
           <Route path="/update-service/:id" element={<ProtectedRoutes><><UpdateService /> <Logout /></></ProtectedRoutes>} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
