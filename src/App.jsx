@@ -7,7 +7,7 @@ import Contacto from "./pages/Contacto";
 import TratamientosFaciales from "./components/TratamientosFaciales";
 import TratamientosCorporales from "./components/TratamientosCorporales";
 import Inicio from "./pages/Inicio";
-import Botox from "./pages/Botox";
+import AcmellaOleracea from "./pages/AcmellaOleracea";
 import Estrias from "./pages/Estrias";
 import RegalaTova from "./pages/RegalaTova";
 import ReservarOnline from "./pages/ReservarOnline";
@@ -38,7 +38,7 @@ function App() {
           <Route path="/reservar-online" element={<ReservarOnline />} />
           <Route path='/' element={<Inicio />} />
           <Route path='/estrias' element={<Estrias />} />
-          <Route path='/botox' element={<Botox />} />
+          <Route path='/Acmella-Oleracea' element={<AcmellaOleracea/>} />
 
           <Route path="/new" element={<ProtectedRoutes><><NewService /> <Logout /></></ProtectedRoutes>} />
           <Route path="/update-service/:id" element={<ProtectedRoutes><><UpdateService /> <Logout /></></ProtectedRoutes>} />

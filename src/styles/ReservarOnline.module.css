@@ -1,0 +1,9 @@
+.reserva{
+    background-image: linear-gradient(rgba(246, 233, 217, 0.6), rgba(248, 230, 210, 0.6)),
+    url('https://img.freepik.com/foto-gratis/toallas-bienvenida-decoradas-flores-plumeria_53876-16572.jpg?uid=R195384068&ga=GA1.1.1117630890.1730399903&semt=ais_hybrid&w=740');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15cm;
+    width: 100%;
+}

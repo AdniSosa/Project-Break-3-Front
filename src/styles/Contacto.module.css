@@ -1,0 +1,54 @@
+.contacto{
+    background-image: linear-gradient(rgba(246, 233, 217, 0.6), rgba(248, 230, 210, 0.6)), 
+    url('https://img.freepik.com/foto-gratis/concepto-spa-masaje-mujer_23-2147817020.jpg?uid=R195384068&ga=GA1.1.1117630890.1730399903&semt=ais_hybrid&w=740');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15cm;
+    width: 100%;
+}
+
+.form{
+    display: flex;
+    margin-top: 100px;
+}
+
+/*contenedor de los datos y el map*/
+.contacto2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+/*subcontenedor datos*/
+.datos {
+    flex: 1;
+    margin-top: 50px;
+}
+
+/*subcontenedor map*/
+.map{
+    display: flex;
+    margin-top: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+.contacto2 .mail,
+.contacto2 .telefono,
+.contacto2 .direccion,
+.contacto2 .horario {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 1rem;
+    color: #7d7b7c;
+    font-size: 19px;
+}
+
+.subtitulo{
+    font-size: 22px;
+    color: #7d7b7c
+}

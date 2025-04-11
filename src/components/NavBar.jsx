@@ -12,7 +12,7 @@ const NavBar = () => {
             <Link to='/inicio'>INICIO</Link>
             <Link to='/tratamientos-faciales'>FACIAL</Link>
             <Link to='/tratamientos-corporales'>CORPORAL</Link>
-            <Link to='/botox'>BÓTOX</Link>
+            <Link to='/Acmella Oleracea'>ACMELLA OLERACEA</Link>
             <Link to='/laser'>ESTRÍAS</Link>
             <Link to='/contacto'>CONTACTO</Link>
             <Link to='/reservar-online'>RESERVAR ONLINE</Link>

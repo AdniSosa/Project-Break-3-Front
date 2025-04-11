@@ -3,7 +3,7 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from 'react';
 import {getDay} from "date-fns";
-
+import styles from '../styles/ReservarOnline.module.css';
 
 const ReservarOnline = () => {
     const [startDate, setStartDate] = useState(null);
@@ -42,22 +42,25 @@ const ReservarOnline = () => {
 
     return (
         <>
+        <div className={styles.reserva}>
+            <h1>Reserva tu tratamiento</h1>
+        </div>
         <DatePicker
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
-        showTimeSelect
-        filterTime={filterTime} //Filtrar las horas permitidas y horas pasadas
-        dateFormat="d, MMMM , yyyy hh:mm aa"
-        withPortal // calendario se abre como en una pantalla
-        timeIntervals={60} // cada 1 hora
-        filterDate={isWeekday} //filtra sólo de lunes a viernes 
-        timeFormat="HH:mm"
-        placeholderText="Escoge tu cita"
-        showIcon//icono calendario
-        toggleCalendarOnIconClick//y que funcione al hacer click
-        //excludeTimes={} //bloquear citas agendadas
-        required
-        
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            showTimeSelect
+            filterTime={filterTime} //Filtrar las horas permitidas y horas pasadas
+            dateFormat="d, MMMM , yyyy hh:mm aa"
+            withPortal // calendario se abre como en una pantalla
+            timeIntervals={60} // cada 1 hora
+            filterDate={isWeekday} //filtra sólo de lunes a viernes 
+            timeFormat="HH:mm"
+            placeholderText="Escoge tu cita"
+            showIcon//icono calendario
+            toggleCalendarOnIconClick//y que funcione al hacer click
+            //excludeTimes={} //bloquear citas agendadas
+            required
+    
         />
         <form onSubmit={handleSubmit}>
             <div>
@@ -69,7 +72,7 @@ const ReservarOnline = () => {
                 required>
                     <option value="">Escoge tu tratamiento</option>
                     <option value="">Armonización facial</option>
-                    <option value="">Bótox</option>
+                    <option value="">Acmella Oleracea</option>
                     <option value="">Láser CO2 fraccionado</option>
                     <option value="">Limpieza Facial Detox Skin</option>
                     <option value="">Limpieza Facia Premium</option>
@@ -113,7 +116,7 @@ const ReservarOnline = () => {
             </div>
             
             <button type="submit">Agenda tu cita</button>
-            </form>
+            </form>  
         </>
     );
 };

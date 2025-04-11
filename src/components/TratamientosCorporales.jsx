@@ -3,6 +3,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import styles from '../styles/TratamientosCorporales.module.css';
 
 const TratamientosCorporales = () => {
     const [tratamientosCorporales, setTratamientosCorporales] = useState([]);
@@ -26,20 +27,24 @@ const TratamientosCorporales = () => {
         }, [])
 
         return (
-            <div className="treatments-list">
+            <>
+            <div className={styles.corporales}>
                 <h1>Tratamientos Corporales</h1>
+            </div>
+
+            <div className={styles.servicios}>
                 {tratamientosCorporales.map((tratamientoCorporal) => (
-                    <div key={tratamientoCorporal._id} className="service-detail">
-                        <img src={tratamientoCorporal.image} alt={tratamientoCorporal.title} />
-                        <h2>{tratamientoCorporal.title}</h2>
-                        <p>{tratamientoCorporal.description}</p>
-                        <p>Duración: {tratamientoCorporal.duration}</p>
-                        <p>Precio: {tratamientoCorporal.price} €</p>
+                    <div key={tratamientoCorporal._id}className={styles.tratamiento}>
+                        <img src={tratamientoCorporal.image} alt={tratamientoCorporal.title}className={styles.img} />
+                        <a>{tratamientoCorporal.title}</a>
+                        <p>{tratamientoCorporal.duration}</p>
+                        <p>Desde {tratamientoCorporal.price} €</p>
                         <Link to='/reservar-online'>Reserva tu cita</Link>
-                        <a href={tratamientoCorporal.explorer}>Más información</a>
+                        <Link to='/mas-info'>Más información</Link>
                     </div>
                 ))}
             </div>
+            </>
         );
     };
     

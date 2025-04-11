@@ -13,45 +13,52 @@ import styles from '../styles/Footer.module.css';
 const Footer = () => {
     return (
         <footer>
-            <h3>CONTACTO</h3>
+            <div className={styles.contenedorprincipal}>
+                <div className={styles.contacto}>
+                    <h3>CONTACTO</h3>
 
-            <div className={styles.mail}>
-            <FontAwesomeIcon icon={faEnvelope}/>
-            <span>contacto@tova.com</span>
+                    <div className={styles.mail}>
+                    <FontAwesomeIcon icon={faEnvelope} className={styles.icon}/>
+                    <span>contacto@tova.com</span>
+                    </div>
+
+                    <div className={styles.telefono}>
+                    <FontAwesomeIcon icon={faMobile} className={styles.icon} />
+                    <span>654 00 00 00</span>
+                    </div>
+
+                    <div className={styles.direccion}>
+                    <FontAwesomeIcon icon={faLocationDot} className={styles.icon}/>
+                    <span>Av. de la Industria 65, 28760 Tres Cantos-Madrid</span>
+                    </div>
+
+                    <div className={styles.horario}>
+                    <FontAwesomeIcon icon={faClock} className={styles.icon}/>
+                    <span>De lunes a viernes de 10:00h a 20:00h</span>
+                    </div>
+                </div>
+
+                <div className={styles.informacion}>
+                    <h3>INFORMACIÓN</h3>
+                    <Link to='/inicio'>Quiénes somos</Link>
+                    <Link to='/contacto'>Contacto</Link>
+                </div>
+
+                <div className={styles.siguenos}>
+                    <h3>SÍGUENOS</h3>
+                    <a href="https://www.instagram.com/tuusuario" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faInstagram} size="2x" />
+                    </a>
+
+                    <a href="https://www.facebook.com/tuusuario" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faFacebookF} size="2x" />
+                    </a>
+
+                    <a href="https://wa.me/34654000000" target="_blank" rel="noopener noreferrer" >
+                    <FontAwesomeIcon icon={faWhatsapp} size="2x" />
+                    </a>
+                </div>
             </div>
-
-            <div className={styles.telefono}>
-            <FontAwesomeIcon icon={faMobile} />
-            <span>654 00 00 00</span>
-            </div>
-
-            <div className={styles.direccion}>
-            <FontAwesomeIcon icon={faLocationDot}/>
-            <span>Av. de la Industria 65, 28760 Tres Cantos-Madrid</span>
-            </div>
-
-            <div className={styles.horario}>
-            <FontAwesomeIcon icon={faClock}/>
-            <span>Visítanos de Lunes a Viernes de 10:00 AM a 8:00 PM</span>
-            </div>
-
-            <h3>INFORMACIÓN</h3>
-            <Link to='/inicio'>Quiénes somos</Link>
-            <Link to='/contacto'>Contacto</Link>
-
-            <h3>SÍGUENOS</h3>
-            <a href="https://www.instagram.com/tuusuario" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faInstagram} size="2x" />
-            </a>
-
-            <a href="https://www.facebook.com/tuusuario" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faFacebookF} size="2x" />
-            </a>
-
-            <a href="https://wa.me/34654000000" target="_blank" rel="noopener noreferrer" >
-            <FontAwesomeIcon icon={faWhatsapp} size="2x" />
-            </a>
-
         </footer>
     )
 }

@@ -2,8 +2,49 @@
     background-image: linear-gradient(rgba(246, 233, 217, 0.6), rgba(248, 230, 210, 0.6)), url('https://img.freepik.com/foto-gratis/vista-lujoso-espacio-interior-hotel_23-2150683409.jpg?t=st=1744323833~exp=1744327433~hmac=e62899914d104ea133a79eec55eed96c47229153bed6332a15e2821c00375af7&w=1380');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     height: 15cm;
     width: 100%;
 }
+
+.info{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.info p {
+    margin-top: 50px;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.subtitulo {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #7d7b7c;
+    font-weight: 600;
+    margin-top: 80px;
+}
+
+.link{
+    background: #D8C7B9;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #7A7A7A;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    width: 250px;
+    margin: 25px auto; 
+    text-align: center;
+    margin-top: 60px;
+}
+
+
 
 

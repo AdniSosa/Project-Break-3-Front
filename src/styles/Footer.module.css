@@ -6,9 +6,48 @@
     align-items: center;
     gap: 20px;
     font-size: 16px;
-    color: #333;
+    color: #7d7b7c;
     font-family: 'Lora', serif;
-    /* vertical-align: middle;*/
     justify-content: center; 
 }
 
+.icon{
+    color: #7d7b7c;
+    margin-right: 10px;
+}
+
+.contacto, .informacion {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    text-align: center;       
+    gap: 1rem;           
+}
+
+.siguenos{
+    flex:1;
+    align-items: center;   
+    text-align: center;       
+}
+
+.contenedorprincipal{
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 20px;
+    flex-wrap: wrap; 
+    background-color: #f4f4f4; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+}
+
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .contactoInfoRedes {
+        flex-direction: column; /* En móviles, los bloques se apilan en columna */
+        gap: 15px;
+    }
+}
