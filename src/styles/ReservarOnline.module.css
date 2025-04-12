@@ -1,16 +1,19 @@
 .reserva{
-    background-image: linear-gradient(rgba(246, 233, 217, 0.6), rgba(248, 230, 210, 0.6)),
+    background-image: linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)),
     url('https://img.freepik.com/foto-gratis/toallas-bienvenida-decoradas-flores-plumeria_53876-16572.jpg?uid=R195384068&ga=GA1.1.1117630890.1730399903&semt=ais_hybrid&w=740');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 15cm;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .form{
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,24 +21,61 @@
 }
 
 form {
-    width: 600px;
-    background-color: #fef9f5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea todos los campos a la izquierda */
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0px 4px 20px rgb(91, 90, 90);;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px;
-    flex-wrap: wrap;
+    box-shadow: 0px 4px 20px rgba(91, 90, 90, 0.2);
+    gap: 1.5rem;
+    width: 500px;
 }
 
-input,
-select,
-textarea {
+form input,
+form select,
+form textarea{
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 16px;
-    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    color: #7d7b7c;
+    width: 450px;
 }
+
+.nombre,
+.telefono,
+.observaciones,
+.servicios{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    color: #7d7b7c;
+    width: 550px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.mensajeGracias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Clase para el contenedor principal */
+.calendario,.hora{
+    width: 150px;
+    padding: 10px;
+}
+
+
+
+
+label {
+    font-family: 'Open Sans', sans-serif;
+    color: #7d7b7c;
+}   

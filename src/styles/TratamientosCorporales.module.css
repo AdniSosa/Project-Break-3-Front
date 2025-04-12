@@ -1,12 +1,11 @@
 .corporales{
-    background-image: linear-gradient(rgba(246, 233, 217, 0.6), rgba(248, 230, 210, 0.6)),
+    background-image: linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)),
     url('https://img.freepik.com/foto-gratis/concepto-spa-mujer-vista-cerca_23-2147816923.jpg?uid=R195384068&ga=GA1.1.1117630890.1730399903&semt=ais_hybrid&w=740');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 15cm;
     width: 100%;
-    align-items: center;
 }
 
 
@@ -50,9 +49,10 @@
     color: #7A7A7A;
 }
 
-.reserva{
+.reserva,
+.boton{
     background: #D8C7B9;
-    height: 30px;
+    height: 25px;
     border: none;
     padding: 12px;
     border-radius: 10px;

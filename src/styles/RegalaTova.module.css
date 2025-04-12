@@ -1,5 +1,6 @@
+/*parte superior imagen navbar*/
 .regala {
-    background-image: linear-gradient(rgba(246, 233, 217, 0.6), rgba(248, 230, 210, 0.6)), 
+    background-image: linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)),
     url('https://img.freepik.com/foto-gratis/flay-lay-regalo-bodas_23-2148480743.jpg?uid=R195384068&ga=GA1.1.1117630890.1730399903&semt=ais_hybrid&w=740');
     background-position: center;
     background-repeat: no-repeat;
@@ -8,27 +9,14 @@
     width: 100%;
 }
 
-
-.titulo{
-    font-size: 65px;
-    position: absolute;
-    color: rgb(91, 90, 90);
-    top: 50%;  
-    left: 50%;
-    text-align:center;
-    justify-content: space-around;
-    margin-top: 0;
-    transform: translate(-50%, -50%);  
-    display: inline;
-}
-
+/*subtitulo debajo imagen*/
 .subtitulo{
     font-size: 25px;
     color: rgb(91, 90, 90);
     text-align: center;
-    margin-top: 100px;
 }
 
+/*contenedor form*/
 .form{
     margin-top: 100px;
     display: flex;
@@ -37,41 +25,50 @@
     padding: 2rem;
 }
 
+/*hijo contenendor*/
 form {
-    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea todos los campos a la izquierda */
     background-color: #fef9f5;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0px 4px 20px rgb(91, 90, 90);;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px; /* espacio entre el formulario y la imagen */
-    padding: 40px;
-    flex-wrap: wrap;
+    box-shadow: 0px 4px 20px rgba(91, 90, 90, 0.2);
+    gap: 1.5rem;
 }
 
-label{
-    margin-right: 15px;
-}
-
+/*cada uno de los items del form*/
 .importe,
 .nombre,
 .dedicatoria,
 .telefono,
-.obeservaciones{
+.observaciones{
     display: flex;
+    justify-content: left;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
-    color: #7d7b7c
+    color: #7d7b7c;
+    background-color: #fbfafa;
+    width: 550px;
+    font-family: 'Open Sans', sans-serif;
 }
 
-input,
-select,
-textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 16px;
-    background-color: #fff;
+
+/*texto pequeño debajo del recuadro blanco*/
+.form a {
+    font-size: 13px;
+    display: flex;
+    align-items: left;
 }
+
+/*mensaje que se muestra tras darle a enviar*/
+.mensajeGracias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+
