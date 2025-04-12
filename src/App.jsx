@@ -41,7 +41,7 @@ function App() {
           <Route path='/estrias' element={<Estrias />} />
           <Route path='/acmella-oleracea' element={<AcmellaOleracea/>} />
 
-          <Route path='/admin' element={<ProtectedRoutes><><Inicio /> <NewButton /> <Logout /></></ProtectedRoutes>} />
+          <Route path='/admin' element={<ProtectedRoutes><><Inicio /></></ProtectedRoutes>} />
           <Route path="/new" element={<ProtectedRoutes><><NewService /> <Logout /></></ProtectedRoutes>} />
           <Route path="/update-service/:id" element={<ProtectedRoutes><><UpdateService /> <Logout /></></ProtectedRoutes>} />
           <Route path='/login' element={<Login />} />

@@ -1,4 +1,5 @@
-import useLoggedUser from "../hooks/useLoggedUser"
+import useLoggedUser from "../hooks/useLoggedUser";
+import styles from '../styles/Logout.module.css'
 
 const Logout = () => {
     const {userLogout} = useLoggedUser();
@@ -17,7 +18,7 @@ const Logout = () => {
       };
     
       return(
-      <><button onClick={handleLogout}>Cierra sesión</button></>
+      <><button className={styles.button} onClick={handleLogout}>Cierra sesión</button></>
       )
     
 }

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from '../styles/NavBar.module.css';
-
+import NewButton from './NewButton';
+import Logout from './Logout';
 import useLoggedUser from "../hooks/useLoggedUser"
 
 const NavBar = () => {
@@ -17,10 +18,10 @@ const NavBar = () => {
             <Link to='/acmella-oleracea'>ACMELLA OLERACEA</Link>
             <Link to='/estrias'>ESTRÍAS</Link>
             <Link to='/contacto'>CONTACTO</Link>
-            <Link to='/reservar-online'>RESERVAR ONLINE</Link>
-            <div className={styles.regalaTova}>
-            <Link to='/regala-tova' >REGALA TOVA</Link>
-            </div>
+            {!userLogged ? <Link to='/reservar-online'>RESERVAR ONLINE</Link> : null}
+            
+            {!userLogged ? <div className={styles.regalaTova}><Link to='/regala-tova' >REGALA TOVA</Link></div> : (<div><NewButton /> <Logout/></div>)}
+            
         </nav>
         </>
     )
