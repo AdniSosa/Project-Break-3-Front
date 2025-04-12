@@ -66,16 +66,24 @@ form textarea{
     font-family: 'Playfair Display', serif;
 }
 
+
+label {
+    font-family: 'Open Sans', sans-serif;
+    color: #7d7b7c;
+}  
+
 /* Clase para el contenedor principal */
 .calendario,.hora{
     width: 150px;
     padding: 10px;
 }
 
-
-
-
-label {
-    font-family: 'Open Sans', sans-serif;
-    color: #7d7b7c;
-}   
+.customCalendar .react-datepicker__header {
+    height: 70px !important;  /* Asegura que el estilo se aplique */
+    line-height: 70px !important; /* Centrado del texto */
+    background-color: #f1c40f !important;  /* Color de fondo */
+    color: white !important;  /* Color de texto */
+    font-weight: bold !important;  /* Negrita */
+    font-size: 16px !important;  /* Tamaño de la fuente */
+    text-align: center !important;  /* Centrado del texto */
+}

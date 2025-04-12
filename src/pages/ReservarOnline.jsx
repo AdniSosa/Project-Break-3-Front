@@ -33,14 +33,14 @@ const ReservarOnline = () => {
         return day !== 0 && day !== 6;
     };
 
-    // Filtrar las horas permitidas (10:00-14:00 y 16:00-20:00) y restringir horas pasadas
+    /* Filtrar las horas permitidas (10:00-14:00 y 16:00-20:00) y restringir horas pasadas
     const filterTime = (time) => {
         const now = new Date();
         const hour = time.getHours();
         const isInValidRange = hour >= 10 && hour < 20;
         const isInFuture = time > now;
         return isInValidRange && isInFuture;
-    };
+    };*/
 
     return (
         <>
@@ -88,15 +88,15 @@ const ReservarOnline = () => {
                         />
                     </div>
 
-                    <div  >
-                    <DatePicker className={styles.calendario}
+                    <div>
+                        <DatePicker className={styles.calendario}
                         selected={startDate}
                         onChange={(date) => setStartDate(date)} // Actualiza startDate cuando cambia la fecha
                         //showTimeSelect
                         //filterTime={filterTime} // Filtrar las horas permitidas y horas pasadas
                         dateFormat="d, MMMM , yyyy hh:mm aa"
-                        withPortal // Calendario se abre como en una pantalla
-                        timeIntervals={60} // Cada 1 hora
+                        //withPortal // Calendario se abre como en una pantalla
+                        //timeIntervals={60} // Cada 1 hora
                         filterDate={isWeekday} // Filtra sólo de lunes a viernes
                         //timeFormat="HH:mm"
                         placeholderText="Escoge el día"
@@ -104,6 +104,7 @@ const ReservarOnline = () => {
                         toggleCalendarOnIconClick // Y que funcione al hacer click
                         required
                         locale={es} // en español
+                        calendarClassName={styles.customCalendar} //formato específico para calendar
                         />
                     </div>
                     <div >
