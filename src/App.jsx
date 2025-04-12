@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import { UserLoggedProvider } from "./contexts/UserLoggedContext";
-import useUserLogged from "./hooks/useLoggedUser";
 
 import Contacto from "./pages/Contacto";
 import TratamientosFaciales from "./components/TratamientosFaciales";
@@ -15,15 +14,12 @@ import NewService from "./pages/NewService";
 import UpdateService from "./pages/UpdateService";
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Logout from './components/Logout';
-import NewButton from "./components/NewButton";
 import NavBar from './components/NavBar';
 import './App.css';
 import Footer from "./components/Footer";
 import ProtectedRoutes from './components/ProtectedRoutes';
 
 function App() {
-  //const { userLogged } = useUserLogged();
 
   return (
     <UserLoggedProvider>
@@ -41,9 +37,9 @@ function App() {
           <Route path='/estrias' element={<Estrias />} />
           <Route path='/acmella-oleracea' element={<AcmellaOleracea/>} />
 
-          <Route path='/admin' element={<ProtectedRoutes><><Inicio /></></ProtectedRoutes>} />
-          <Route path="/new" element={<ProtectedRoutes><><NewService /> <Logout /></></ProtectedRoutes>} />
-          <Route path="/update-service/:id" element={<ProtectedRoutes><><UpdateService /> <Logout /></></ProtectedRoutes>} />
+          <Route path='/admin' element={<ProtectedRoutes><Inicio /></ProtectedRoutes>} />
+          <Route path="/new" element={<ProtectedRoutes><NewService /></ProtectedRoutes>} />
+          <Route path="/update-service/:id" element={<ProtectedRoutes><UpdateService /></ProtectedRoutes>} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path="*" element={<Navigate to="/" replace />} //la propiedad "replace" evitará redirecciones adicionales después de que el usuario haga clic en "atrás" 

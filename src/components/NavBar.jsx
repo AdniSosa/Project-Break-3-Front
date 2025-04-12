@@ -11,7 +11,7 @@ const NavBar = () => {
         <div className={styles.banner}>
             <p className={styles.banner1}>¡15 AÑOS CUIDÁNDOTE! DISFRUTA DE UN 15% DE DESCUENTO EN TODOS NUESTROS TRATAMIENTOS</p>
         </div>
-        <nav className={styles.navbar}>
+        <nav className={!userLogged ? styles.navbar : styles.login}>
             {!userLogged ? <Link to='/inicio'>INICIO</Link> : <Link to='/admin'>INICIO</Link>}
             <Link to='/tratamientos-faciales'>FACIAL</Link>
             <Link to='/tratamientos-corporales'>CORPORAL</Link>
@@ -19,10 +19,11 @@ const NavBar = () => {
             <Link to='/estrias'>ESTRÍAS</Link>
             <Link to='/contacto'>CONTACTO</Link>
             {!userLogged ? <Link to='/reservar-online'>RESERVAR ONLINE</Link> : null}
-            
-            {!userLogged ? <div className={styles.regalaTova}><Link to='/regala-tova' >REGALA TOVA</Link></div> : (<div><NewButton /> <Logout/></div>)}
+            {!userLogged ? <div className={styles.regalaTova}><Link to='/regala-tova' >REGALA TOVA</Link></div> : null}
+            {!userLogged ? null : <div><NewButton /><Logout/></div>}
             
         </nav>
+        
         </>
     )
 }

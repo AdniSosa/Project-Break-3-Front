@@ -1,11 +1,11 @@
 .button {
+    background-color: #7A7A7A;
+    color: #F4F0EB;
     position: relative;
-    left: 170px;
-    top: 7px;
-    width: 60px;
+    left: 155px;
+    width: 40px;
     height: 40px;
     padding: 0px;
     margin: 0;
-    text-align: center;
     
 }
