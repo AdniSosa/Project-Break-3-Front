@@ -1,0 +1,15 @@
+.login {
+    position: absolute;
+    top: 50%;
+    left: 27%;
+}
+
+.login input {
+    color: black
+}
+
+p {
+    position: absolute;
+    top: 72%;
+    left: 38%
+}

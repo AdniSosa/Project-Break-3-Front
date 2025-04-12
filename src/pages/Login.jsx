@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
 import useLoggedUser from "../hooks/useLoggedUser"
+import styles from '../styles/Login.module.css'
 
 
 const Login = () => {
@@ -50,7 +51,7 @@ const Login = () => {
     return (
         <>
             <h1>Inicia sesión</h1>
-            <form >
+            <form className={styles.login}>
                 <input
                     type='email'
                     placeholder='Ingresa tu correo electrónico'
@@ -69,7 +70,7 @@ const Login = () => {
                 <button type="submit" onClick={handleSubmit}>Inicia sesión</button>
 
             </form>
-            <p>¿No estás registrado? <Link to='/register'>Regístrate aquí</Link></p>
+            <p className={styles.p}>¿No estás registrado? <Link to='/register'>Regístrate aquí</Link></p>
 
             {message && <p>{message}</p>}
         </>
