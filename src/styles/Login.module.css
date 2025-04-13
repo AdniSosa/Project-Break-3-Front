@@ -1,14 +1,61 @@
+.inicio {
+    background-image: linear-gradient(rgba(246, 233, 217, 0.6), rgba(248, 230, 210, 0.6)),
+    url('https://res.cloudinary.com/dljpuje5r/image/upload/v1744535274/vista-lujoso-espacio-interior-hotel_23-2150683409.jpg_hznprr.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15cm;
+    width: 100%;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    padding: 2rem;
+}
+
+.subtitulo{
+    font-size: 25px;
+}
+
+.subtituloboton{
+    font-size: 20px;
+    background: #f5f1ef;
+    height: 30px;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #7A7A7A;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 130px;
+}
+
+/*contenedor del form*/
 .login {
-    position: absolute;
-    top: 50%;
-    left: 27%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 50px;
 }
 
-.login input {
-    color: white
+
+
+.boton{
+    background: #D8C7B9;
+    height: 40px;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #7A7A7A;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-p {
-    top: 72%;
-    left: 38%
-}
+

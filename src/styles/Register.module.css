@@ -1,4 +1,4 @@
-.inicio{
+.inicio {
     background-image: linear-gradient(rgba(246, 233, 217, 0.6), rgba(248, 230, 210, 0.6)),
     url('https://res.cloudinary.com/dljpuje5r/image/upload/v1744535274/vista-lujoso-espacio-interior-hotel_23-2150683409.jpg_hznprr.jpg');
     background-position: center;
@@ -7,33 +7,14 @@
     height: 15cm;
     width: 100%;
 }
+.subtitulo{
+    font-size: 25px;
+}
 
-
-
-.info{
-    display: block;
-    align-items: center;
-    justify-content: center;
+.subtituloboton{
     font-size: 20px;
-}
-
-.info p {
-    margin-top: 50px;
-    margin-bottom: 1.5rem;
-    text-align: justify;
-}
-
-.subtitulo {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #7d7b7c;
-    font-weight: 600;
-    margin-top: 80px;
-}
-
-.link{
-    background: #D8C7B9;
+    background: #f5f1ef;
+    height: 30px;
     border: none;
     padding: 12px;
     border-radius: 10px;
@@ -42,16 +23,39 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.3s;
-    width: 250px;
-    margin: 25px auto; 
-    text-align: center;
-    margin-top: 60px;
+    margin-top: 130px;
+}
+
+/*contenedor del form*/ 
+.register {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 50px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    padding: 2rem;
 }
 
 
+.login input {
+    color: white
+}
 
-
-
-
-
-
+.boton{
+    background: #D8C7B9;
+    height: 40px;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #7A7A7A;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}

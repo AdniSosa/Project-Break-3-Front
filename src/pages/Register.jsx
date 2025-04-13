@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import styles from '../styles/Register.module.css'
 
 const Register = () => {
-     const [email, setEmail] = useState('');
+    const [email, setEmail] = useState('');
         const [password, setPassword] = useState('');
         const navigate = useNavigate();
         const payload = {
@@ -40,27 +41,33 @@ const Register = () => {
 
     return (
         <>
-        <h1>¡Regístrate aquí!</h1>
-        <form onSubmit={handleSubmit}>
-            <input 
-                type='email' 
-                placeholder='Ingresa tu correo electrónico'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-            />
-            <input 
-                type='password' 
-                placeholder='Ingresa tu contraseña' 
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
+        <div className={styles.inicio}> 
+            <h1>¡Regístrate aquí!</h1>
+            <h2 className={styles.subtitulo}>Si ya estás registrado:</h2>
+            <h2><Link to='/login' className={styles.subtituloboton}>Inicia sesión aquí</Link></h2>
+        </div>
+
+        <div className={styles.register}> 
+            <form onSubmit={handleSubmit}className={styles.form}>
+                <input 
+                    type='email' 
+                    placeholder='Ingresa tu correo electrónico'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                 />
-            <button type="submit">Enviar</button>
+                <input 
+                    type='password' 
+                    placeholder='Ingresa tu contraseña' 
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                    />
+                <button type="submit">Regístrate</button>
 
-        </form>
-
-        <p>¿Estás registrado? <Link to='/login'>Inicia sesión aquí</Link></p>
+            </form>
+        </div>
+        
         </>
     )
 }

@@ -21,7 +21,7 @@ const Login = () => {
             const user = userCredential.user;
             const idToken = await user.getIdToken();
             console.log(user)
-           
+
 
             const response = await fetch(`${import.meta.env.VITE_URL_API}/login`,
                 {
@@ -50,29 +50,35 @@ const Login = () => {
 
     return (
         <>
-            <h1>Inicia sesión</h1>
-            <form className={styles.login}>
-                <input
-                    type='email'
-                    placeholder='Ingresa tu correo electrónico'
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    onClick={() => detectClick()}
-                    required
-                />
-                <input
-                    type='password'
-                    placeholder='Ingresa tu contraseña'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <button type="submit" onClick={handleSubmit}>Inicia sesión</button>
+            <div className={styles.inicio}> 
+                <h1>Inicia sesión</h1>
+                <h2 className={styles.subtitulo}>¿No estás registrado?</h2>
+                <h2> <Link to='/register' className={styles.subtituloboton}>Regístrate aquí</Link></h2>
+            </div>
+            
+            <div className={styles.login}>
+                <form className={styles.form}>
+                    <input
+                        type='email'
+                        placeholder='Ingresa tu correo electrónico'
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        onClick={() => detectClick()}
+                        required
+                    />
+                    <input
+                        type='password'
+                        placeholder='Ingresa tu contraseña'
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                    <button type="submit" onClick={handleSubmit} className={styles.boton}>Inicia sesión</button>
 
-            </form>
-            <p className={styles.p}>¿No estás registrado? <Link to='/register'>Regístrate aquí</Link></p>
+                </form>
+            </div>   
 
-            {message && <p>{message}</p>}
+                {message && <p>{message}</p>}
         </>
     )
 }
