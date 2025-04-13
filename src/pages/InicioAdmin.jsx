@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import styles from '../styles/Inicio.module.css';
 import { Link } from 'react-router-dom';
 
@@ -26,4 +26,4 @@ const InicioAdmin = () => {
     );
 };
 
-export default InicioAdmin;
+export default InicioAdmin;*/

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+/*import { Link } from 'react-router-dom';
 import styles from '../styles/NavBar.module.css';
 import Logout from './Logout';
 import NewButton from './NewButton';
@@ -23,5 +23,5 @@ const NavBarAdmin = () => {
     )
 }
 
-export default NavBarAdmin;
+export default NavBarAdmin;*/
 

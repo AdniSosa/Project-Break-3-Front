@@ -24,8 +24,9 @@ function App() {
   return (
     <UserLoggedProvider>
       <Router>
-        <NavBar />
 
+        <NavBar />
+        
         <Routes>
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/tratamientos-faciales" element={<TratamientosFaciales />} />
@@ -53,3 +54,5 @@ function App() {
 }
 
 export default App;
+
+
