@@ -50,7 +50,7 @@ const TratamientosCorporales = () => {
                         <p>{tratamientoCorporal.duration}</p>
                         <p>Desde {tratamientoCorporal.price} €</p>
                         <Link to='/reservar-online'className={styles.reserva}>Reserva tu cita</Link>
-                        <Link to='/mas-info'className={styles.boton}>Más información</Link>
+                        <Link to={`/tratamientos-corporales/mas-info/id/${tratamientoCorporal._id}`} className={styles.boton}>Más info</Link>
                         {!userLogged ? null : <EditButton id={tratamientoCorporal._id} />}
                         {!userLogged ? null : <DeleteButton id={tratamientoCorporal._id} setDeletedService={setDeletedService} deletedService={deletedService} treatment={'tratamientos-corporales'}/>}
                     </div>
@@ -64,3 +64,8 @@ const TratamientosCorporales = () => {
     
 
 export default TratamientosCorporales;
+
+
+
+
+

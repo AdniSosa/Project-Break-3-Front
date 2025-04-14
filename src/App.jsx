@@ -5,6 +5,8 @@ import { UserLoggedProvider } from "./contexts/UserLoggedContext";
 import Contacto from "./pages/Contacto";
 import TratamientosFaciales from "./components/TratamientosFaciales";
 import TratamientosCorporales from "./components/TratamientosCorporales";
+import MasInfoFacial from "./components/MasInfoFacial";
+import MasInfoCorporal from "./components/MasInfoCorporal";
 import Inicio from "./pages/Inicio";
 import AcmellaOleracea from "./pages/AcmellaOleracea";
 import Estrias from "./pages/Estrias";
@@ -37,7 +39,9 @@ function App() {
           <Route path='/' element={<Inicio />} />
           <Route path='/estrias' element={<Estrias />} />
           <Route path='/acmella-oleracea' element={<AcmellaOleracea/>} />
-
+          <Route path='/tratamientos-faciales/mas-info/id/:_id' element={<MasInfoFacial/>} />
+          <Route path='/tratamientos-corporales/mas-info/id/:_id' element={<MasInfoCorporal/>} />
+        
           <Route path='/admin' element={<ProtectedRoutes><Inicio /></ProtectedRoutes>} />
           <Route path="/new" element={<ProtectedRoutes><NewService /></ProtectedRoutes>} />
           <Route path="/update-service/:id" element={<ProtectedRoutes><UpdateService /></ProtectedRoutes>} />

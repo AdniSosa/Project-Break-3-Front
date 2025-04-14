@@ -50,7 +50,8 @@ const TratamientosFaciales = () => {
                         <p>{tratamientoFacial.duration}</p>
                         <p>Desde {tratamientoFacial.price} €</p>
                         <Link to='/reservar-online'className={styles.reserva}>Reserva tu cita</Link>
-                        <Link to='/mas-info'className={styles.boton}>Más información</Link>
+                        <Link to={`/tratamientos-faciales/mas-info/id/${tratamientoFacial._id}`} className={styles.boton}>Más info</Link>
+                        
                         {!userLogged ? null : <EditButton id={tratamientoFacial._id} />}
                         {!userLogged ? null : <DeleteButton id={tratamientoFacial._id} setDeletedService={setDeletedService} deletedService={deletedService} treatment={'tratamientos-faciales'}/>}
                     </div>

@@ -1,0 +1,35 @@
+.fondo{
+    background-image: linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)),
+    url('');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15cm;
+    width: 100%;
+}
+
+/*botón para reservar*/
+.boton{
+    background: #D8C7B9;
+    height: 40px;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #7A7A7A;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* contenedor principal*/
+.detalle {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+
+
