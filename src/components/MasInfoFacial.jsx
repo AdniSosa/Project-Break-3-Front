@@ -43,11 +43,7 @@ const MasInfoFacial = () => {
             <>
             <div className={styles.fondo}
                 style={{
-                    backgroundImage: `url(${tratamiento.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    height: '400px',
-                    width: '100%',
+                    backgroundImage: `linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)), url(${tratamiento.image})`,
                 }}>
                 <h1>{tratamiento.title}</h1>
             </div>

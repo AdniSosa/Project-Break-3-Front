@@ -43,9 +43,10 @@
     margin-top: 50px;
 }
 
-
-
 .boton{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
     background: #D8C7B9;
     height: 40px;
     border: none;

@@ -1,17 +1,17 @@
 .fondo{
-    background-image: linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)),
-    url('');
+    background-image: linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 15cm;
-    width: 100%;
+
+
 }
 
 /*botón para reservar*/
 .boton{
     background: #D8C7B9;
-    height: 40px;
+    height: 30px;
     border: none;
     padding: 12px;
     border-radius: 10px;

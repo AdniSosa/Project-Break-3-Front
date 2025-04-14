@@ -146,8 +146,9 @@ const ReservarOnline = () => {
                             <option value="Zionic">Zionic</option>
                         </select>
                     </div>
-                    
-                    <button type="submit">Agenda tu cita</button>
+                    <div className={styles.contenedorBtn}>
+                        <button type="submit"className={styles.boton}>Agenda tu cita</button>
+                    </div>
                 </form>
             </div>     
             )}

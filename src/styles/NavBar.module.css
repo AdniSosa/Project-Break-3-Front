@@ -12,7 +12,7 @@
 h1{
     font-size: 75px;
     position: absolute;
-    color: #6c6c6c;;
+    color: #575757;
     top: 40%;  
     left: 50%;
     text-align: center;
@@ -24,7 +24,7 @@ h2{
     font-size: 45px;
     position: absolute;
     display: flex;
-    color: #6c6c6c;;
+    color: #5c5b5b;
     top: 50%;  
     left: 50%;
     text-align: center;
@@ -34,7 +34,7 @@ h2{
 
 
 .navbar a , h3 {
-    color: #606060;
+    color: #575757;;
     font-size: 1.1rem; 
     text-decoration: none;
 }

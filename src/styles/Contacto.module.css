@@ -75,27 +75,32 @@
 
 .nombre,
 .mail,
-.mensaje{
+.mensaje,
+.telefono{
     font-family: 'Open Sans', sans-serif;
     color: #7d7b7c;
     background-color: #F4F0EB;
     border-radius: 10px;
     border-color: #b5b4b5;
+    
 }
 
 .mensaje{
-    width: 350px;
+    width: 450px;
     height: 150px;
 }
 
-.nombre{
-    width: 200px;
+.nombre,
+.mail{
+    width: 450px;
     height: 20px;
 }
 
-.mail{
-    width: 250px;
-    height: 20px;
+.contenedorBtn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
+
 
 

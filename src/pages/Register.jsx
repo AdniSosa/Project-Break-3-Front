@@ -63,7 +63,7 @@ const Register = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                     />
-                <button type="submit">Regístrate</button>
+                <button type="submit" className={styles.boton}>Regístrate</button>
 
             </form>
         </div>

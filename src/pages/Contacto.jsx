@@ -50,7 +50,7 @@ const Contacto = () => {
           
             <div className={styles.horario}>
               <FontAwesomeIcon icon={faClock}/>
-              <span>Visítanos de Lunes a Viernes de 10:00 AM a 8:00 PM</span>
+              <span>Visítanos de lunes a viernes de 10:00h a 20:00h</span>
             </div>
         </div>
 
@@ -102,7 +102,9 @@ const Contacto = () => {
               placeholder="Mensaje"
             />
           </div>
-          <button type="submit">Enviar</button>
+          <div className={styles.contenedorBtn}>
+            <button type="submit"className={styles.boton}>Enviar</button>
+          </div>
         </form>
       </div>
       

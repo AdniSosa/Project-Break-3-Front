@@ -77,3 +77,22 @@ label {
     width: 150px;
     padding: 10px;
 }
+
+.boton{
+    background: #D8C7B9;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #7A7A7A;
+    font-family: 'Mulish', sans-serif;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contenedorBtn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
