@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Input from '../components/InputAdmin'
 import Select from '../components/SelectAdmin'
 
+
 const UpdateService = () => {
     const [updatedService, setUpdatedService] = useState('');
     const [treatment, setTreatment] = useState(null);
@@ -89,10 +90,13 @@ const UpdateService = () => {
 
     return (
         <>
+
             <h1>Editar servicio</h1>
+
+
             {treatment && 
             <form>
-               
+
                 <Input title={"URL de la imágen"} name={"image"} value={payload.image} onChange={handleChange} />
                 <Input title={"Título"} name={"title"} value={payload.title} onChange={handleChange} />
                 <Input title={"Descripción"} name={"description"} value={payload.description} onChange={handleChange} />

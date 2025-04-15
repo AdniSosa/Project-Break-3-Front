@@ -46,7 +46,68 @@
     margin: 25px auto; 
     text-align: center;
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    align-items: center; 
 }
+
+
+.tratamientos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.clase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.img {
+    height: 220px; 
+    width: 300px; 
+    border-radius: 8px; 
+    margin-bottom: 10px; 
+    margin-top: 20px;
+}
+
+
+/*contenedor principal sobre mi*/
+.sobreMi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    text-align: justify;
+}
+.imgsobremi{
+    height: 700px; 
+    width: 550px;
+}
+
+.carta{
+    font-family: 'Parisienne', cursive;
+    font-size: 25px;
+}
+
+.pregunta{
+    font-family: 'Parisienne', cursive;
+    font-size: 60px;
+    margin-left: 130px;
+    margin-top: 200px;
+    font-weight: bold;
+}
+
+.saludo{
+    font-family: 'Parisienne', cursive;
+    font-size: 45px;
+}
+
+
 
 
 
