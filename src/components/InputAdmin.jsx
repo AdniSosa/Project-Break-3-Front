@@ -1,8 +1,7 @@
-import styles from '../styles/InputAdmin.module.css'
 
 const InputAdmin = ( {title, name, value, onChange, onClick}) => {
     return (
-        <div className={styles.container}>
+        <>
             <label htmlFor={name}>{title}: </label>
             <input
                 id={name}
@@ -13,7 +12,7 @@ const InputAdmin = ( {title, name, value, onChange, onClick}) => {
                 onClick={onClick}
                 required
             />
-        </div>
+        </>
     )
 }
 

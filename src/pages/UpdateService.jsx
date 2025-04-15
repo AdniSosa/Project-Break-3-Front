@@ -91,18 +91,29 @@ const UpdateService = () => {
     return (
         <div className={styles.formContainer}>
             <h1>Editar servicio</h1>
+        
             {treatment && 
             <form className={styles.formUpdate}>
                
-                <Input title={"URL de la imágen"} name={"image"} value={payload.image} onChange={handleChange} />
-                <Input title={"Título"} name={"title"} value={payload.title} onChange={handleChange} />
-                <Input title={"Descripción"} name={"description"} value={payload.description} onChange={handleChange} />
-                <Input title={"Precio"} name={"price"} value={payload.price} onChange={handleChange} />
-                <Input title={"Duración"} name={"duration"} value={payload.duration} onChange={handleChange} />
+                <Input className={styles.inputImage} title={"URL de la imágen"} name={"image"} value={payload.image} onChange={handleChange} />
+                <Input className={styles.inputTitle} title={"Título"} name={"title"} value={payload.title} onChange={handleChange} />
+                
+                <label className="label-textarea" htmlFor="description">Descripción:</label>
+                <textarea 
+                    id="description" 
+                    className={styles.description} 
+                    title="Descripción" 
+                    name="description" 
+                    value={payload.description} 
+                    onChange={handleChange}>
+                </textarea>
+                
+                <Input className={styles.inputPrice} title={"Precio"} name={"price"} value={payload.price} onChange={handleChange} />
+                <Input className={styles.inputDuration} title={"Duración"} name={"duration"} value={payload.duration} onChange={handleChange} />
 
                 <Select title={"Categoría"} name={"category"} value={payload.category} onChange={handleChange} options={treatments} />
 
-                <button type="submit" onClick={editService}>Guardar</button>
+                <button type="submit" onClick={editService} className={styles.button}>Guardar</button>
 
             </form>
         }

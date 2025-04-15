@@ -1,9 +1,35 @@
 .formContainer {
-   display: flex;
-   justify-content: center;
+   background-image: linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)),
+      url('https://res.cloudinary.com/dljpuje5r/image/upload/v1744535274/vista-lujoso-espacio-interior-hotel_23-2150683409.jpg_hznprr.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 15cm;
+   width: 100%;
 }
 
 .formUpdate {
    position: relative;
-   top: 280px;
+   top: 580px;
+   display: flex;
 }
+
+
+label {
+   display: block;
+}
+
+.description {
+   height: 100px;
+   padding: 15px;
+   display: block;
+   margin-top: 0;
+}
+
+.label-textarea {
+   display: block;
+   margin-bottom: 4px;
+   /* reduce el espacio entre el label y el textarea */
+
+}
+
