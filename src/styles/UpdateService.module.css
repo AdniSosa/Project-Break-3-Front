@@ -1,35 +1,64 @@
-.formContainer {
-   background-image: linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)),
-      url('https://res.cloudinary.com/dljpuje5r/image/upload/v1744535274/vista-lujoso-espacio-interior-hotel_23-2150683409.jpg_hznprr.jpg');
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   height: 15cm;
-   width: 100%;
-}
+.titulo {
+    background-image: linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)),
+    url('https://res.cloudinary.com/dljpuje5r/image/upload/v1744535274/vista-lujoso-espacio-interior-hotel_23-2150683409.jpg_hznprr.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15cm;
+    width: 100%;
+    }
 
-.formUpdate {
-   position: relative;
-   top: 580px;
-   display: flex;
-}
+.formContainer {
+    position: relative;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
 
 
 label {
-   display: block;
-}
+    display: block;
+    }
 
 .description {
-   height: 100px;
-   padding: 15px;
-   display: block;
-   margin-top: 0;
-}
+    height: 100px;
+    padding: 15px;
+    display: block;
+    margin-top: 0;
+    }
 
 .label-textarea {
-   display: block;
-   margin-bottom: 4px;
+    display: block;
+    margin-bottom: 4px;
    /* reduce el espacio entre el label y el textarea */
 
 }
+
+.contenedorBtn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.boton{
+    background: #D8C7B9;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 220px;
+    height: 40px;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #7A7A7A;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    left: 155px;
+    padding: 0px;
+}
+
 

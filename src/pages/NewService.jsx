@@ -49,30 +49,31 @@ const NewService = () => {
                 <h1>Crear nuevo servicio</h1>
             </div>
 
-            <form className={styles.form}>
-                <Input title={"URL de la imágen"} name={"image"} value={payload.image} onChange={handleChange} className={styles.img} />
-                <Input title={"Título"} name={"title"} value={payload.title} onChange={handleChange} className={styles.inputTitulo} />
-                
-                <label className="label-textarea" htmlFor="description">Descripción:</label>
-                <textarea
-                    id="description"
-                    className={styles.descripcion}
-                    title="Descripción"
-                    name="description"
-                    value={payload.description}
-                    onChange={handleChange}>
-                </textarea>
-                
-                <Input title={"Precio"} name={"price"} value={payload.price} onChange={handleChange} className={styles.precio} />
-                <Input title={"Duración"} name={"duration"} value={payload.duration} onChange={handleChange} className={styles.duracion} />
+            <div className={styles.new}>
+                <form className={styles.form}>
+                    <Input title={"URL de la imágen"} name={"image"} value={payload.image} onChange={handleChange} className={styles.img} />
+                    <Input title={"Título"} name={"title"} value={payload.title} onChange={handleChange} className={styles.inputTitulo} />
+                    
+                    <label className="label-textarea" htmlFor="description">Descripción:</label>
+                    <textarea
+                        id="description"
+                        className={styles.descripcion}
+                        title="Descripción"
+                        name="description"
+                        value={payload.description}
+                        onChange={handleChange}>
+                    </textarea>
+                    
+                    <Input title={"Precio"} name={"price"} value={payload.price} onChange={handleChange} className={styles.precio} />
+                    <Input title={"Duración"} name={"duration"} value={payload.duration} onChange={handleChange} className={styles.duracion} />
 
-                <Select title={"Categoría"} name={"category"} value={payload.category} onChange={handleChange} options={treatments} />
-
-                <button type="submit" onClick={createService}>Guardar</button>
-
-            </form>
+                    <Select title={"Categoría"} name={"category"} value={payload.category} onChange={handleChange} options={treatments} />
+                <div contenedorBtn>
+                    <button className={styles.boton} type="submit" onClick={createService}>Crear nuevo tratamiento</button>
+                </div>
+                </form>
             {createdService && <p>{createdService}</p>}
-
+            </div>
         </>
     );
 };

@@ -9,6 +9,18 @@
     padding-top: 40px;
 }   
 
+.login{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        width: 80%;
+        position: absolute; /* <- Esto es lo que rompe el layout */
+        padding-top: 40px;
+    } 
+
+
 h1{
     font-size: 75px;
     position: absolute;

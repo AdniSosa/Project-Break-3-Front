@@ -16,10 +16,6 @@ a {
   padding: 15px;
   
 }
-a:hover {
-  color: #785f74;
-
-}
 
 h1 {
   line-height: 1.1;
@@ -45,7 +41,6 @@ h1, h2{
   letter-spacing: 1px;
   
 }
-
 
 
 p, a, span,h3 {

@@ -27,7 +27,8 @@ const RegalaTova = () => {
         <>
         <div className={styles.regala}>
             <div className={styles.titulo}>
-            <h1>Regala Tova</h1>
+                <h1>Regala Tova</h1>
+                <h2>Centro de Bienestar & Autocuidado</h2>
             </div>
         </div>
 

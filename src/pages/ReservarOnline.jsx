@@ -66,7 +66,8 @@ const ReservarOnline = () => {
     return (
         <>
             <div className={styles.reserva}>
-                <h1>Reserva tu tratamiento</h1>
+                <h1>Reserva Tova</h1>
+                <h2>Centro de Bienestar & Autocuidado</h2>
             </div>
 
             {formularioEnviado ? (

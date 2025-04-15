@@ -73,9 +73,9 @@ const UpdateService = () => {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setPayload({ ...payload, [name]: value });
-      };
+        };
 
-      useEffect(() => {
+        useEffect(() => {
         if (treatment) {
             setPayload({
                 image: treatment.image,
@@ -90,9 +90,11 @@ const UpdateService = () => {
     
 
     return (
-        <div className={styles.formContainer}>
+    <>
+        <div className={styles.titulo}>
             <h1>Editar servicio</h1>
-        
+        </div>
+        <div className={styles.formContainer}>
             {treatment && 
             <form className={styles.formUpdate}>
 
@@ -113,14 +115,14 @@ const UpdateService = () => {
                 <Input className={styles.inputDuration} title={"Duración"} name={"duration"} value={payload.duration} onChange={handleChange} />
 
                 <Select title={"Categoría"} name={"category"} value={payload.category} onChange={handleChange} options={treatments} />
-
-                <button type="submit" onClick={editService} className={styles.button}>Guardar</button>
-
+                <div className={styles.containerboton}>
+                <button type="submit" onClick={editService} className={styles.boton}>Guardar</button>
+                </div>
             </form>
         }
             {updatedService && <p>{updatedService}</p>}
-
         </div>
+    </>    
     );
 }
 
