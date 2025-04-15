@@ -92,7 +92,7 @@ const UpdateService = () => {
         <div className={styles.formContainer}>
             <h1>Editar servicio</h1>
             {treatment && 
-            <form className={styles.form}>
+            <form className={styles.formUpdate}>
                
                 <Input title={"URL de la imágen"} name={"image"} value={payload.image} onChange={handleChange} />
                 <Input title={"Título"} name={"title"} value={payload.title} onChange={handleChange} />
