@@ -1,0 +1,9 @@
+.formContainer {
+   display: flex;
+   justify-content: center;
+}
+
+form {
+    position: relative;
+   top: 280px;
+}
