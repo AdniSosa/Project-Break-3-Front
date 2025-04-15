@@ -29,7 +29,7 @@ const DeleteButton = ({ id, setDeletedService }) => {
 
     return (
         <>
-            <button onClick={() => deleteService()}>Borrar</button>
+            <button style={{marginTop: '10px'}} onClick={() => deleteService()}>Borrar</button>
         </>
     )
 }

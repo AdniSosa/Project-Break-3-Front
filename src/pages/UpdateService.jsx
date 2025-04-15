@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Input from '../components/InputAdmin'
-import Select from '../components/SelectAdmin'
+import Select from '../components/SelectAdmin';
+import styles from '../styles/UpdateService.module.css'
 
 const UpdateService = () => {
     const [updatedService, setUpdatedService] = useState('');
@@ -88,10 +89,10 @@ const UpdateService = () => {
     
 
     return (
-        <>
+        <div className={styles.formContainer}>
             <h1>Editar servicio</h1>
             {treatment && 
-            <form>
+            <form className={styles.form}>
                
                 <Input title={"URL de la imágen"} name={"image"} value={payload.image} onChange={handleChange} />
                 <Input title={"Título"} name={"title"} value={payload.title} onChange={handleChange} />
@@ -107,7 +108,7 @@ const UpdateService = () => {
         }
             {updatedService && <p>{updatedService}</p>}
 
-        </>
+        </div>
     );
 }
 
