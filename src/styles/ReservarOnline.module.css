@@ -95,4 +95,7 @@ label {
     display: flex;
     justify-content: center;
     width: 100%;
+}   
+.calendario {
+    margin-left: 5px;
 }

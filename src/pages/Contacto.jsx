@@ -4,9 +4,31 @@ import { faMobile } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
+import emailjs from 'emailjs-com';
 import styles from '../styles/Contacto.module.css';
 
 const Contacto = () => {
+  const [message, setMessage] = useState('')
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_u3jrquu',
+      'template_osd6n4v',
+      e.target,
+      'ph0HufJ0bmt6ueBdE'
+    )
+      .then((result) => {
+      console.log('Mensaje enviado correctamente');
+      setMessage('Su mensaje ha sido enviado, en breve nos pondremos en contacto.')
+      }, (error) => {
+        console.log('Error:', error.text);
+        setMessage('No se ha podido enviar el mensaje')
+      });
+
+  };
+
   const [formData, setFormData] = useState({
     nombre: '',
     correo: '',
@@ -18,9 +40,9 @@ const Contacto = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+/*  const handleSubmit = (e) => {
     e.preventDefault();
-  };
+  }; */
 
   return (
     <>
@@ -33,8 +55,8 @@ const Contacto = () => {
 
         <div className={styles.datos}>
           <h3 className={styles.subtitulo}>Visita nuestro centro en Madrid</h3>
-            <div className={styles.mail}>
-              <FontAwesomeIcon icon={faEnvelope}/>
+          <div className={styles.mail}>
+            <FontAwesomeIcon icon={faEnvelope} />
             <span>contacto@tova.com</span>
             </div>
           
@@ -65,12 +87,11 @@ const Contacto = () => {
             referrerPolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
-      </div> 
+      </div>
 
       <div className={styles.form}>
         <h3 className={styles.subtitulo}>Escríbenos y resolveremos tu duda</h3>
-        <form onSubmit={handleSubmit}>
-          <div>
+        <form onSubmit={sendEmail}>
             <input className={styles.nombre}
               type="text"
               id="nombre"
@@ -80,9 +101,7 @@ const Contacto = () => {
               required
               placeholder="Nombre"
             />
-          </div>
-          <div>
-            <input  className={styles.mail}
+            <input className={styles.mail}
               type="email"
               id="correo"
               name="correo"
@@ -91,9 +110,7 @@ const Contacto = () => {
               required
               placeholder="Correo electrónico"
             />
-          </div>
-          <div>
-            <textarea  className={styles.mensaje}
+            <textarea className={styles.mensaje}
               id="mensaje"
               name="mensaje"
               value={formData.mensaje}
@@ -101,13 +118,13 @@ const Contacto = () => {
               required
               placeholder="Mensaje"
             />
-          </div>
           <div className={styles.contenedorBtn}>
             <button type="submit"className={styles.boton}>Enviar</button>
           </div>
         </form>
+        {message && <p style={{fontSize: '20px', textAlign: 'center'}}><strong>{message}</strong></p>}
       </div>
-      
+
     </>
   );
 };
