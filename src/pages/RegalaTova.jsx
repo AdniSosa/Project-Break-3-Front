@@ -35,7 +35,7 @@ const RegalaTova = () => {
             <>
             <div className={styles.stripe}>
 
-            {/* Stripe Buy Button según importe de la tarjeta regalo*/}
+            {/* Stripe Buy Button -->tarjeta regalo*/}
 
                 {formRegala.importe === "100" && (
                 <stripe-buy-button 

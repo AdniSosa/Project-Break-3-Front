@@ -52,6 +52,8 @@ const TratamientosCorporales = () => {
                     
                         {!userLogged ?  <Link to='/reservar-online'className={styles.reserva}>Reserva tu cita</Link> : <EditButton id={tratamientoCorporal._id} />}
                         {!userLogged ? <Link to={`/tratamientos-corporales/mas-info/id/${tratamientoCorporal._id}`} className={styles.boton}>Más info</Link> : <DeleteButton id={tratamientoCorporal._id} setDeletedService={setDeletedService} deletedService={deletedService} treatment={'tratamientos-corporales'}/>}
+                        {!userLogged ? <Link to='/reservar-online'className={styles.reserva}>Reserva tu cita</Link> : <EditButton id={tratamientoCorporal._id} />}
+                        {!userLogged ? <Link to='/mas-info'className={styles.boton}>Más información</Link> : <DeleteButton id={tratamientoCorporal._id} setDeletedService={setDeletedService} deletedService={deletedService} treatment={'tratamientos-corporales'}/>}
                     </div>
                     
                 ))}

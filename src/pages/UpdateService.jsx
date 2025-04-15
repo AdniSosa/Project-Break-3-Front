@@ -4,6 +4,7 @@ import Input from '../components/InputAdmin'
 import Select from '../components/SelectAdmin';
 import styles from '../styles/UpdateService.module.css'
 
+
 const UpdateService = () => {
     const [updatedService, setUpdatedService] = useState('');
     const [treatment, setTreatment] = useState(null);
@@ -94,7 +95,7 @@ const UpdateService = () => {
         
             {treatment && 
             <form className={styles.formUpdate}>
-               
+
                 <Input className={styles.inputImage} title={"URL de la imágen"} name={"image"} value={payload.image} onChange={handleChange} />
                 <Input className={styles.inputTitle} title={"Título"} name={"title"} value={payload.title} onChange={handleChange} />
                 
