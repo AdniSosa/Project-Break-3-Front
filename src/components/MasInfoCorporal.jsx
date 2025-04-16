@@ -53,10 +53,6 @@ const MasInfoCorporal = () => {
                 <p>{tratamiento.price} €</p>
                 <p className={styles.descripcion}>{tratamiento.description}</p>
                 <Link to='/reservar-online'className={styles.boton}>Reserva tu cita</Link>
-
-                {!userLogged ? null : <EditButton id={tratamiento._id} className={styles.boton} />}
-                {!userLogged ? null : <DeleteButton id={tratamiento._id} className={styles.boton} setDeletedService={setDeletedService} deletedService={deletedService} treatment={'tratamientos-corporales'}/>}
-
                     
                 {deletedService && <p>{deletedService}</p>}
             </div>

@@ -8,15 +8,15 @@
     width: 100%;
 }
 
-
-.servicio {
+/*contenedor grande de todos los tratamientos*/
+.servicios {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
     gap: 20px; 
     padding: 20px;
 }
-
+/*contenedor de cada tratamiento*/
 .tratamiento {
     background-color: #fef9f5; 
     width: 300px; 
@@ -30,12 +30,13 @@
     align-items: center;
     text-align: center; 
 }
-
+/*imagen tratamiento*/
 .img {
-    height: 250px; 
-    width: 180px; 
+    height: 180px; 
+    width: 250px; 
     border-radius: 8px; 
     margin-bottom: 10px; 
+    margin-top: 20px;
 }
 
 .tratamiento a {

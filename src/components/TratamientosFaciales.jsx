@@ -48,11 +48,11 @@ const TratamientosFaciales = () => {
                         <img src={tratamientoFacial.image} alt={tratamientoFacial.title}className={styles.img} />
                         <a>{tratamientoFacial.title}</a>
                         <p>{tratamientoFacial.duration}</p>
-                        <p>Desde {tratamientoFacial.price} €</p>
+                        <p>Desde {tratamientoFacial.price} € /sesión</p>
                         
                         
                         {!userLogged ? <Link to='/reservar-online'className={styles.reserva}>Reserva tu cita</Link> : <EditButton id={tratamientoFacial._id} />}
-                        {!userLogged ? <Link to='/mas-info'className={styles.boton}>Más información</Link> : <DeleteButton id={tratamientoFacial._id} setDeletedService={setDeletedService} deletedService={deletedService} treatment={'tratamientos-faciales'}/>}
+                        {!userLogged ? <Link to={`/tratamientos-faciales/mas-info/id/${tratamientoFacial._id}`} className={styles.boton}>Más información</Link> : <DeleteButton id={tratamientoFacial._id} setDeletedService={setDeletedService} deletedService={deletedService} treatment={'tratamientos-faciales'}/>}
                     </div>
                 ))}
                 {deletedService && <p>{deletedService}</p>}

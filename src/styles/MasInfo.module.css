@@ -4,8 +4,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 15cm;
-
-
 }
 
 /*botón para reservar*/
@@ -29,6 +27,14 @@
     justify-content: center; 
     gap: 20px; 
     padding: 20px; 
+    text-align: justify;
+}
+
+/*es todo el texto informativo del tratamiento*/
+.descripcion {
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 1rem;
 }
 
 

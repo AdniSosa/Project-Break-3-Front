@@ -41,6 +41,7 @@ function App() {
           <Route path='/acmella-oleracea' element={<AcmellaOleracea/>} />
           <Route path='/tratamientos-faciales/mas-info/id/:_id' element={<MasInfoFacial/>} />
           <Route path='/tratamientos-corporales/mas-info/id/:_id' element={<MasInfoCorporal/>} />
+
         
           <Route path='/admin' element={<ProtectedRoutes><Inicio /></ProtectedRoutes>} />
           <Route path="/new" element={<ProtectedRoutes><NewService /></ProtectedRoutes>} />
