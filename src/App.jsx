@@ -20,6 +20,7 @@ import NavBar from './components/NavBar';
 import './App.css';
 import Footer from "./components/Footer";
 import ProtectedRoutes from './components/ProtectedRoutes';
+import Appointments from "./pages/Appointments";
 
 function App() {
 
@@ -44,8 +45,9 @@ function App() {
 
         
           <Route path='/admin' element={<ProtectedRoutes><Inicio /></ProtectedRoutes>} />
-          <Route path="/new" element={<ProtectedRoutes><NewService /></ProtectedRoutes>} />
+          <Route path="/nuevo-servicio" element={<ProtectedRoutes><NewService /></ProtectedRoutes>} />
           <Route path="/update-service/:id" element={<ProtectedRoutes><UpdateService /></ProtectedRoutes>} />
+          <Route path='/citas-reservadas' element={<ProtectedRoutes><Appointments /></ProtectedRoutes>} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path="*" element={<Navigate to="/" replace />} //la propiedad "replace" evitará redirecciones adicionales después de que el usuario haga clic en "atrás" 

@@ -4,7 +4,6 @@ import { createContext, useState } from "react"
 export const UserLoggedContext = createContext();
 
 export const UserLoggedProvider = ({children}) => {
-    //const [userLogged, setUserLogged] = useState(null);
 
     const [userLogged, setUserLogged] = useState(() => {
         return localStorage.getItem('token') || null;

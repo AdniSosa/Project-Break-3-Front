@@ -1,7 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
-
 const DeleteButton = ({ id, setDeletedService }) => {
-    const navigate = useNavigate();
 
     const deleteService = async (e) => {
         //e.preventDefault()

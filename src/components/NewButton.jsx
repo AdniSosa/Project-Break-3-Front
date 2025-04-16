@@ -6,7 +6,7 @@ const NewButton = () => {
 
     return (
         <>
-            <button className={styles.button} onClick={() => navigate(`/new`)}>+</button>
+            <button className={styles.button} onClick={() => navigate('/nuevo-servicio')}>+</button>
         </>
     )
 }
