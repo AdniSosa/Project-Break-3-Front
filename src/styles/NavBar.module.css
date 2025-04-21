@@ -1,24 +1,24 @@
 .navbar {
-    height: 500px;
+    height: 100px;
+    width: 1300px;
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0;
-    width: 80%;
-    position: absolute; /* <- Esto es lo que rompe el layout */
-    padding-top: 40px;
+    position: absolute;
+    padding-top: 20px;
+    gap: 35px;
+    margin-left: -20px;
+    
 }   
 
 .login{
-        height: 500px;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-        width: 80%;
-        position: absolute; /* <- Esto es lo que rompe el layout */
-        padding-top: 40px;
-    } 
+    height: 100px;
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    padding-top: 20px;
+    gap: 35px;
+} 
 
 
 h1{
@@ -45,7 +45,7 @@ h2{
 }
 
 
-.navbar a , h3 {
+.navbar a , h3, .login a {
     color: #575757;;
     font-size: 1.1rem; 
     text-decoration: none;
@@ -83,8 +83,9 @@ h2{
 
 /*boton regala tova*/
 .regalaTova{
-    background: #D8C7B9;
+    background: #ecdfcc;
     height: 30px;
+    width: 160px;
     border: none;
     padding: 12px;
     border-radius: 10px;
@@ -93,17 +94,36 @@ h2{
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.3s;
-}
-
-.login {
-    height: 500px;
     display: flex;
     justify-content: center;
-    margin: 0 0 0 15px;
-    padding:0;
-    width: 80%;
-    justify-content: center;
-    position: absolute;
-    left: 12%;
-    padding-top: 40px;
+    align-items: center;
 }
+
+.logo{
+    width: 190px;
+    height: 190px;
+}
+
+/*container logo y links*/
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.containerlinks{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.newbutton,
+.logout{
+    display: flex;
+    margin-right: 50px;
+}
+
+
