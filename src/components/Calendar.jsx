@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getDay } from "date-fns";
 import DatePicker from 'react-datepicker';
 import { es } from 'date-fns/locale';
-import styles from '../styles/ReservarOnline.module.css';
+import styles from '../styles/Calendar.module.css'
 
 const Calendar = ({startDate, handleDate}) => {
     const [thisYear, setThisYear] =  useState('');

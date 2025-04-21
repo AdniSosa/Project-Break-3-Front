@@ -6,9 +6,12 @@ const NewButton = () => {
 
     return (
         <>
-            <button className={styles.button} onClick={() => navigate('/nuevo-servicio')}>+</button>
+            <button className={styles.newbutton} onClick={() => navigate('/nuevo-servicio')}>
+                <span class={`material-icons ${styles.icon}`}>add</span>
+            </button>
         </>
     )
 }
+
 
 export default NewButton;

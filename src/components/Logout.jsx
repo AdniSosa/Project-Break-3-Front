@@ -18,10 +18,13 @@ const Logout = () => {
         }
       };
     
-      return(
-      <><button className={styles.button} onClick={handleLogout}><img src={logoutIcon} width={30} /></button></>
-      )
-    
+  return(
+    <>
+      <button className={styles.buttonlogout} onClick={handleLogout}>
+        <span className={`material-icons ${styles.icon}`}>logout</span>
+      </button>
+    </>
+  )
 }
 
 export default Logout;

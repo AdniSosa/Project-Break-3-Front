@@ -170,15 +170,14 @@ const ReservarOnline = () => {
                                 required
                             >
                                 <option value="">Escoge tu tratamiento</option>
-                                <option value="Armonización facial">Armonización facial</option>
-                                <option value="Acmella Oleracea">Acmella Oleracea</option>
-                                <option value="Láser CO2 fraccionado">Láser CO2 fraccionado</option>
-                                <option value="Limpieza Facial Detox Skin">Limpieza Facial Detox Skin</option>
-                                <option value="Limpieza Facial Premium">Limpieza Facial Premium</option>
-                                <option value="Láser para eliminar estrías">Láser para eliminar estrías</option>
-                                <option value="Láser para eliminar varices">Láser para eliminar varices</option>
-                                <option value="Imperium">Imperium</option>
-                                <option value="Zionic">Zionic</option>
+                                <option value="Terapia Facial Revitaluxe">Terapia Facial Revitaluxe</option>
+                                <option value="Luminova – Fotoregeneración Avanzada">Luminova – Fotoregeneración Avanzada</option>
+                                <option value="Limpieza Facial PureGlow">Limpieza Facial PureGlow</option>
+                                <option value="Limpieza Facial RenewUp">Limpieza Facial RenewUp</option>
+                                <option value="Tratamiento Reafirmante Imperium Cell ">Tratamiento Reafirmante Imperium Cell </option>
+                                <option value="Zionic Remodelación Corporal Activa">Zionic Remodelación Corporal Activa</option>
+                                <option value="Tratamiento Estrías">Tratamiento Estrías</option>
+                                <option value="Acmella Oleracea – Lifting Natural">Acmella Oleracea – Lifting Natural</option>
                             </select>
                         </div>
 

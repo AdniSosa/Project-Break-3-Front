@@ -58,11 +58,20 @@ const Appointments = () => {
     return (
         <>
             <div className={styles.citas}>
-                <h1>Citas reservadas</h1>
+                <h1>Tova</h1>
+                <h2>Citas reservadas</h2>
             </div>
 
-            <Calendar startDate={startDate} handleDate={handleDate} />
-
+            {!startDate &&
+                <div className={styles.contenedor}>
+                    <p>Selecciona una fecha en el calendario</p>
+                </div>
+            }
+            
+            <div className={styles.contenedor}>
+                <Calendar className={styles.calendario} startDate={startDate} handleDate={handleDate} />
+            </div>
+            
             {dayServices &&
                 dayServices.map(services => (
                     <ul>
@@ -76,11 +85,7 @@ const Appointments = () => {
                 ))
             }
 
-            {!startDate &&
-
-                <p>Selecciona una fecha en el calendario</p>
-
-            }
+            
 
         </>
     )

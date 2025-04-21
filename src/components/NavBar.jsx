@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from '../styles/NavBar.module.css';
 import NewButton from './NewButton';
 import Logout from './Logout';
+import AppointmentsButton from './AppointmentsButton';
 import useLoggedUser from "../hooks/useLoggedUser"
 
 const NavBar = () => {
@@ -28,6 +29,7 @@ const NavBar = () => {
                 {!userLogged ? <Link to='/reservar-online'>RESERVA</Link> : null}
                 {!userLogged ? <Link to='/regala-tova' className={styles.regalaTova}>REGALA TOVA</Link> : null}
                 {!userLogged ? null : <div><NewButton/><Logout/></div>}
+                {!userLogged ? null : <div><AppointmentsButton/></div>}            
             </div>
         </nav>
         
@@ -36,3 +38,4 @@ const NavBar = () => {
 }
 
 export default NavBar;
+
