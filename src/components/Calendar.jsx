@@ -3,8 +3,9 @@ import { getDay } from "date-fns";
 import DatePicker from 'react-datepicker';
 import { es } from 'date-fns/locale';
 import styles from '../styles/ReservarOnline.module.css';
+import Appointments from "../pages/Appointments";
 
-const Calendar = ({startDate, handleDate}) => {
+const Calendar = ({startDate, handleDate, appointments}) => {
     const [thisYear, setThisYear] =  useState('');
 
     // Configuración calendario:
@@ -63,7 +64,7 @@ const Calendar = ({startDate, handleDate}) => {
                 new Date(`${thisYear}-12-25`),
             ]}
             calendarClassName={styles.customCalendar}
-
+            highlightDates={appointments}
         />
     )
 }

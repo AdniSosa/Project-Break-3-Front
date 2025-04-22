@@ -73,3 +73,15 @@ h2.react-datepicker__current-month {
   position: absolute;
   top: 20px;
 }
+
+.react-datepicker-wrapper {
+  height: 37px;
+}
+
+.react-datepicker__day--holidays {
+  background-color: #7c5665;
+}
+
+.react-datepicker__day--highlighted {
+  background-color: #f3c3c3;
+}
