@@ -2,20 +2,15 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams, Link } from "react-router-dom";
 import styles from '../styles/MasInfo.module.css';
-import EditButton from './EditButton';
-import DeleteButton from './DeleteButton';
-import useLoggedUser from "../hooks/useLoggedUser"
 
-const MasInfoCorporal = () => {
-    const {userLogged} = useLoggedUser();
-    const [deletedService, setDeletedService] = useState('');
+const MasInfo = () => {
     const [tratamiento, setTratamiento] = useState(null);
     const { _id } = useParams();
     
     
     const getMasInfo = async () => {
         try {
-            const response = await fetch(`http://localhost:3000/tratamientos-corporales/mas-info/id/${_id}`)
+            const response = await fetch(`${import.meta.env.VITE_URL_API}/id/${_id}`)
             if (!response.ok) throw new Error("Tratamiento no encontrado");
             const data = await response.json();
             setTratamiento(data);
@@ -29,13 +24,6 @@ const MasInfoCorporal = () => {
         useEffect(() =>{
             getMasInfo()
         }, [])
-
-        useEffect(() =>{
-            setTimeout(() => {
-                getMasInfo();
-                setDeletedService('')
-            }, 2000);
-        }, [deletedService])
 
         if (!tratamiento) return <p>Cargando tratamiento...</p>;
 
@@ -53,13 +41,11 @@ const MasInfoCorporal = () => {
                 <p>{tratamiento.price} €</p>
                 <p className={styles.descripcion}>{tratamiento.description}</p>
                 <Link to='/reservar-online'className={styles.boton}>Reserva tu cita</Link>
-                    
-                {deletedService && <p>{deletedService}</p>}
             </div>
         </>    
         );
     };
     
 
-export default MasInfoCorporal;
+export default MasInfo;
 

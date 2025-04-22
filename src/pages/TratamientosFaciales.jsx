@@ -2,8 +2,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import styles from '../styles/TratamientosFaciales.module.css';
-import EditButton from './EditButton';
-import DeleteButton from './DeleteButton';
+import EditButton from '../components/EditButton';
+import DeleteButton from '../components/DeleteButton';
 import useLoggedUser from "../hooks/useLoggedUser"
 
 const TratamientosFaciales = () => {
@@ -13,8 +13,8 @@ const TratamientosFaciales = () => {
     
     const getTratamientosFaciales = async () => {
         try {
-            const response = await fetch('http://localhost:3000/tratamientos-faciales');
-            //const response = await fetch(`http://localhost:3000/${tratamientosFaciales}`);
+            const response = await fetch(`${import.meta.env.VITE_URL_API}/tratamientos-faciales`);
+            
             if (!response.ok) throw new Error("Tratamientos no encontrados");
             const data = await response.json();
             setTratamientosFaciales(data);

@@ -1,12 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import { UserLoggedProvider } from "./contexts/UserLoggedContext";
+import { UserLoggedProvider, useLoggedUser } from "./contexts/UserLoggedContext";
 
 import Contacto from "./pages/Contacto";
-import TratamientosFaciales from "./components/TratamientosFaciales";
-import TratamientosCorporales from "./components/TratamientosCorporales";
-import MasInfoFacial from "./components/MasInfoFacial";
-import MasInfoCorporal from "./components/MasInfoCorporal";
+import TratamientosFaciales from "./pages/TratamientosFaciales";
+import TratamientosCorporales from "./pages/TratamientosCorporales";
+import MasInfo from "./pages/MasInfo";
 import Inicio from "./pages/Inicio";
 import AcmellaOleracea from "./pages/AcmellaOleracea";
 import Estrias from "./pages/Estrias";
@@ -23,6 +22,7 @@ import ProtectedRoutes from './components/ProtectedRoutes';
 import Appointments from "./pages/Appointments";
 
 function App() {
+  //const {userLogged, logout} = useLoggedUser();
 
   return (
     <UserLoggedProvider>
@@ -40,8 +40,8 @@ function App() {
           <Route path='/' element={<Inicio />} />
           <Route path='/estrias' element={<Estrias />} />
           <Route path='/acmella-oleracea' element={<AcmellaOleracea/>} />
-          <Route path='/tratamientos-faciales/mas-info/id/:_id' element={<MasInfoFacial/>} />
-          <Route path='/tratamientos-corporales/mas-info/id/:_id' element={<MasInfoCorporal/>} />
+          <Route path='/tratamientos-faciales/mas-info/id/:_id' element={<MasInfo/>} />
+          <Route path='/tratamientos-corporales/mas-info/id/:_id' element={<MasInfo/>} />
 
         
           <Route path='/admin' element={<ProtectedRoutes><Inicio /></ProtectedRoutes>} />
