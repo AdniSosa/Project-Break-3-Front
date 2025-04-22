@@ -55,8 +55,8 @@ const Appointments = () => {
     }, [startDate])
 
     const appointmentsDates = appointments
-    ? appointments.map(a => new Date(a.dia))
-    : []
+        ? appointments.map(a => new Date(a.dia))
+        : []
 
     /* const changeDate = (date, button) => {
         const selectedDate = new Date(date)
@@ -92,19 +92,21 @@ const Appointments = () => {
             </header>
 
             <section className={styles.calendar}>
-                {/* <button onClick={() => changeDate(calendarDate, '-')}>atrás</button> */}
+                
                 {!startDate &&
-                <div className={styles.contenedor}>
-                    <p>Selecciona una fecha en el calendario</p>
-                </div>
-            }
+                    <div className={styles.contenedor}>
+                        <p>Selecciona una fecha en el calendario</p>
+                    </div>
+                }
+            </section>
             
-            <div className={styles.contenedor}>
-                <Calendar className={styles.calendario} startDate={startDate} handleDate={handleDate} appointments={appointmentsDates}/>
+            <section className={styles.contenedor}>
+                {/* <button onClick={() => changeDate(calendarDate, '-')}>atrás</button> */}
+                <Calendar className={styles.calendario} startDate={startDate} handleDate={handleDate} appointments={appointmentsDates} />
                 {/* <button onClick={() => changeDate(calendarDate, '+')}>delante</button> */}
             </section>
-            <section className={styles.dates}>            </div>
-            
+            <section className={styles.dates}>
+
                 {dayServices &&
                     dayServices.map(services => (
                         <ul>
@@ -117,12 +119,7 @@ const Appointments = () => {
                         </ul>
                     ))
                 }
-
-            {!startDate &&
-
-                <p>Selecciona una fecha en el calendario</p>
-
-            }
+            </section>
 
         </>
     )
