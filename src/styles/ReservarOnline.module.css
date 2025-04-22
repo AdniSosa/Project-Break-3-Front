@@ -99,7 +99,3 @@ label {
 .calendario {
     margin-left: 5px;
 }
-
-option:disabled {
-    color: #db6420;
-}

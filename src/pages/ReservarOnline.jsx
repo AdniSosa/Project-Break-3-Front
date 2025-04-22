@@ -138,7 +138,7 @@ const ReservarOnline = () => {
                             />
                         </div>
 
-                        <Calendar startDate={startDate} handleDate={handleDate}/>
+                        <Calendar startDate={startDate} handleDate={handleDate} appointments={''}/>
                         <div>
                             <select
                                 className={styles.hora}
