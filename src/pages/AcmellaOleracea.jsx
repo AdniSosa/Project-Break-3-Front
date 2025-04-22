@@ -6,7 +6,7 @@ const AcmellaOleracea = () => {
   return (
     <>
       <div className={styles.titulo}>
-        <h1>Acmella Oleracea</h1>
+        <h1 >Acmella Oleracea</h1>
         <h2>Lifting Natural - FACIAL</h2>
       </div>
 

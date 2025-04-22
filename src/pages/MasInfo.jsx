@@ -29,13 +29,16 @@ const MasInfo = () => {
 
         return (
             <>
-            <div className={styles.fondo}
-                style={{
-                backgroundImage: `linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)),url(${tratamiento.image})`,
-                
-                }}>
-                <h1>{tratamiento.title}</h1>
-            </div>
+                <div
+                    className={styles.fondo}
+                    style={{
+                        backgroundImage: `linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)),url(${tratamiento.image})`,
+                    }}
+                    >
+                    <div className={styles.contenedorTitulo}>
+                        <h1>{tratamiento.title}</h1>
+                    </div>
+                </div>
             <div className={styles.detalle}>
                 <p>{tratamiento.duration}</p>
                 <p>{tratamiento.price} €</p>

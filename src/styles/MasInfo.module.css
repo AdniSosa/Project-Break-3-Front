@@ -5,6 +5,9 @@
     background-size: cover;
     height: 15cm;
 }
+.contenedorTitulo h1 {
+    margin-top: 4rem;
+}
 
 /*botón para reservar*/
 .boton{

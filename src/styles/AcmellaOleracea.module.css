@@ -6,6 +6,8 @@
     background-size: cover;
     height: 15cm;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 /*botón reserva*/

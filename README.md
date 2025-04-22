@@ -7,13 +7,8 @@
 *[Funcionalidades del proyecto](#Funcionalidades-del-proyecto)
 *[Tecnologías utilizadas](#Tecnologías-utilizadas)
 *[Características de archivos](#Características-de-los-archivos)
-*[Base de datos](#Base-de-datos)
 *[Servidor](#Servidor)
-*[Modelos](#Modelos)
-*[Rutas](#Rutas)
-*[Controladores](#Controladores)
 *[Despliegue](#Despliegue)
-*[Firebase](#Firebase)
 *[Autores](#Autores)
 
 ## Descripción del proyecto
@@ -31,9 +26,9 @@ Proyecto realizado como requisito del Bootcamp Full Stack Developer de The Bridg
 - `Regala TOVA`: Opción para adquirir tarjetas regalo a través de una pasarela de pago segura.
 - `Contacto`: Canal directo para que los usuarios puedan realizar consultas o solicitar información personalizada.
 
+****************************************TECNOLOGÍAS UTILIZADAS**************************************************
 ## Tecnologías utilizadas
 
-### Frontend:
 - **React.js** – Biblioteca de JavaScript para construir interfaces interactivas.
 - **React Router DOM** – Manejo de rutas.
 - **Vite** – Herramienta de desarrollo rápida para aplicaciones frontend.
@@ -44,19 +39,9 @@ Proyecto realizado como requisito del Bootcamp Full Stack Developer de The Bridg
 - **Firebase** – Autenticación y otros servicios en la nube (si se está utilizando activamente).
 - **Stripe** – Pasarela de pago para tarjetas regalo
 
-### Backend:
-- **Node.js** – Entorno de ejecución para JavaScript en el servidor.
-- **Express.js** – Framework minimalista para crear la API REST.
-- **MongoDB** – Base de datos NoSQL.
-- **Mongoose** – ODM que facilita la interacción con MongoDB desde Node.js.
-- **Firebase Admin SDK** – Permite validar tokens y gestionar usuarios desde el backend.
-- **dotenv** – Carga de variables de entorno desde un archivo `.env`.
-- **cors** – Middleware para habilitar el intercambio de recursos entre distintos orígenes.
-- **cookie-parser** – Middleware para manejar cookies en peticiones HTTP.
-
 
 ****************************************CARACTERÍSTICAS ARCHIVOS**************************************************
-### Frontend:
+
 ### 📁 components
 - Contiene componentes reutilizables de la interfaz de usuario, como botones, formularios, navbar, footer, entre otros. Cada componente está diseñado para ser modular y fácil de integrar en distintas vistas o páginas de la aplicación.
 
@@ -87,52 +72,27 @@ Con **CSS Modules**, cada clase definida en estos archivos solo se aplica al com
 - package.json: Archivo que contendrá las dependencias del proyecto. Se debe hacer ```npm i``` para instalar todas las dependencias necesarias para que el proyecto funcione. (npm run dev)
 
 
+**********************************************SERVIDOR***********************************************
+
+- Levantamos el servidor npm run dev  y por defecto corre en http://localhost:5173.
+
+
+**********************************************DESPLIEGUE***********************************************
 
 
 
+**********************************************FIREBASE***********************************************
+
+Utilizamos Firebase para la autenticación del administrador o administradores del sitio web. 
+
+Se usa la librería firebase para iniciar sesión y obtener el token del usuario.
+
+Este token se envía al backend para su verificación.
 
 
-### controlllers
-- controllers/authControllers.js: Archivo que contiene la configuración de firebase y la lógica para manejar tanto la creación de usuario, como el registro, inicio y cierre de sesión del administrador utilizando Firebase. Devuelve las respuestas en formato HTML.
-- controllers/productController.js: Archivo que contiene la lógica para manejar las solicitudes CRUD de los productos. Devuelve las respuestas en formato HTML.
+************************************************AUTORES*************************************************
 
-### middlewares
-- middlewares/authMiddleware.js: Archivo que contiene el middleware para comprobar si el usuario está autenticado. Este busca la sesión del usuario y, si no la encuentra, redirige al formulario de login.
-
-### models
-- models/.js: Archivo que contiene la definición del esquema del servicio utilizando Mongoose.
-
-
-### routes
-- routes/productRoutes.js: Archivo que contiene la definición de las rutas CRUD para los productos. Este llama a los métodos del controlador.
-- routes/authRoutes.js: Archivo que contiene la definición de las rutas para la autenticación. Este llama a los métodos del controlador.
-
-### index.js
-- index.js: Archivo principal que inicia el servidor Express. Importa las rutas y las usa. También tiene configurado para servir archivos estáticos y para leer el body de las peticiones de formularios.
-
-- .env: Archivo que contendrá las variables de entorno. 
-
-### 📄package.json
-- package.json: Archivo que contendrá las dependencias del proyecto. Se debe hacer ```npm i``` para instalar todas las dependencias necesarias para que el proyecto funcione. (npm start)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[Adni Sosa](https://github.com/AdniSosa)  | [Mariana Lobeto](https://github.com/MarianaLGM)
 
 
 
