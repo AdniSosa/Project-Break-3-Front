@@ -7,7 +7,7 @@ export const UserLoggedProvider = ({children}) => {
 
     const [userLogged, setUserLogged] = useState(() => {
         return localStorage.getItem('token') || null;
-      });
+    });
 
     const isUserLogin = (token) => {
         setUserLogged(token)

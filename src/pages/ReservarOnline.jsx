@@ -171,13 +171,13 @@ const ReservarOnline = () => {
                             >
                                 <option value="">Escoge tu tratamiento</option>
                                 <option value="Terapia Facial Revitaluxe">Terapia Facial Revitaluxe</option>
-                                <option value="Luminova – Fotoregeneración Avanzada">Luminova – Fotoregeneración Avanzada</option>
+                                <option value="Luminova - Fotoregeneración Avanzada">Luminova - Fotoregeneración Avanzada</option>
                                 <option value="Limpieza Facial PureGlow">Limpieza Facial PureGlow</option>
                                 <option value="Limpieza Facial RenewUp">Limpieza Facial RenewUp</option>
                                 <option value="Tratamiento Reafirmante Imperium Cell ">Tratamiento Reafirmante Imperium Cell </option>
                                 <option value="Zionic Remodelación Corporal Activa">Zionic Remodelación Corporal Activa</option>
                                 <option value="Tratamiento Estrías">Tratamiento Estrías</option>
-                                <option value="Acmella Oleracea – Lifting Natural">Acmella Oleracea – Lifting Natural</option>
+                                <option value="Acmella Oleracea - Lifting Natural">Acmella Oleracea - Lifting Natural</option>
                             </select>
                         </div>
 
