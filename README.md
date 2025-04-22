@@ -83,6 +83,15 @@ Con **CSS Modules**, cada clase definida en estos archivos solo se aplica al com
 ### 📄 Main.jsx
 - Archivo de entrada de la aplicación, donde se monta el componente raíz (`App`) en el DOM.  
 
+### 📄package.json
+- package.json: Archivo que contendrá las dependencias del proyecto. Se debe hacer ```npm i``` para instalar todas las dependencias necesarias para que el proyecto funcione. (npm run dev)
+
+
+
+
+
+
+
 ### controlllers
 - controllers/authControllers.js: Archivo que contiene la configuración de firebase y la lógica para manejar tanto la creación de usuario, como el registro, inicio y cierre de sesión del administrador utilizando Firebase. Devuelve las respuestas en formato HTML.
 - controllers/productController.js: Archivo que contiene la lógica para manejar las solicitudes CRUD de los productos. Devuelve las respuestas en formato HTML.
@@ -103,8 +112,8 @@ Con **CSS Modules**, cada clase definida en estos archivos solo se aplica al com
 
 - .env: Archivo que contendrá las variables de entorno. 
 
-### package.json
-- package.json: Archivo que contendrá las dependencias del proyecto. Se debe hacer ```npm i``` para instalar todas las dependencias necesarias para que el proyecto funcione. ----->("start": "node --watch index.js") 
+### 📄package.json
+- package.json: Archivo que contendrá las dependencias del proyecto. Se debe hacer ```npm i``` para instalar todas las dependencias necesarias para que el proyecto funcione. (npm start)
 
 
 
