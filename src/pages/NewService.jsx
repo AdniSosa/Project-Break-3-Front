@@ -72,7 +72,7 @@ const NewService = () => {
                     <button className={styles.boton} type="submit" onClick={createService}>Crear nuevo tratamiento</button>
                 </div>
                 </form>
-            {createdService && <p>{createdService}</p>}
+            {createdService && <p className={styles.message}>{createdService}</p>}
             </div>
         </>
     );

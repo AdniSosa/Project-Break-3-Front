@@ -62,3 +62,8 @@
     cursor: pointer;
     transition: 0.3s;
 }
+
+.message {
+    position: absolute;
+    bottom: -2050px;
+}

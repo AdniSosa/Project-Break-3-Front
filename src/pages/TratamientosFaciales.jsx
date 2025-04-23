@@ -33,7 +33,7 @@ const TratamientosFaciales = () => {
                     setTimeout(() => {
                         getTratamientosFaciales();
                         setDeletedService('')
-                    }, 2000);
+                    }, 3000);
                 }, [deletedService])
 
         return (
@@ -55,7 +55,7 @@ const TratamientosFaciales = () => {
                         {!userLogged ? <Link to={`/tratamientos-faciales/mas-info/id/${tratamientoFacial._id}`} className={styles.boton}>Más información</Link> : <DeleteButton id={tratamientoFacial._id} setDeletedService={setDeletedService} deletedService={deletedService} treatment={'tratamientos-faciales'}/>}
                     </div>
                 ))}
-                {deletedService && <p>{deletedService}</p>}
+                {deletedService && <p className={styles.message}>{deletedService}</p>}
             </div>
             </>
         );

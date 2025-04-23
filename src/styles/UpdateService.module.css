@@ -38,18 +38,19 @@ label {
 .contenedorBtn {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
 
 .boton{
     background: #D8C7B9;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     width: 220px;
     height: 40px;
     border: none;
-    padding: 12px;
+    padding: 0px;
     border-radius: 10px;
     font-size: 16px;
     color: #7A7A7A;
@@ -57,8 +58,12 @@ label {
     cursor: pointer;
     transition: 0.3s;
     position: relative;
-    left: 155px;
-    padding: 0px;
+    left: 145px;
+}
+
+.message {
+    position: absolute;
+    bottom: 20px;
 }
 
 
