@@ -1,5 +1,5 @@
 **************************************CENTRO DE ESTÉTICA********************************************************
-![Logo tienda de ropa](https://res.cloudinary.com/dljpuje5r/image/upload/v1745252932/Tova_cn1yyn.png)
+![Logo centro de estética](https://res.cloudinary.com/dljpuje5r/image/upload/v1745252932/Tova_cn1yyn.png)
 
 
 ## ÍNDICE
@@ -12,19 +12,30 @@
 *[Autores](#Autores)
 
 ## Descripción del proyecto
-Proyecto realizado como requisito del Bootcamp Full Stack Developer de The Bridge. Centro de estética, donde los usuarios pueden agendar citas online y también dispone de una pasarela de pago para la compra de tarjetas regalo. A los administradores de la tienda, les permite crear un usuario e iniciar sesión para poder gestionar los productos: crear, editar o borrar cualquier artículo.
+Proyecto realizado como requisito del Bootcamp Full Stack Developer de The Bridge. Centro de estética, donde los usuarios pueden agendar citas online y también dispone de una pasarela de pago para la compra de tarjetas regalo. A los administradores de la estética, les permite crear un usuario e iniciar sesión, ya sea con correo y contraseña, o con una cuenta de Google. Ya inciados sesión, los administradores podrán gestionar los servicios: crear, editar o borrar cualquier artículo, además de visualizar todas las citas agendadas por los clientes.
 
 ## Funcionalidades del proyecto
-- `Registro de usuarios`: Permite el registro de usuarios para los administradores de la tienda online. Requiere de correo electrónico y contraseña (min. 6 caracteres).
-- `Inicio de sesión de usuarios`: Al iniciar sesión, el administrador podrá realizar funciones, como crear, editar o borrar un servicio.
+
+### Funcionalidades para el usuario
+
+Estas son las funcionalidades de las que el usuario de la página web podrá hacer uso:
+
 - `Clasificación de los tratamientos por categoría`: Permite una visión rápida de todos los tratamientos organizados por categorías: faciales y corporales.
-- `Ver detalles del servicio`: Permite visualizar todos los detalles del servicio haciendo click en "ver".
-- `Creación de nuevo servicio`: Permite crear un nuevo producto, introduciendo valores como titulo, descripción, duración categoría, precio y url de la imágen. Para esta funcionalidad debe haber realizado inicio de sesión.
-- `Editar un servicio`: Permite editar todos los campos rellenados en la creación del servicio. Para esta funcionalidad debe haber realizado inicio de sesión.
-- `Borrar un servicio`: Borra cualquier servicio. Para esta funcionalidad debe haber realizado inicio de sesión.
+- `Ver detalles del servicio`: Permite visualizar todos los detalles del servicio haciendo click en "Más información".
 - `Reserva`: Permite a los usuarios seleccionar fecha y hora para agendar un servicio de forma sencilla.
 - `Regala TOVA`: Opción para adquirir tarjetas regalo a través de una pasarela de pago segura.
 - `Contacto`: Canal directo para que los usuarios puedan realizar consultas o solicitar información personalizada.
+
+### Funcionalidades para el administrador
+
+Además de las funcionalidades del usuario, el administrador podrá hacer uso de estas funcionalidades: 
+
+- `Registro de usuarios`: Permite el registro de usuarios para los administradores de la tienda online. Requiere de correo electrónico y contraseña (min. 6 caracteres).
+- `Inicio de sesión de usuarios`: Inicio de sesión con correo y contraseña utilizados en el resgistro, o con una cuenta de Google. Al iniciar sesión, el administrador podrá realizar funciones, como crear, editar o borrar un servicio.
+- `Creación de nuevo servicio`: Permite crear un nuevo producto, introduciendo valores como titulo, descripción, duración, categoría, precio y url de la imágen. Para esta funcionalidad debe haber realizado inicio de sesión.
+- `Editar un servicio`: Permite editar todos los campos rellenados en la creación del servicio. Para esta funcionalidad debe haber realizado inicio de sesión.
+- `Borrar un servicio`: Borra cualquier servicio. Para esta funcionalidad debe haber realizado inicio de sesión.
+- `Visualización de citas reservadas`: Ver las citas reservadas eligiendo el día en el calendario. Los días con citas reservadas se podrán ver resaltadas en el calendario.
 
 ****************************************TECNOLOGÍAS UTILIZADAS**************************************************
 ## Tecnologías utilizadas
@@ -32,7 +43,6 @@ Proyecto realizado como requisito del Bootcamp Full Stack Developer de The Bridg
 - **React.js** – Biblioteca de JavaScript para construir interfaces interactivas.
 - **React Router DOM** – Manejo de rutas.
 - **Vite** – Herramienta de desarrollo rápida para aplicaciones frontend.
-- **Axios** – Cliente HTTP para consumir APIs.
 - **EmailJS** – Servicio para el envío de correos desde el frontend sin necesidad de backend.
 - **React Datepicker** – Componente para selección de fechas en formularios.
 - **FontAwesome** – Íconos vectoriales escalables.
@@ -41,6 +51,7 @@ Proyecto realizado como requisito del Bootcamp Full Stack Developer de The Bridg
 
 
 ****************************************CARACTERÍSTICAS ARCHIVOS**************************************************
+## Característica de los archivos
 
 ### 📁 components
 - Contiene componentes reutilizables de la interfaz de usuario, como botones, formularios, navbar, footer, entre otros. Cada componente está diseñado para ser modular y fácil de integrar en distintas vistas o páginas de la aplicación.
@@ -73,24 +84,33 @@ Con **CSS Modules**, cada clase definida en estos archivos solo se aplica al com
 
 
 **********************************************SERVIDOR***********************************************
+## Servidor
 
 - Levantamos el servidor npm run dev  y por defecto corre en http://localhost:5173.
 
 
 **********************************************DESPLIEGUE***********************************************
-
+## Despliegue
 
 
 **********************************************FIREBASE***********************************************
 
+## Firebase
+
 Utilizamos Firebase para la autenticación del administrador o administradores del sitio web. 
 
-Se usa la librería firebase para iniciar sesión y obtener el token del usuario.
+Se usa la librería firebase para registrar usuario e iniciar sesión con correo electrónico y contraseña. 
+También nos da la opción de realizar inicio de sesión con Google, sin necesidad de realizar un registro.
 
-Este token se envía al backend para su verificación.
+Al iniciar sesión se genera un token único para cada usuario, esto permite que el usuario, o en este caso, 
+el administrador, solo haga inicio de sesión 1 vez cada cierto tiempo. 
+
+Este token se envía al backend para su verificación y así dar acceso o no a los endpoints de administrador.
+
 
 
 ************************************************AUTORES*************************************************
+## Autores
 
 [Adni Sosa](https://github.com/AdniSosa)  | [Mariana Lobeto](https://github.com/MarianaLGM)
 
