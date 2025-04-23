@@ -1,5 +1,6 @@
-import { createContext, useState } from "react"
-
+import { createContext, useContext, useEffect, useState } from "react"
+import { GoogleAuthProvider, onAuthStateChanged, signOut, signInWithPopup } from "firebase/auth";
+import { auth } from "../config/firebase";
 
 export const UserLoggedContext = createContext();
 
@@ -9,6 +10,11 @@ export const UserLoggedProvider = ({children}) => {
         return localStorage.getItem('token') || null;
     });
 
+      const googleSignIn = () => {
+        const provider = new GoogleAuthProvider();
+        return signInWithPopup(auth, provider)
+      }
+
     const isUserLogin = (token) => {
         setUserLogged(token)
         localStorage.setItem('token', token);
@@ -17,6 +23,7 @@ export const UserLoggedProvider = ({children}) => {
     const userLogout = () => {
         setUserLogged(null)
         localStorage.removeItem('token');
+        signOut(auth);
     }
 
     return (
