@@ -1,6 +1,5 @@
-import { createContext, useContext, useEffect, useState } from "react"
-import { GoogleAuthProvider, onAuthStateChanged, signInWithRedirect, signOut } from "firebase/auth";
-import { auth } from "../config/firebase";
+import { createContext, useState } from "react"
+
 
 export const UserLoggedContext = createContext();
 
@@ -10,36 +9,19 @@ export const UserLoggedProvider = ({children}) => {
         return localStorage.getItem('token') || null;
     });
 
-      const googleSignIn = () => {
-        const provider = new GoogleAuthProvider();
-        signInWithRedirect(auth, provider)
-      }
-
     const isUserLogin = (token) => {
         setUserLogged(token)
         localStorage.setItem('token', token);
     }
 
     const userLogout = () => {
-       /*  setUserLogged(null)
-        localStorage.removeItem('token'); */
-        signOut(auth);
+        setUserLogged(null)
+        localStorage.removeItem('token');
     }
 
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setUserLogged(currentUser)
-        })
-        return () => {
-            unsubscribe()
-        }
-    }, [])
-
     return (
-        <UserLoggedContext.Provider value={{userLogged, isUserLogin, userLogout, googleSignIn}}>
+        <UserLoggedContext.Provider value={{userLogged, isUserLogin, userLogout}}>
             {children}
         </UserLoggedContext.Provider>
     )
 }
-
-export const useLoggedUser = () => useContext(UserLoggedContext);
