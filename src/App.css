@@ -44,3 +44,7 @@ h2.react-datepicker__current-month {
   color: white;
   font-weight: bold;
 }
+
+.react-datepicker__day--selected {
+  background-color: #836e6e;
+}
