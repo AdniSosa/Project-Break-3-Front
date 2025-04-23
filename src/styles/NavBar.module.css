@@ -7,7 +7,10 @@
     padding-top: 20px;
     gap: 35px;
     margin-left: -20px;
-    
+    @media (max-width: 1024px) {
+        font-size: .2rem;
+        width: 800px;
+      }
 }   
 
 .login{
@@ -22,7 +25,7 @@
 
 
 h1{
-    font-size: 75px;
+    font-size: 5rem;
     position: absolute;
     color: #575757;
     top: 40%;  
@@ -30,10 +33,14 @@ h1{
     text-align: center;
     margin-top: 0;
     transform: translate(-50%, -50%);  
-    
+    @media (max-width: 1024px) {
+        width: 700px;
+        font-size: 3.8rem;
+        margin-top: 5%;
+      }
 }
 h2{
-    font-size: 45px;
+    font-size: 2.8rem;
     position: absolute;
     display: flex;
     color: #5c5b5b;
@@ -41,7 +48,10 @@ h2{
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);  
-    
+    @media (max-width: 1024px) {
+        font-size: 2.3rem;
+        margin-top: 10%;
+      }
 }
 
 
@@ -49,6 +59,11 @@ h2{
     color: #575757;;
     font-size: 1.1rem; 
     text-decoration: none;
+    @media (max-width: 1024px) {
+        font-size: .9rem;
+        text-align: center;
+        padding: 17px;
+      }
 }
 
 .banner {
@@ -60,6 +75,9 @@ h2{
     align-items: center;
     overflow: hidden;
     z-index: 999;
+    @media (max-width: 1024px) {
+        height: 30px;
+      }
 }
 
 @keyframes moveLeft {
@@ -77,6 +95,9 @@ h2{
     color: #F4F0EB;
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
+    @media (max-width: 1024px) {
+        font-size: .9rem;
+      }
 }
 
 
@@ -102,6 +123,12 @@ h2{
 .logo{
     width: 190px;
     height: 190px;
+    @media (max-width: 1024px) {
+        width: 140px;
+        height: 140px;
+        position: relative;
+        right: 15%;
+      }
 }
 
 /*container logo y links*/
@@ -110,6 +137,9 @@ h2{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    @media (max-width: 1024px) {
+        width: 500px;
+      }
 }
 
 .containerlinks{
@@ -143,4 +173,8 @@ h2{
     align-items: center;
 }
 
-
+@media (max-width: var(--bp-desktop)) {
+    .container {
+        width: 600px;
+    }
+  }
