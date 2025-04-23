@@ -59,4 +59,19 @@
     transition: 0.3s;
 }
 
+.logo {
+    position: relative;
+    top: 4px;
+    right: 8px;
+}
 
+.secondLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.googleBtn {
+    position: absolute;
+    top: 163%;
+}

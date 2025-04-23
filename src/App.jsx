@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import { UserLoggedProvider, useLoggedUser } from "./contexts/UserLoggedContext";
+import { UserLoggedProvider } from "./contexts/UserLoggedContext";
 
 import Contacto from "./pages/Contacto";
 import TratamientosFaciales from "./pages/TratamientosFaciales";
@@ -22,7 +22,6 @@ import ProtectedRoutes from './components/ProtectedRoutes';
 import Appointments from "./pages/Appointments";
 
 function App() {
-  //const {userLogged, logout} = useLoggedUser();
 
   return (
     <UserLoggedProvider>

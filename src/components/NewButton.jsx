@@ -7,7 +7,7 @@ const NewButton = () => {
     return (
         <>
             <button className={styles.newbutton} onClick={() => navigate('/nuevo-servicio')}>
-                <span class={`material-icons ${styles.icon}`}>add</span>
+                <span className={`material-icons ${styles.icon}`}>add</span>
             </button>
         </>
     )
