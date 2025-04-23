@@ -1,6 +1,5 @@
 import useLoggedUser from "../hooks/useLoggedUser";
 import styles from '../styles/Logout.module.css';
-import logoutIcon from '../public/logouticon.png'
 
 const Logout = () => {
     const {userLogout} = useLoggedUser();
