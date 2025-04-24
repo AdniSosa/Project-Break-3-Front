@@ -212,8 +212,9 @@
     }
 
     .link {
-        margin-left: 190px;
+        margin-left: 50px;
         padding: 12px;
+        width: 100%
     }
 
 
@@ -227,7 +228,7 @@
     .saludo {
         font-size: 2rem;
     }
-  }
+}
 
 
 
