@@ -47,18 +47,7 @@ p, a, span,h3 {
   color: #7d7b7c
 }
 
-/*portátil*/
-@media (max-width: 1024px) {
-  h1 {
-      font-size: 3rem;
-      text-align: center;
-      }
 
-  h2 {
-      font-size: 1.8rem;
-      text-align: center;
-      }
-}
 /*tablet*/
 @media (max-width: 768px) {
   h1 {
@@ -70,9 +59,4 @@ p, a, span,h3 {
       font-size: 1.4rem;
       text-align: center;
   }
-
-<<<<<<< HEAD
-
-=======
 }
->>>>>>> 5d9384086428d7a81f952835fc3954d5df6505f6

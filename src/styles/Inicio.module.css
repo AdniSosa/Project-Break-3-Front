@@ -115,29 +115,34 @@
 
 
 
-/* Portátil */
 @media (max-width: 1024px) {
     .inicio {
-        height: 100vh;
+        height: 15cm;
         background-size: cover;
         width: 100%;
     }
 
     .info {
         font-size: 18px;
+        text-align: center; 
+        margin: 0 auto; 
+        width: 90%; 
     }
 
     .info p {
         font-size: 1.1rem;
         margin-top: 15px;
-        padding: 0 40px;
+        padding: 0 40px; 
         width: 100%;
+        text-align: center; 
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .subtitulo {
         font-size: 1.3rem;
-        text-align: center;
-        padding: 0 40px;
+        text-align: center; 
+        padding: 0 40px; 
     }
 
     .tratamientos {
@@ -160,7 +165,7 @@
 
     .pregunta {
         font-size: 2.2rem;
-        text-align: center;
+        text-align: center; 
         margin-top: 80px;
         padding: 0 40px;
     }
