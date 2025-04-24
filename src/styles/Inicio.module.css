@@ -41,7 +41,6 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.3s;
-    width: 250px;
     margin: 25px auto; 
     text-align: center;
     margin-top: 60px;
@@ -107,38 +106,128 @@
     font-size: 45px;
 }
 
+/* Portátil */
 @media (max-width: 1024px) {
+    .inicio {
+        height: 100vh;
+        background-size: cover;
+        width: 100%;
+    }
+
+    .info {
+        font-size: 18px;
+    }
+
     .info p {
-        font-size: 1.2rem;
-        margin-top: 20px;
+        font-size: 1.1rem;
+        margin-top: 15px;
+        padding: 0 40px;
+        width: 100%;
     }
 
     .subtitulo {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 0 40px;
     }
-   
+
     .tratamientos {
-        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        gap: 20px;
+        padding: 0 40px;
     }
 
-    .sobreMi {
-        gap: 40px;
-    }
-
-    .carta {
-        font-size: 1.4rem;
+    .link {
+        width: 80%;
+        margin: 0 auto;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     .pregunta {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 80px;
+        padding: 0 40px;
+    }
+
+    .saludo {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .imgsobremi {
+        width: 90%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .sobreMi {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        padding: 0 40px;
+    }
+
+    .carta {
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+}
+
+/* tablets */
+@media (max-width: 768px) {
+    .inicio {
+        height: 100vh; 
+        background-size: cover;
+    }
+
+    .info {
+        font-size: 16px;
+    }
+
+    .info p {
+        font-size: 1rem;
+        margin-top: 10px;
+        width: 100%;  
+        margin-left: 20px; 
+    }
+
+    .subtitulo {
+        font-size: 1.4rem; 
+        width: 100%;
+        margin-left: 30px;  
+    }
+
+    .tratamientos {
+        flex-direction: column; 
+        margin-top: 30px;
+        margin-left: 30px; 
+    }
+
+    .link {
+        margin-left: 190px;
+        padding: 12px;
+    }
+
+
+    .pregunta {
+        font-size: 1.8rem; 
+        margin-top: 60px;
+        width: 100%;
+        margin-left: 30px; 
     }
 
     .saludo {
         font-size: 2rem;
     }
-}
+  }
 
 
 
