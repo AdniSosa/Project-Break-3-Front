@@ -1,3 +1,4 @@
+
 .inicio{
     background-image: linear-gradient(rgba(246, 233, 217, 0.6), rgba(248, 230, 210, 0.6)),
     url('https://res.cloudinary.com/dljpuje5r/image/upload/v1744535274/vista-lujoso-espacio-interior-hotel_23-2150683409.jpg_hznprr.jpg');
@@ -196,6 +197,9 @@
 }
 
 /* tablets */
+
+
+/* tablets */
 @media (max-width: 768px) {
     .inicio {
         height: 100vh; 
@@ -205,12 +209,14 @@
 
     .info {
         font-size: 14px;
+        padding: 0;
     }
 
     .info p {
         font-size: 1.1rem;
         margin-top: 10px;
         width: 100%;  
+        padding: 0;
     }
 
     .subtitulo {
@@ -232,6 +238,7 @@
         font-size: 1.8rem; 
         margin-top: 60px;
         width: 100%;
+        padding: 0;
     }
 
     .saludo {
@@ -252,6 +259,12 @@
         flex-direction: column; 
         gap: 20px;
         width: 100%; 
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .carta {
+        width: 90%;
         margin: 0 auto;
     }
 }
