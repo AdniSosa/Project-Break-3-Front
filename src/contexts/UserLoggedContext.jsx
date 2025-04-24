@@ -27,7 +27,7 @@ export const UserLoggedProvider = ({children}) => {
     }
 
     return (
-        <UserLoggedContext.Provider value={{userLogged, isUserLogin, userLogout}}>
+        <UserLoggedContext.Provider value={{userLogged, isUserLogin, userLogout, googleSignIn}}>
             {children}
         </UserLoggedContext.Provider>
     )

@@ -116,3 +116,12 @@
    
   }
 
+  @media (max-width: 768px) {
+    .map {
+        position: absolute;
+        top: 160%;
+        text-align: center;
+    }
+   
+  }
+
