@@ -113,15 +113,13 @@
         display: flex;
         width: 400px;
     }
-   
-  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .map {
         position: absolute;
         top: 160%;
         text-align: center;
     }
-   
-  }
+}
 

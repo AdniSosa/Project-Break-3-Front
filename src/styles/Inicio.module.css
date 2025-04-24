@@ -242,7 +242,6 @@
     .sobreMi {
         flex-direction: column; 
         gap: 20px;
-        margin-left: 30px; 
         width: 100%; 
     }
 }
@@ -259,13 +258,12 @@
         font-size: 1rem;
         margin-top: 10px;
         width: 100%;
-        margin-left: 120px;
+
     }
 
     .subtitulo {
         font-size: 1.2rem;
         width: 100%;
-        margin-left: 120px;
     }
 
     .tratamientos {
@@ -277,7 +275,6 @@
     .link {
         margin: 15px auto;
         padding: 10px;
-        margin-left:120px;
         width: 100%;
     }
 
@@ -285,7 +282,6 @@
         font-size: 1.8rem; 
         margin-top: 60px;
         width: 100%;
-        margin-left:120px;
     }
 
     .saludo {
@@ -304,7 +300,6 @@
     .sobreMi {
         flex-direction: column; 
         gap: 20px;
-        margin-left: 120px;
         width: 100%; 
     }
 }
