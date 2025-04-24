@@ -20,10 +20,6 @@
     margin-top: 50px;
     margin-bottom: 1.5rem;
     text-align: justify;
-    @media (max-width: 1024px) {
-        font-size: 1.2rem;
-        margin-top: 20px;
-      }
 }
 
 .subtitulo {
@@ -33,9 +29,6 @@
     color: #7d7b7c;
     font-weight: 600;
     margin-top: 80px;
-    @media (max-width: 1024px) {
-        font-size: 1.4rem;
-      }
 }
 
 .link{
@@ -64,9 +57,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 150px;
-    @media (max-width: 1024px) {
-        margin-top: 50px;
-      }
 }
 
 .clase{
@@ -92,9 +82,6 @@
     justify-content: center;
     gap: 80px;
     text-align: justify;
-    @media (max-width: 1024px) {
-        gap: 40px;
-      }
 }
 .imgsobremi{
     height: 650px; 
@@ -105,9 +92,6 @@
 .carta{
     font-family: 'Parisienne', cursive;
     font-size: 25px;
-    @media (max-width: 1024px) {
-        font-size: 1.4rem;
-      }
 }
 
 .pregunta{
@@ -116,21 +100,45 @@
     text-align: center;
     margin-top: 200px;
     font-weight: bold;
-    @media (max-width: 1024px) {
-        font-size: 2.5rem;
-        text-align: center;
-        margin-top: 100px;
-      }
 }
 
 .saludo{
     font-family: 'Parisienne', cursive;
     font-size: 45px;
-    @media (max-width: 1024px) {
-        font-size: 2rem;
-      }
 }
 
+@media (max-width: 1024px) {
+    .info p {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    .subtitulo {
+        font-size: 1.4rem;
+    }
+   
+    .tratamientos {
+        margin-top: 50px;
+    }
+
+    .sobreMi {
+        gap: 40px;
+    }
+
+    .carta {
+        font-size: 1.4rem;
+    }
+
+    .pregunta {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .saludo {
+        font-size: 2rem;
+    }
+  }
 
 
 

@@ -7,10 +7,6 @@
     padding-top: 20px;
     gap: 35px;
     margin-left: -20px;
-    @media (max-width: 1024px) {
-        font-size: .2rem;
-        width: 800px;
-      }
 }   
 
 .login{
@@ -33,11 +29,6 @@ h1{
     text-align: center;
     margin-top: 0;
     transform: translate(-50%, -50%);  
-    @media (max-width: 1024px) {
-        width: 700px;
-        font-size: 3.8rem;
-        margin-top: 5%;
-      }
 }
 h2{
     font-size: 2.8rem;
@@ -48,10 +39,6 @@ h2{
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);  
-    @media (max-width: 1024px) {
-        font-size: 2.3rem;
-        margin-top: 10%;
-      }
 }
 
 
@@ -59,11 +46,6 @@ h2{
     color: #575757;;
     font-size: 1.1rem; 
     text-decoration: none;
-    @media (max-width: 1024px) {
-        font-size: .9rem;
-        text-align: center;
-        padding: 17px;
-      }
 }
 
 .banner {
@@ -95,9 +77,6 @@ h2{
     color: #F4F0EB;
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
-    @media (max-width: 1024px) {
-        font-size: .9rem;
-      }
 }
 
 
@@ -123,12 +102,6 @@ h2{
 .logo{
     width: 190px;
     height: 190px;
-    @media (max-width: 1024px) {
-        width: 140px;
-        height: 140px;
-        position: relative;
-        right: 15%;
-      }
 }
 
 /*container logo y links*/
@@ -137,9 +110,6 @@ h2{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    @media (max-width: 1024px) {
-        width: 500px;
-      }
 }
 
 .containerlinks{
@@ -173,8 +143,41 @@ h2{
     align-items: center;
 }
 
-@media (max-width: var(--bp-desktop)) {
-    .container {
-        width: 600px;
+@media (max-width: 1024px) {
+    .navbar {
+        font-size: .2rem;
+        width: 800px;
     }
-  }
+
+    .h1 {
+        width: 700px;
+        font-size: 3.8rem;
+        margin-top: 5%;
+    }
+
+    .h2 {
+        font-size: 2.3rem;
+        margin-top: 10%;
+    }
+
+    .navbar a , h3, .login a {
+        font-size: .9rem;
+        text-align: center;
+        padding: 17px;
+    }
+
+    .banner {
+        height: 30px;
+    }
+
+    .logo {
+        width: 140px;
+        height: 140px;
+        position: relative;
+        right: 15%;
+    }
+
+    .container {
+        width: 500px;
+    }
+}

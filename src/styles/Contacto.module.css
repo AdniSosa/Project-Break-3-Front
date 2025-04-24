@@ -34,10 +34,7 @@
 
 .googleMap {
     width: 600px;
-    @media (max-width: 1024px) {
-        display: flex;
-        width: 400px;
-      }
+   
 }
 
 .contacto .mail,
@@ -111,5 +108,11 @@
     width: 100%;
 }
 
-
+@media (max-width: 1024px) {
+    .googleMap {
+        display: flex;
+        width: 400px;
+    }
+   
+  }
 
