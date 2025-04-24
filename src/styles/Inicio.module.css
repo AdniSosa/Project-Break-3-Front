@@ -106,6 +106,9 @@
     font-size: 45px;
 }
 
+
+
+
 /* Portátil */
 @media (max-width: 1024px) {
     .inicio {
@@ -212,9 +215,8 @@
     }
 
     .link {
-        margin-left: 50px;
+        margin-left: 190px;
         padding: 12px;
-        width: 100%
     }
 
 
@@ -227,8 +229,86 @@
 
     .saludo {
         font-size: 2rem;
+        width: 100%;  
+    }
+
+    .imgsobremi {
+        width: 100%; 
+        height: auto;
+        display: block;
+        margin-left: 20px; 
+    }
+
+    .sobreMi {
+        flex-direction: column; 
+        gap: 20px;
+        margin-left: 30px; 
+        width: 100%; 
     }
 }
+
+/* Móvil*/
+@media (max-width: 480px) {
+    .inicio {
+        height: 100vh; 
+        background-size: cover; 
+        width: 100%;
+    }
+
+    .info p {
+        font-size: 1rem;
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 120px;
+    }
+
+    .subtitulo {
+        font-size: 1.2rem;
+        width: 100%;
+        margin-left: 120px;
+    }
+
+    .tratamientos {
+        flex-direction: column; 
+        margin-top: 30px;
+        padding: 10px;
+    }
+
+    .link {
+        margin: 15px auto;
+        padding: 10px;
+        margin-left:120px;
+        width: 100%;
+    }
+
+    .pregunta {
+        font-size: 1.8rem; 
+        margin-top: 60px;
+        width: 100%;
+        margin-left:120px;
+    }
+
+    .saludo {
+        font-size: 2rem; 
+        width: 100%;
+
+    }
+
+    .imgsobremi {
+        width: 100%; 
+        height: auto;
+        display: block;
+        margin-left: 0px;
+    }
+
+    .sobreMi {
+        flex-direction: column; 
+        gap: 20px;
+        margin-left: 120px;
+        width: 100%; 
+    }
+}
+
 
 
 
