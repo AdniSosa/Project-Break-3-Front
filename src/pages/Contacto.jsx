@@ -83,7 +83,8 @@ const Contacto = () => {
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade" className={styles.googleMap}>
+            referrerPolicy="no-referrer-when-downgrade" 
+            className={styles.googleMap}>
           </iframe>
         </div>
       </div>
