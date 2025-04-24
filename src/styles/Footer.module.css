@@ -41,10 +41,20 @@
 }
 
 
-/* Responsividad para móviles */
+/* tablets */
 @media (max-width: 768px) {
     .contactoInfoRedes {
-        flex-direction: column; /* En móviles, los bloques se apilan en columna */
+        flex-direction: column; 
         gap: 15px;
+    }
+}
+
+/* móvil */
+@media (max-width: 480px) {
+    .contactoInfoRedes {
+        flex-direction: column;  
+        gap: 15px;  
+        align-items: center;  
+        justify-content: center; 
     }
 }
