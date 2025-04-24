@@ -7,9 +7,23 @@
     padding-top: 20px;
     gap: 35px;
     margin-left: -20px;
-}   
+}
 
-.login{
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    height: fit-content;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #575757;
+    margin: 3px 0;
+}
+
+.login {
     height: 100px;
     width: 1300px;
     display: flex;
@@ -17,35 +31,40 @@
     position: absolute;
     padding-top: 20px;
     gap: 35px;
-} 
+}
 
 
-h1{
+h1 {
     font-size: 5rem;
     position: absolute;
     color: #575757;
-    top: 40%;  
+    top: 40%;
     left: 50%;
     text-align: center;
     margin-top: 0;
-    transform: translate(-50%, -50%);  
+    transform: translate(-50%, -50%);
 }
-h2{
+
+h2 {
     font-size: 2.8rem;
     position: absolute;
     display: flex;
     color: #5c5b5b;
-    top: 50%;  
+    top: 50%;
     left: 50%;
     text-align: center;
-    transform: translate(-50%, -50%);  
+    transform: translate(-50%, -50%);
 }
 
 
-.navbar a , h3, .login a {
-    color: #575757;;
-    font-size: 1.1rem; 
+.navbar a,
+h3,
+.login a {
+    color: #575757;
+    ;
+    font-size: 1.1rem;
     text-decoration: none;
+    align-items: center;
 }
 
 .banner {
@@ -57,17 +76,19 @@ h2{
     align-items: center;
     overflow: hidden;
     z-index: 999;
+
     @media (max-width: 1024px) {
         height: 30px;
-      }
+    }
 }
 
 @keyframes moveLeft {
     0% {
-        transform: translateX(100%); 
+        transform: translateX(100%);
     }
+
     100% {
-        transform: translateX(-100%); 
+        transform: translateX(-100%);
     }
 }
 
@@ -82,7 +103,7 @@ h2{
 
 
 /*boton regala tova*/
-.regalaTova{
+.regalaTova {
     background: #ecdfcc;
     height: 30px;
     width: 160px;
@@ -99,20 +120,21 @@ h2{
     align-items: center;
 }
 
-.logo{
+.logo {
     width: 190px;
     height: 190px;
 }
 
 /*container logo y links*/
-.container{
+.container,
+.links {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
 
-.containerlinks{
+.containerlinks {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -121,12 +143,12 @@ h2{
 
 
 .newbutton,
-.logout{
+.logout {
     display: flex;
     margin-right: 50px;
 }
 
-.citasreservadas{
+.citasreservadas {
     background: #ecdfcc;
     height: 30px;
     width: 160px;
@@ -149,18 +171,20 @@ h2{
         width: 800px;
     }
 
-    .h1 {
+    h1 {
         width: 700px;
         font-size: 3.8rem;
         margin-top: 5%;
     }
 
-    .h2 {
+    h2 {
         font-size: 2.3rem;
         margin-top: 10%;
     }
 
-    .navbar a , h3, .login a {
+    .navbar a,
+    h3,
+    .login a {
         font-size: .9rem;
         text-align: center;
         padding: 17px;
@@ -179,5 +203,54 @@ h2{
 
     .container {
         width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+       
+    }
+
+    .navbar {
+        font-size: .2rem;
+        width: 800px;
+        height: fit-content;
+    }
+
+    .links {
+        flex-direction: column;
+        position: relative;
+        top: 120%;
+        right: 3%;
+        align-items: end;
+        
+    }
+
+    .links a {
+        padding: 0;
+        margin-bottom: 8%;
+        margin-right: 5px;
+    }
+
+    .logo {
+        position: relative;
+        left: -35%;
+    }
+
+    h1 {
+        font-size: 3rem;
+        text-align: left;
+        position: absolute;
+        left: 53%;
+
+    }
+
+    h2 {
+        font-family: 2rem;
+        text-align: left;
+        position: absolute;
+        left: 35%;
+        margin-top: 40px;
     }
 }
