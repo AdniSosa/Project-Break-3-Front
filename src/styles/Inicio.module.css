@@ -6,6 +6,7 @@
     background-size: cover;
     height: 15cm;
     width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -13,22 +14,28 @@
     display: block;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 1.25rem;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 .info p {
-    margin-top: 50px;
-    margin-bottom: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 1rem;
     text-align: justify;
+    width: 100%;
+    font-size: 1.4rem;
 }
 
 .subtitulo {
-    font-size: 32px;
+    font-size: 1.6rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.6rem;
     color: #7d7b7c;
     font-weight: 600;
     margin-top: 80px;
+    padding: 0 10px;
 }
 
 .link{
@@ -41,13 +48,12 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.3s;
-    margin: 25px auto; 
     text-align: center;
     margin-top: 60px;
     display: flex;
     flex-direction: column;
-    width: 350px;
     align-items: center; 
+    width: 100%;
 }
 
 
@@ -56,6 +62,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 150px;
+    gap: 50px;
 }
 
 .clase{
@@ -83,9 +90,8 @@
     text-align: justify;
 }
 .imgsobremi{
-    height: 650px; 
-    width: 550px;
-    
+    width: 100%;
+    height: auto;
 }
 
 .carta{
@@ -189,34 +195,31 @@
     .inicio {
         height: 100vh; 
         background-size: cover;
+        width: 100%;  
     }
 
     .info {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .info p {
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-top: 10px;
         width: 100%;  
-        margin-left: 20px; 
     }
 
     .subtitulo {
         font-size: 1.4rem; 
         width: 100%;
-        margin-left: 30px;  
     }
 
     .tratamientos {
         flex-direction: column; 
         margin-top: 30px;
-        margin-left: 30px; 
     }
 
     .link {
-        margin-left: 190px;
-        padding: 12px;
+        margin: 0 auto;
     }
 
 
@@ -224,25 +227,27 @@
         font-size: 1.8rem; 
         margin-top: 60px;
         width: 100%;
-        margin-left: 30px; 
     }
 
     .saludo {
         font-size: 2rem;
         width: 100%;  
+        margin: 0 auto;
     }
 
     .imgsobremi {
         width: 100%; 
         height: auto;
         display: block;
-        margin-left: 20px; 
+        margin: 0 auto;
+
     }
 
     .sobreMi {
         flex-direction: column; 
         gap: 20px;
         width: 100%; 
+        margin: 0 auto;
     }
 }
 
@@ -258,7 +263,6 @@
         font-size: 1rem;
         margin-top: 10px;
         width: 100%;
-
     }
 
     .subtitulo {

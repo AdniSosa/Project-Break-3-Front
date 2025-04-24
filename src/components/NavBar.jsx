@@ -19,12 +19,12 @@ const NavBar = () => {
             </div>
 
             <nav className={!userLogged ? styles.navbar : styles.login}>
-                <div className={styles.container}>
+                <div className={styles.containerlogo}>
                     <img src='https://res.cloudinary.com/dljpuje5r/image/upload/v1745252932/Tova_cn1yyn.png' alt='logo' className={!toggle ? styles.logo : styles.toggleLogo} />
                 </div>
 
             
-                <div className={styles.container}>
+                <div className={styles.containerlinks}>
                     <div className={!toggle ? styles.links : styles.navbarHide}>
                         {!userLogged ? <Link to='/inicio'>INICIO</Link> : <Link to='/admin'>ADMINISTRADOR</Link>}
                         <Link to='/tratamientos-faciales'>FACIAL</Link>
