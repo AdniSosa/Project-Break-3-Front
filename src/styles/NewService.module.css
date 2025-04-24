@@ -73,3 +73,21 @@ form {
     position: absolute;
     bottom: 20px;
 }
+
+/*móviles*/
+@media (max-width: 480px) {
+    .new {
+        top: 60px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    form {
+        width: 70%;
+    }
+    .boton{
+        width: 110%;
+        left: 60px;
+    }
+    
+}

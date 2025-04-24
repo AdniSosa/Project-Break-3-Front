@@ -75,3 +75,33 @@
     position: absolute;
     top: 140%;
 }
+
+/*tablets*/
+@media (max-width: 768px) {
+    .secondLogin {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .googleBtn {
+        position: static;
+        margin-top: 20px;
+        width: 40%;
+        text-align: center;
+    }
+}
+
+/*móviles*/
+@media (max-width: 480px) {
+    .secondLogin {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .googleBtn {
+        position: static;
+        margin-top: 20px;
+        width: 60%;
+        text-align: center;
+    }
+}
