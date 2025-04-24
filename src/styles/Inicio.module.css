@@ -41,7 +41,6 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.3s;
-    width: 250px;
     margin: 25px auto; 
     text-align: center;
     margin-top: 60px;
@@ -107,16 +106,15 @@
     font-size: 45px;
 }
 
+/*tablets*/
 @media (max-width: 1024px) {
     .info p {
         font-size: 1.2rem;
         margin-top: 20px;
     }
-
     .subtitulo {
         font-size: 1.4rem;
     }
-   
     .tratamientos {
         margin-top: 50px;
     }
@@ -124,27 +122,67 @@
     .sobreMi {
         gap: 40px;
     }
-
     .carta {
         font-size: 1.4rem;
     }
-
     .pregunta {
         font-size: 2.5rem;
         text-align: center;
         margin-top: 100px;
     }
-
     .saludo {
         font-size: 2rem;
     }
-  }
 
+    .imgsobremi{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto; 
+        }
+}
 
+/* móviles */
+@media (max-width: 768px) {
+    .info p {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
 
+    .subtitulo {
+        font-size: 1.2rem;
+    }
 
+    .tratamientos {
+        margin-top: 30px;
+    }
 
+    .sobreMi {
+        flex-direction: column;
+        gap: 30px;
+    }
 
+    .carta {
+        font-size: 1.2rem;
+        text-align: center;
+    }
 
+    .pregunta {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 60px;
+    }
 
+    .saludo {
+        font-size: 1.8rem;
+        text-align: center;
+    }
 
+    .imgsobremi {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+}
