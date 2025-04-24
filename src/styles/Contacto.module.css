@@ -125,19 +125,17 @@
         left: 25%;
     }
     .datos {
-    margin-top: 10px;
+        margin-top: 10px;
     }
-    .datos .mail,
-    .datos .telefono,
-    .datos .direccion,
-    .datos .horario {
-    width: 650px;
-    justify-content: center;
+    .mail,
+    .nombre,
+    .mensaje {
+        width: 100%;
     }
     .form {
-    position: absolute;
-    top: 120%;
-    left: 8%;
+        position: absolute;
+        top: 130%;
+        left: 8%;
     }
 }
 
@@ -145,6 +143,7 @@
 
 
 /*MÓVILES*/
+
 @media (max-width: 480px) {
 
     .map {
@@ -154,19 +153,24 @@
 
     }
     .datos {
-    margin-top: 10px;
+        margin-top: 10px;
     }
-    .datos .mail,
-    .datos .telefono,
-    .datos .direccion,
-    .datos .horario {
-    width: 100%;
-    justify-content: center;
-}
+    .mail,
+    .nombre,
+    .mensaje{
+        width: 100%;
+    
+    }
+    .subtitulo {
+        font-size: 18px;
+        text-align: center;
+    }
 
     .form {
-    position: absolute;
-    top: 170%;
-    left: 8%;
+        position: absolute;
+        top: 180%;
+        left: 5%;
+        width: 80%;
     }
-}    
+
+}
