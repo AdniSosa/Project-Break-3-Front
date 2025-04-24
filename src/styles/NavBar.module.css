@@ -241,13 +241,10 @@ h3,
     }
 
     .navbar {
-        width: 100%; 
-        height: auto;
-        flex-direction: column; 
-        align-items: center;
-        justify-content: flex-start;
-        gap: 15px; 
-        }
+        font-size: .2rem;
+        width: 800px;
+        height: fit-content;
+    }
 
     .links {
         flex-direction: column;
