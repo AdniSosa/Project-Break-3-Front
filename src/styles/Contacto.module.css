@@ -108,6 +108,7 @@
     width: 100%;
 }
 
+/*PANTALLAS PEQUEÑAS*/
 @media (max-width: 1024px) {
     .googleMap {
         display: flex;
@@ -115,34 +116,57 @@
     }
 }
 
-@media (max-width: 768px) {
 
-    body {
-        height: 1400px;
-    }
+/*TABLETS*/
+@media (max-width: 768px) {
     .map {
         position: absolute;
         top: 90%;
-        left: 20%;
-
+        left: 25%;
     }
     .datos {
     margin-top: 10px;
-}
-
-
-.datos .mail,
-.datos .telefono,
-.datos .direccion,
-.datos .horario {
+    }
+    .datos .mail,
+    .datos .telefono,
+    .datos .direccion,
+    .datos .horario {
     width: 650px;
     justify-content: center;
-}
-
-.form {
+    }
+    .form {
     position: absolute;
-    top: 220%;
+    top: 120%;
     left: 8%;
     }
 }
 
+
+
+
+/*MÓVILES*/
+@media (max-width: 480px) {
+
+    .map {
+        position: absolute;
+        top: 130%;
+        left: 10%;
+
+    }
+    .datos {
+    margin-top: 10px;
+    }
+    .datos .mail,
+    .datos .telefono,
+    .datos .direccion,
+    .datos .horario {
+    width: 100%;
+    justify-content: center;
+}
+
+    .form {
+    position: absolute;
+    top: 170%;
+    left: 8%;
+    }
+}    

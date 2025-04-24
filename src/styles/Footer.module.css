@@ -48,15 +48,17 @@
         gap: 15px;
     }
     .contenedorprincipal {
-        margin-top: 450px; 
+        margin-top: 1000px; 
     }
 }
 
+/* móviles */
 @media (max-width: 480px) {
     .contenedorprincipal {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-top: 1000px; 
     }
 
     .contacto,

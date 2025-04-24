@@ -102,3 +102,51 @@ form {
     border: 1px solid #ccc;
 }
 
+
+/*móviles*/
+
+@media (max-width: 480px) {
+    .form {
+    margin-top: 40px;
+    padding: 1rem;
+    flex-direction: column;
+    }
+
+    form {
+    width: 100%;
+    padding: 1rem;
+    }
+
+    .importe,
+    .nombre,
+    .dedicatoria,
+    .telefono,
+    .observaciones {
+    width: 100%;
+    }
+
+    .form a {
+    font-size: 12px;
+    text-align: left;
+    }
+
+    .contenedorBtn {
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .boton {
+    width: 100%;
+    padding: 12px;
+    }
+
+    .stripe {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    }
+
+    .stripebuybutton {
+    width: 100%;
+    }
+}
