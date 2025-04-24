@@ -115,22 +115,22 @@
     }
 }
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
 
     body {
         height: 1400px;
     }
     .map {
         position: absolute;
-        top: 155%;
+        top: 90%;
         left: 20%;
 
     }
-   .datos {
+    .datos {
     margin-top: 10px;
-   }
+}
 
-   
+
 .datos .mail,
 .datos .telefono,
 .datos .direccion,
@@ -139,12 +139,10 @@
     justify-content: center;
 }
 
-   
-
-   .form {
+.form {
     position: absolute;
     top: 220%;
     left: 8%;
-   }
-  }
+    }
+}
 
