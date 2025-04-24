@@ -1,6 +1,6 @@
-.titulo{
+.titulo {
     background-image: linear-gradient(rgba(246, 233, 217, 0.5), rgba(248, 230, 210, 0.5)),
-    url('https://res.cloudinary.com/dljpuje5r/image/upload/v1744535274/vista-lujoso-espacio-interior-hotel_23-2150683409.jpg_hznprr.jpg');
+        url('https://res.cloudinary.com/dljpuje5r/image/upload/v1744535274/vista-lujoso-espacio-interior-hotel_23-2150683409.jpg_hznprr.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,7 +9,7 @@
 }
 
 /*contenedor de los datos y el map*/
-.contacto{
+.contacto {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -24,17 +24,17 @@
 }
 
 /*subcontenedor map*/
-.map{
+.map {
     display: flex;
     margin-top: 50px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    
+
 }
 
 .googleMap {
     width: 600px;
-   
+
 }
 
 .contacto .mail,
@@ -49,7 +49,7 @@
     font-size: 19px;
 }
 
-.subtitulo{
+.subtitulo {
     font-size: 22px;
     color: #7d7b7c
 }
@@ -82,22 +82,22 @@
 .nombre,
 .mail,
 .mensaje,
-.telefono{
+.telefono {
     font-family: 'Open Sans', sans-serif;
     color: #7d7b7c;
     background-color: #F4F0EB;
     border-radius: 10px;
     border-color: #b5b4b5;
-    
+
 }
 
-.mensaje{
+.mensaje {
     width: 450px;
     height: 150px;
 }
 
 .nombre,
-.mail{
+.mail {
     width: 450px;
     height: 20px;
 }
@@ -115,11 +115,36 @@
     }
 }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
+
+    body {
+        height: 1400px;
+    }
     .map {
         position: absolute;
-        top: 160%;
-        text-align: center;
+        top: 155%;
+        left: 20%;
+
     }
+   .datos {
+    margin-top: 10px;
+   }
+
+   
+.datos .mail,
+.datos .telefono,
+.datos .direccion,
+.datos .horario {
+    width: 650px;
+    justify-content: center;
 }
+
+   
+
+   .form {
+    position: absolute;
+    top: 220%;
+    left: 8%;
+   }
+  }
 

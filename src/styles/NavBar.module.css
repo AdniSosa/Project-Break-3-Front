@@ -221,7 +221,7 @@ h3,
     .burger {
         display: flex;
         position: relative;
-        left: -15%;
+        left: 6%;
     }
 
     .navbarHide {
@@ -230,7 +230,7 @@ h3,
 
     .toggle {
         position: relative;
-        right: 120px;
+        right: -20px;
         height: fit-content;
     }
 
@@ -243,7 +243,7 @@ h3,
 
     .navbar {
         font-size: .2rem;
-        width: 800px;
+        width: 700px;
         height: fit-content;
     }
 
@@ -251,7 +251,7 @@ h3,
         flex-direction: column;
         position: relative;
         top: 0;
-        right: 3%;
+        right: -25%;
         align-items: end;
         margin: 0;
         margin-top: 5%;
@@ -267,7 +267,7 @@ h3,
 
     .logo {
         position: relative;
-        left: 65%;
+        left: 156%;
         bottom: 20%;
 
     }
@@ -276,7 +276,7 @@ h3,
         width: 140px;
         height: 140px;
         position: relative;
-        left: 16%;
+        left: 40%;
         bottom: -18%;
     }
 
@@ -299,3 +299,9 @@ h3,
         margin: 0;
     }
 }
+
+
+
+
+
+
