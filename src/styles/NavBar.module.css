@@ -214,6 +214,7 @@ h3,
         font-size: 2.2rem;
         top: 35%; 
     }
+    
 
 }
 
@@ -315,7 +316,9 @@ h3,
         width: 110px;
         height: auto;
         display: block;
-        margin-left: 0;
+        margin-left: 5px;
+        position: absolute;
+        top: 40px;
     }
 
     .toggleLogo {
@@ -347,8 +350,8 @@ h3,
         justify-content: space-between;
         align-items: center;      
         height: auto;
-        padding: 10px 20px;
-        top: 0;        
+        padding: 10px 20px;   
+        left: 70px; 
     }
 
     .containerlogo {
@@ -396,6 +399,10 @@ h3,
 
 /*480*/
 @media (max-width: 480px) {
+
+    .logo {
+        left: 70px
+    }
     .containerlogo {
         display: flex;
         justify-content: space-between;
@@ -415,13 +422,13 @@ h3,
 
     h1 {
         font-size: 2.5rem;
-        top: 30%;  
+        top: 42%;  
         left: 170px;
     }
 
     h2 {
         font-size: 1.5rem;
-        top: 40%;  
+        top: 50%;  
         left: 170px;
         
     }
@@ -451,4 +458,3 @@ h3,
     }
 
 }
-
