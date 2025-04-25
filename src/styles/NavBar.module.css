@@ -1,14 +1,23 @@
 
 .navbar {
     height: 100px;
-    width: 1400px;
+    width: 100%;
     display: flex;
     justify-content: center;
     position: absolute;
     padding-top: 20px;
     gap: 35px;
-    margin-left: -50px;
+    margin-left: -200px;
+}
 
+.login {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    padding-top: 20px;
+    gap: 35px;
 }
 
 .navbarHide {
@@ -35,15 +44,7 @@
     margin: 3px 0;
 }
 
-.login {
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    padding-top: 20px;
-    gap: 35px;
-}
+
 
 
 h1 {
@@ -199,6 +200,7 @@ h3,
         width: 100%;
         justify-content: center;
         width: 100%;
+        margin-left: -30px;
     }
 
 

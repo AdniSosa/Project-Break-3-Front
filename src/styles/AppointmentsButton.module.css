@@ -14,27 +14,9 @@
 @media (max-width: 768px) {
     .AppoimentsButton {
         position: absolute;
-        top:260px;
-        right: 10px;
+        top:200px;
+        left: 260px;
 
     }
 }
-
-
-/* móviles*/
-@media (max-width: 480px) {
-    .AppoimentsButton {
-        position: absolute;
-        top:260px;
-        
-    }
-
-    .containerAppoint {
-        display: flex;
-        justify-content: flex-end; /* A la derecha */
-        width: 100%;
-        padding-right: 20px; /* Opcional: margen con el borde */
-    }
-}
-
 
