@@ -9,6 +9,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 a {
   font-weight: 500;
   color: #7d7b7c;
@@ -48,7 +56,7 @@ p, a, span,h3 {
 }
 
 
-/*tablet*/
+/*tablet
 @media (max-width: 768px) {
   h1 {
       font-size: 2.5rem;
@@ -59,4 +67,4 @@ p, a, span,h3 {
       font-size: 1.4rem;
       text-align: center;
   }
-}
+}*/

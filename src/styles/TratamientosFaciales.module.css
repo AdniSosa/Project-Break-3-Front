@@ -4,9 +4,15 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 15cm;
-    width: 100%;
+    height: 20cm;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
 }
+
 /*contenedor grande de todos los tratamientos*/
 .servicios {
     display: flex;
@@ -66,4 +72,12 @@
 .message {
     position: absolute;
     bottom: -2050px;
+}
+
+@media (max-width: 1440px) {
+    .faciales {
+        height: 15cm;
+        background-size: cover;
+        width: 100%;
+    }
 }

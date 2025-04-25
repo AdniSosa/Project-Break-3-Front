@@ -3,11 +3,38 @@
     height: 100px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     position: absolute;
+    padding-top: 20px 40px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.links {
+    display: flex;        
+    align-items: center;    
+    justify-content: flex-start; /* Empuja los links hacia la izquierda */
+    gap: 15px;               
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.containerlinks {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.logo{
     padding-top: 20px;
-    gap: 35px;
-    margin-left: -200px;
+    width: 150px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
 }
 
 .login {
@@ -44,9 +71,6 @@
     margin: 3px 0;
 }
 
-
-
-
 h1 {
     font-size: 5rem;
     position: absolute;
@@ -69,8 +93,6 @@ h2 {
     transform: translate(-50%, -50%);
 }
 
-
-.navbar a,
 h3,
 .login a {
     color: #575757;
@@ -136,12 +158,6 @@ h3,
 }
 
 
-.logo {
-    width: 150px; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
-}
 
 /* Clase para el logo cuando toggle está activo */
 .toggleLogo {
@@ -152,21 +168,13 @@ h3,
 }
 
 
-/*container logo y links*/
+/*container logo*/
 
-.container,
-.links {
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-}
-
-.containerlinks {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 
@@ -191,6 +199,18 @@ h3,
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/*1440*/
+@media (max-width: 1440px) {
+    .navbar {
+        font-size: 0.9rem;
+        justify-content: center;
+        margin-left: 0; /* o ajustá esto según lo que necesites */
+    }
+
+    .links {
+      gap: 15px; /* Por ejemplo, más juntos */
+    }
 }
 
 /*1024*/

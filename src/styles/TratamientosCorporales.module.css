@@ -4,8 +4,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 15cm;
-    width: 100%;
+    height: 20cm;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
 }
 
 /*contenedor grande de todos los tratamientos*/
@@ -63,3 +68,13 @@
     cursor: pointer;
     transition: 0.3s;
 }
+
+
+@media (max-width: 1440px) {
+    .corporales {
+        height: 15cm;
+        background-size: cover;
+        width: 100%;
+    }
+}
+

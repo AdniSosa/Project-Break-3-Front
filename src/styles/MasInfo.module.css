@@ -3,7 +3,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 15cm;
+    height: 20cm;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
 }
 .contenedorTitulo h1 {
     margin-top: 4rem;

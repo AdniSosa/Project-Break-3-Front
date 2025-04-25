@@ -4,8 +4,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 15cm;
-    width: 100%;
+    height: 20cm;
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
 }
 
 /*contenedor de los datos y el map*/
@@ -107,6 +112,16 @@
     justify-content: center;
     width: 100%;
 }
+
+@media (max-width: 1440px) {
+    .titulo {
+        height: 15cm;
+        background-size: cover;
+        width: 100%;
+    }
+}
+
+
 
 /*PANTALLAS PEQUEÑAS*/
 @media (max-width: 1024px) {

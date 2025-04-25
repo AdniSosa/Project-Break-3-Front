@@ -4,7 +4,7 @@
 .styles_horario {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     font-size: 16px;
     color: #7d7b7c;
     font-family: 'Lora', serif;
