@@ -20,8 +20,8 @@
 /*tablets*/
 @media (max-width: 768px) {
     .newbutton {
-        width: 40px; 
-        height: 40px;
+        position: absolute;
+        top: 230px;
     }
 
     .icon {
@@ -33,11 +33,13 @@
 
 @media (max-width: 480px) {
     .newbutton {
-        width: 35px; 
-        height: 35px; 
+        position: absolute;
+        top: 230px;
+        width: 40px; 
+        height:40px; 
     }
 
     .icon {
-        font-size: 25px;
+        font-size: 35px;
     }
 }

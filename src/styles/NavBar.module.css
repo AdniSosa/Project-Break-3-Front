@@ -274,6 +274,11 @@ h3,
         align-items: flex-end;
         padding-top: 100px; /* Para no chocar con el logo */
     }
+    .contenedorbotones {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+    }
 
     .navbarHide {
         display: none; 
@@ -393,6 +398,13 @@ h3,
         box-sizing: border-box;
         padding-left: 20px;
     }
+    
+    @media (max-width: 480px) {
+        .contenedorbotones {
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+    }
 }
-
 

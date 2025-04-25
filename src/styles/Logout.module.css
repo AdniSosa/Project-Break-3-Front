@@ -22,8 +22,7 @@
     .buttonlogout {
         position: absolute;
         top: 190px; 
-        width: 45px; 
-        height: 40px; 
+        right: 30px;
     }
 
     .icon {
@@ -44,5 +43,6 @@
         font-size: 30px; 
     }
 }
+
 
 

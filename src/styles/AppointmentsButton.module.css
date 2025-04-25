@@ -13,8 +13,10 @@
 /* tablets */
 @media (max-width: 768px) {
     .AppoimentsButton {
-        margin: 0 auto; 
-        display: block;
+        position: absolute;
+        top:260px;
+        right: 10px;
+
     }
 }
 
@@ -22,8 +24,9 @@
 /* móviles*/
 @media (max-width: 480px) {
     .AppoimentsButton {
-        margin: 0;
-        display: block;
+        position: absolute;
+        top:260px;
+        
     }
 
     .containerAppoint {
