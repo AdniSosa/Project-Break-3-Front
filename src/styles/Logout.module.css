@@ -20,8 +20,8 @@
 /* teablets */
 @media (max-width: 768px) {
     .buttonlogout {
-        left: 100px; 
-        top: 5px; 
+        position: absolute;
+        top: 190px; 
         width: 45px; 
         height: 40px; 
     }
@@ -34,8 +34,8 @@
 /*móviles*/
 @media (max-width: 480px) {
     .buttonlogout {
-        left: 50px; 
-        top: 5px; 
+        position: absolute;
+        top: 200px;
         width: 40px; 
         height: 35px; 
     }

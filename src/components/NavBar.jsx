@@ -26,7 +26,7 @@ const NavBar = () => {
             
                 <div className={styles.containerlinks}>
                     <div className={!toggle ? styles.links : styles.navbarHide}>
-                        {!userLogged ? <Link to='/inicio'>INICIO</Link> : <Link to='/admin'>ADMINISTRADOR</Link>}
+                        {!userLogged ? <Link to='/inicio'>INICIO</Link> : <Link to='/admin'>INICIO</Link>}
                         <Link to='/tratamientos-faciales'>FACIAL</Link>
                         <Link to='/tratamientos-corporales'>CORPORAL</Link>
                         {!userLogged ? <Link to='/acmella-oleracea'>ACMELLA OLERACEA</Link> : null}

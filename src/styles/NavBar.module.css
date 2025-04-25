@@ -260,12 +260,19 @@ h3,
 
 /*768*/
 @media (max-width: 768px) {
-    .navbar {
+    /*.navbar {
         font-size: 0.35rem;
         width: 100%;
         justify-content: center;
         padding: 0;
         margin-left: 80px;
+    }*/
+
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 100px; /* Para no chocar con el logo */
     }
 
     .navbarHide {
@@ -318,18 +325,22 @@ h3,
 
     .containerlinks {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
         flex-wrap: wrap;
+        justify-content: flex-start; /* si quieres que suban en orden */
         width: 100%;
-        margin-right: 100px;
+        position: relative;
+        padding-right: 30px;
+        box-sizing: border-box;
     }
-
     .links {
         display: flex;
         gap: 10px;
         flex-direction: column;
         align-items: center;
-        
+        align-items: flex-end;
+        width: 100%;  
     }
 
     h1 {
@@ -363,11 +374,24 @@ h3,
     .regalaTova{
         width: 70%;
     }
+    .navbarHide {
+        display: none;
+    }
     .links {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 10px;
+    }
+    .containerlinks {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        position: relative;   
+        box-sizing: border-box;
+        padding-left: 20px;
     }
 }
 
