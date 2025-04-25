@@ -20,3 +20,19 @@
     }
 }
 
+/* móviles*/
+@media (max-width: 480px) {
+    .AppoimentsButton {
+        position: absolute;
+        top: 200px;
+        left: 125px;
+        
+    }
+
+    .containerAppoint {
+        display: flex;
+        justify-content: flex-end; 
+        width: 100%;
+        padding-right: 20px;
+    }
+}

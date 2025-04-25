@@ -45,3 +45,17 @@
 }
 
 
+/*móviles*/
+@media (max-width: 480px) {
+    .buttonlogout {
+        position: absolute;
+        top: 330px;
+        left: 137px;
+        width: 40px; 
+        height: 35px; 
+    }
+
+    .icon {
+        font-size: 30px; 
+    }
+}

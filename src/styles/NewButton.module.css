@@ -29,3 +29,19 @@
         font-size: 30px; 
     }
 }
+
+/*móviles*/
+
+@media (max-width: 480px) {
+    .newbutton {
+        position: absolute;
+        top: 280px;
+        left: 140px;
+        width: 30px; 
+        height:30px; 
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+}

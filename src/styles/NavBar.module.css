@@ -262,24 +262,9 @@ h3,
 
 /*768*/
 @media (max-width: 768px) {
-    /*.navbar {
-        font-size: 0.35rem;
-        width: 100%;
-        justify-content: center;
-        padding: 0;
-        margin-left: 80px;
-    }*/
-
-    .navbar {
-        height: auto;
-        flex-direction: column;
-        align-items: flex-end;
-        padding-top: 100px; /* Para no chocar con el logo */
-    }
     .contenedorbotones {
         flex-direction: column;
         align-items: flex-end;
-        gap: 8px;
     }
 
     .navbarHide {
@@ -291,7 +276,6 @@ h3,
         flex-direction: column;
         cursor: pointer;
         position: absolute;
-        top: 20px; 
         right: 20px;
         gap: 5px;
     }
@@ -303,21 +287,11 @@ h3,
         margin: 3px 0;
     }
 
-    .containerlogo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0;
-        width: 100%;
-        padding: 0 20px;
-        position: relative;
-    }
-
     .logo {
         width: 110px;
         height: auto;
         display: block;
-        margin-left: 35px;
+        margin-left: 0;
     }
 
     .toggleLogo {
@@ -328,26 +302,6 @@ h3,
     }
     .regalaTova{
         width: 50%;
-    }
-
-    .containerlinks {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        flex-wrap: wrap;
-        justify-content: flex-start; /* si quieres que suban en orden */
-        width: 100%;
-        position: relative;
-        padding-right: 30px;
-        box-sizing: border-box;
-    }
-    .links {
-        display: flex;
-        gap: 10px;
-        flex-direction: column;
-        align-items: center;
-        align-items: flex-end;
-        width: 100%;  
     }
 
     h1 {
@@ -361,8 +315,45 @@ h3,
         top: 34%; 
         left: 250px; 
     }
-}
 
+
+    .navbar {
+        display: flex;
+        flex-direction: row;        
+        justify-content: space-between;
+        align-items: center;      
+        height: auto;
+        padding: 10px 20px;
+        top: 0;
+
+        
+    }
+
+    .containerlogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin-bottom: 350px;
+    }
+
+    .containerlinks {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        padding-right: 20px;
+        margin: 0;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        width: 100%;
+    }
+}
 
 
 /*480*/
@@ -379,7 +370,7 @@ h3,
         left: 170px;
     }
     .regalaTova{
-        width: 70%;
+        width: 30%;
     }
     .navbarHide {
         display: none;
@@ -387,7 +378,7 @@ h3,
     .links {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
     }
     .containerlinks {
         display: flex;
