@@ -42,6 +42,7 @@ const Footer = () => {
                     <h3>INFORMACIÓN</h3>
                     <Link to='/inicio'>Quiénes somos</Link>
                     <Link to='/contacto'>Contacto</Link>
+                    <Link to='/login'>¿Eres administrador? Haz click aquí</Link>
                 </div>
 
                 <div className={styles.siguenos}>
