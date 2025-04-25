@@ -34,9 +34,11 @@ const NavBar = () => {
                         {!userLogged ? <Link to='/contacto'>CONTACTO</Link> : null}
                         {!userLogged ? <Link to='/reservar-online'>RESERVA</Link> : null}
                         {!userLogged ? <Link to='/regala-tova' className={styles.regalaTova}>REGALA TOVA</Link> : null}
-                        {!userLogged ? null : <div><NewButton /></div>}
-                        {!userLogged ? null : <div><Logout /></div>}
-                        {!userLogged ? null : <div className={styles.containerAppoint}><AppointmentsButton /></div>}
+                        <div className={styles.adminbutton}>
+                            {!userLogged ? null : <NewButton />}
+                            {!userLogged ? null :<Logout />}
+                            {!userLogged ? null :<AppointmentsButton />}
+                        </div>
                     </div>
                 </div>
 

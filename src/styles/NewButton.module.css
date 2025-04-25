@@ -17,31 +17,19 @@
     
 }
 
-/*tablets*/
+
+
 @media (max-width: 768px) {
     .newbutton {
-        position: absolute;
-        top: 280px;
-        left: 265px;
+        position: static;
+        left: auto;
+        top: auto;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
     }
 
     .icon {
-        font-size: 30px; 
-    }
-}
-
-/*móviles*/
-
-@media (max-width: 480px) {
-    .newbutton {
-        position: absolute;
-        top: 280px;
-        left: 140px;
-        width: 30px; 
-        height:30px; 
-    }
-
-    .icon {
-        font-size: 25px;
+        font-size: 30px;
     }
 }
