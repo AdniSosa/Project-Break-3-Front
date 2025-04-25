@@ -198,7 +198,8 @@ h3,
     .navbar {
         font-size: 0.9rem;
         justify-content: center;
-        margin-left: 30px;  
+        margin-left: 30px; 
+
     }
 
     .links {
@@ -225,7 +226,7 @@ h3,
         width: 100%;
         justify-content: center;
         width: 100%;
-        margin-left: -13px;
+        margin-left: 0px;
     }
 
     .navbarHide {
@@ -316,9 +317,10 @@ h3,
         width: 110px;
         height: auto;
         display: block;
-        margin-left: 5px;
+        margin-left: 15px;
         position: absolute;
         top: 40px;
+        left: -50px;
     }
 
     .toggleLogo {
@@ -384,6 +386,8 @@ h3,
         align-items: flex-end;
         gap: 10px;
         width: auto;
+        position: relative;
+        right: 40px
     }
     .login {
         flex-direction: column;
@@ -401,7 +405,8 @@ h3,
 @media (max-width: 480px) {
 
     .logo {
-        left: 70px
+        left: 40px;
+        top: 90px
     }
     .containerlogo {
         display: flex;
@@ -445,6 +450,8 @@ h3,
 
     .links {
         gap: 5px;
+        position: relative;
+        left: -30px;
     }
 
     .adminbutton {
