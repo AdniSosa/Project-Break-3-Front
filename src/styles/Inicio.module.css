@@ -1,50 +1,35 @@
 
-.inicio{
+.inicio {
     background-image: linear-gradient(rgba(246, 233, 217, 0.6), rgba(248, 230, 210, 0.6)),
     url('https://res.cloudinary.com/dljpuje5r/image/upload/v1744535274/vista-lujoso-espacio-interior-hotel_23-2150683409.jpg_hznprr.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 20cm;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 0;
     margin: 0;
 }
 
-
-.info{
-    display: block;
+.form{
+    display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
-    padding: 0 20px;
-    font-size: 16px;
-    line-height: 1.6;
+    margin: 25px;
+    padding: 2rem;
 }
 
-.info p {
-    margin-top: 20px;
-    margin-bottom: 1rem;
-    text-align: justify;
-    width: 100%;
-    font-size: 1.4rem;
+.subtitulo{
+    font-size: 25px;
 }
 
-.subtitulo {
-    font-size: 1.6rem;
-    text-align: center;
-    margin-bottom: 1.6rem;
-    color: #7d7b7c;
-    font-weight: 600;
-    margin-top: 80px;
-    padding: 0 10px;
-}
-
-.link{
-    background: #D8C7B9;
+.subtituloboton{
+    font-size: 20px;
+    background: #f5f1ef;
+    height: 30px;
     border: none;
     padding: 12px;
     border-radius: 10px;
@@ -53,70 +38,49 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: 0.3s;
-    text-align: center;
-    margin-top: 60px;
+    margin-top: 130px;
+}
+
+/*contenedor del form*/
+.login {
     display: flex;
-    flex-direction: column;
+    justify-content: center; 
     align-items: center; 
-    width: 100%;
+    margin-top: 50px;
 }
 
+.boton{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background: #D8C7B9;
+    height: 40px;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #7A7A7A;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-.tratamientos{
+.logo {
+    position: relative;
+    top: 4px;
+    right: 8px;
+}
+
+.secondLogin {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 150px;
-    gap: 50px;
 }
 
-.clase{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.googleBtn {
+    position: absolute;
+    top: 165%;
 }
-
-
-.img {
-    height: 220px; 
-    width: 300px; 
-    border-radius: 8px; 
-    margin-bottom: 10px; 
-    margin-top: 20px;
-}
-
-
-/*contenedor principal sobre mi*/
-.sobreMi{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    text-align: justify;
-}
-.imgsobremi{
-    width: 100%;
-    height: auto;
-}
-
-.carta{
-    font-family: 'Parisienne', cursive;
-    font-size: 25px;
-}
-
-.pregunta{
-    font-family: 'Parisienne', cursive;
-    font-size: 60px;
-    text-align: center;
-    margin-top: 200px;
-    font-weight: bold;
-}
-
-.saludo{
-    font-family: 'Parisienne', cursive;
-    font-size: 45px;
-}
-
 
 @media (max-width: 1440px) {
     .inicio {
@@ -124,220 +88,49 @@
         background-size: cover;
         width: 100%;
     }
-}
-
-
-@media (max-width: 1024px) {
-    .inicio {
-        height: 15cm;
-        background-size: cover;
-        width: 100%;
-    }
-
-    .info {
-        font-size: 18px;
-        text-align: center; 
-        margin: 0 auto; 
-        width: 90%; 
-    }
-
-    .info p {
-        font-size: 1.1rem;
-        margin-top: 15px;
-        padding: 0 40px; 
-        width: 100%;
-        text-align: center; 
-        margin-right: auto;
-    }
-
-    .subtitulo {
-        font-size: 1.3rem;
-        text-align: center; 
-        padding: 0 40px; 
-    }
-
-    .tratamientos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 40px;
-        gap: 20px;
-        padding: 0 40px;
-    }
-
-    .link {
-        width: 80%;
-        margin: 0 auto;
-        padding: 12px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .pregunta {
-        font-size: 2.2rem;
-        text-align: center; 
-        margin-top: 80px;
-        padding: 0 40px;
-    }
-
-    .saludo {
-        font-size: 1.8rem;
+    .googleBtn {
+        position: absolute;
+        top: 118%;
+        width: 15%;
         text-align: center;
     }
+}
 
-    .imgsobremi {
-        width: 90%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .sobreMi {
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-        padding: 0 40px;
-    }
-
-    .carta {
-        font-size: 1.2rem;
-        text-align: justify;
+@media (max-width: 1024px) {
+    .googleBtn {
+        position: absolute;
+        top: 72%;
+        width: 25%;
+        text-align: center;
     }
 }
 
-/* tablets */
-
-
-/* tablets */
+/*tablets*/
 @media (max-width: 768px) {
-    .inicio {
-        background-size: cover;
-        width: 100%;  
+    .secondLogin {
+        flex-direction: column;
+        padding: 1rem;
     }
 
-    .info {
-        font-size: 14px;
-        padding: 0;
-    }
-
-    .info p {
-        font-size: 1.1rem;
-        margin-top: 10px;
-        width: 100%;  
-        padding: 0;
-    }
-
-    .subtitulo {
-        font-size: 1.4rem; 
-        width: 100%;
-    }
-
-    .tratamientos {
-        flex-direction: column; 
-        margin-top: 30px;
-    }
-
-    .link {
-        margin: 0 auto;
-    }
-
-
-    .pregunta {
-        font-size: 1.8rem; 
-        margin-top: 60px;
-        width: 100%;
-        padding: 0;
-    }
-
-    .saludo {
-        font-size: 2rem;
-        width: 100%;  
-        margin: 0 auto;
-    }
-
-    .imgsobremi {
-        width: 100%; 
-        height: auto;
-        display: block;
-        margin: 0 auto;
-
-    }
-
-    .sobreMi {
-        flex-direction: column; 
-        gap: 20px;
-        width: 100%; 
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .carta {
-        width: 90%;
-        margin: 0 auto;
+    .googleBtn {
+        position: absolute;
+        top: 103%;
+        width: 40%;
+        text-align: center;
     }
 }
 
-/* Móvil*/
+/*móviles*/
 @media (max-width: 480px) {
-    .inicio {
-        background-size: cover; 
-        width: 100%;
+    .secondLogin {
+        flex-direction: column;
+        padding: 1rem;
     }
 
-    .info p {
-        font-size: 1rem;
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    .subtitulo {
-        font-size: 1.2rem;
-        width: 100%;
-    }
-
-    .tratamientos {
-        flex-direction: column; 
-        margin-top: 30px;
-        padding: 10px;
-    }
-
-    .link {
-        margin: 0px auto;
-    }
-
-    .pregunta {
-        font-size: 1.8rem; 
-        margin-top: 60px;
-        width: 100%;
-    }
-
-    .saludo {
-        font-size: 2rem; 
-        width: 100%;
-
-    }
-
-    .imgsobremi {
-        width: 100%; 
-        height: auto;
-        display: block;
-        margin-left: 0px;
-    }
-
-    .sobreMi {
-        flex-direction: column; 
-        gap: 20px;
-        width: 100%; 
+    .googleBtn {
+        position: absolute;
+        top: 175%;
+        width: 60%;
+        text-align: center;
     }
 }
-
-
-
-
-
-
-
-
-
-

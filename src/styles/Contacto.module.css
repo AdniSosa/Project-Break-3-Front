@@ -137,7 +137,7 @@
     .map {
         position: absolute;
         top: 90%;
-        left: 25%;
+        left: 23%;
     }
     .datos {
         margin-top: 10px;
@@ -150,7 +150,7 @@
     .form {
         position: absolute;
         top: 130%;
-        left: 8%;
+        left: 7%;
     }
 }
 
@@ -163,8 +163,8 @@
 
     .map {
         position: absolute;
-        top: 130%;
-        left: 10%;
+        top: 157%;
+        left: 8%;
 
     }
     .datos {
@@ -183,8 +183,8 @@
 
     .form {
         position: absolute;
-        top: 180%;
-        left: 5%;
+        top: 223%;
+        left: 2%;
         width: 80%;
     }
 
