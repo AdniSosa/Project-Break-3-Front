@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    width: 75vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,7 +212,6 @@
 /* tablets */
 @media (max-width: 768px) {
     .inicio {
-        height: 100vh; 
         background-size: cover;
         width: 100%;  
     }
@@ -282,7 +281,6 @@
 /* Móvil*/
 @media (max-width: 480px) {
     .inicio {
-        height: 100vh; 
         background-size: cover; 
         width: 100%;
     }
