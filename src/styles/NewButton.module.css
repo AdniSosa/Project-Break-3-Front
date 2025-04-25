@@ -16,3 +16,30 @@
     color: #f1e4d4;
     
 }
+
+/*tablets*/
+@media (max-width: 768px) {
+    .newbutton {
+        width: 40px; 
+        height: 40px;
+        left: 100px; 
+    }
+
+    .icon {
+        font-size: 30px; 
+    }
+}
+
+/*móviles*/
+
+@media (max-width: 480px) {
+    .newbutton {
+        width: 35px; 
+        height: 35px; 
+        left: 50px; 
+    }
+
+    .icon {
+        font-size: 25px;
+    }
+}

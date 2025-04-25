@@ -17,3 +17,32 @@
     font-size: 50px
 }
 
+/* teablets */
+@media (max-width: 768px) {
+    .buttonlogout {
+        left: 100px; 
+        top: 5px; 
+        width: 45px; 
+        height: 40px; 
+    }
+
+    .icon {
+        font-size: 40px; 
+    }
+}
+
+/*móviles*/
+@media (max-width: 480px) {
+    .buttonlogout {
+        left: 50px; 
+        top: 5px; 
+        width: 40px; 
+        height: 35px; 
+    }
+
+    .icon {
+        font-size: 30px; 
+    }
+}
+
+

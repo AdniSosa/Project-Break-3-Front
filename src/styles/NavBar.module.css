@@ -329,8 +329,7 @@ h3,
         gap: 10px;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        margin-top: 20px;
+        
     }
 
     h1 {
@@ -364,4 +363,12 @@ h3,
     .regalaTova{
         width: 70%;
     }
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
+
+
