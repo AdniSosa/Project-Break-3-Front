@@ -20,6 +20,10 @@
     width: 100%;
 }
 
+.links a{
+    color:#575757;
+}
+
 .containerlinks {
     display: flex;
     justify-content: flex-start;
@@ -75,7 +79,7 @@ h1 {
     font-size: 5rem;
     position: absolute;
     color: #575757;
-    top: 40%;
+    top: 50%;
     left: 50%;
     text-align: center;
     margin-top: 0;
@@ -87,7 +91,7 @@ h2 {
     position: absolute;
     display: flex;
     color: #5c5b5b;
-    top: 50%;
+    top: 60%;
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -209,8 +213,19 @@ h3,
     }
 
     .links {
-      gap: 15px; /* Por ejemplo, más juntos */
+        gap: 15px; 
     }
+
+    h1 {
+        font-size: 4.5rem;
+        top: 30%; 
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        top: 35%; 
+    }
+
 }
 
 /*1024*/
@@ -223,20 +238,18 @@ h3,
         margin-left: -30px;
     }
 
-
     .navbarHide {
         display: none;
     }
 
-
     h1 {
-        font-size: 3.8rem; 
+        font-size: 3.5rem;
         top: 20%;  
     }
 
     h2 {
-        font-size: 2.3rem;
-        top: 27%; 
+        font-size: 2rem;
+        top: 25%; 
     }
 
 
@@ -325,15 +338,15 @@ h3,
     }
 
     h1 {
-        font-size: 3.3rem;
-        top: 25%; 
+        font-size: 3rem;
+        top: 20%;  
         left: 250px;
     }
 
     h2 {
-        font-size: 2.3rem;
-        top: 34%; 
-        left: 250px; 
+        font-size: 1.8rem;
+        top: 25%;
+        left: 250px;
     }
 
 
@@ -379,15 +392,16 @@ h3,
 /*480*/
 @media (max-width: 480px) {
     h1 {
-        font-size: 3.2rem; 
-        top: 39%;  
+        font-size: 2.5rem;
+        top: 30%;  
         left: 170px;
     }
 
     h2 {
-        font-size: 2rem;
-        top: 55%; 
+        font-size: 1.5rem;
+        top: 40%;  
         left: 170px;
+        
     }
     .regalaTova{
         width: 30%;

@@ -78,7 +78,7 @@
 
 .googleBtn {
     position: absolute;
-    top: 140%;
+    top: 165%;
 }
 
 @media (max-width: 1440px) {
@@ -87,8 +87,22 @@
         background-size: cover;
         width: 100%;
     }
+    .googleBtn {
+        position: absolute;
+        top: 110%;
+        width: 15%;
+        text-align: center;
+    }
 }
 
+@media (max-width: 1024px) {
+    .googleBtn {
+        position: absolute;
+        top: 85%;
+        width: 25%;
+        text-align: center;
+    }
+}
 
 /*tablets*/
 @media (max-width: 768px) {
@@ -98,8 +112,8 @@
     }
 
     .googleBtn {
-        position: static;
-        margin-top: 20px;
+        position: absolute;
+        top: 105%;
         width: 40%;
         text-align: center;
     }
@@ -113,8 +127,8 @@
     }
 
     .googleBtn {
-        position: static;
-        margin-top: 20px;
+        position: absolute;
+        top: 145%;
         width: 60%;
         text-align: center;
     }
